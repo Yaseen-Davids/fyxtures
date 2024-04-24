@@ -62,16 +62,12 @@ function App() {
     () =>
       queries.reduce((arr, q) => {
         if (!q.isLoading && q.data) {
-          const { response, get } = q.data;
-          if (get === "races") {
-            arr.push(
-              ...response
-                .map((row: any) => formatFixture(row))
-                .filter((row: any) => row)
-            );
-          } else {
-            arr.push(formatFixture(response) as Fixture);
-          }
+          const { response } = q.data;
+          arr.push(
+            ...response
+              .map((row: any) => formatFixture(row))
+              .filter((row: any) => row)
+          );
         }
         return arr;
       }, [] as Fixture[]),
