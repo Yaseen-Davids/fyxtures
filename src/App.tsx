@@ -7,6 +7,8 @@ import { Fixture } from "./types/Fixture";
 import { FootballCard } from "./components/FootballCard";
 import { FormulaOneCard } from "./components/FormulaOneCard";
 import { formatFixture } from "./helpers/formatFixture";
+import { Toggle } from "./components/Toggle";
+
 
 const formatRelativeLocale = {
   other: "EEEE, dd MMM yyyy",
@@ -102,7 +104,12 @@ function App() {
   if (isLoading) return "Loading...";
 
   return (
-    <div className="flex flex-col items-center gap-8 md:gap-10 p-4">
+    <div className="p-4 gap-8 md:gap-10 grid grid-cols-[1fr_5fr_1fr]">
+      <div className="p-4">
+        <input type="button" value="search" />
+        <Toggle/>
+      </div>
+      <div className="flex flex-col items-center gap-8 md:gap-10 p-4">
       {Object.keys(grouped)
         .sort()
         .map((date) => (
@@ -124,6 +131,8 @@ function App() {
               )}
           </div>
         ))}
+        </div>
+        <div> something else</div>
     </div>
   );
 }
