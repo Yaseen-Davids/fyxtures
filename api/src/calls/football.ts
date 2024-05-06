@@ -10,7 +10,6 @@ interface FootballFixtureProps {
 export const getFootballFixtures = async (
   props: FootballFixtureProps
 ): Promise<Football[]> => {
-  console.log("props", props);
   const keys = Object.keys(props).reduce((str, k, i) => {
     if (i === 0) {
       str += "?";

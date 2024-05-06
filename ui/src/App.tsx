@@ -9,6 +9,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Fixture } from "./types/Fixture";
 import { FootballCard } from "./components/FootballCard";
 import { FormulaOneCard } from "./components/FormulaOneCard";
+import { LoadingSpinner } from "./components/LoadingSpinner";
 
 const formatRelativeLocale = {
   other: "EEEE, dd MMM yyyy",
@@ -35,7 +36,7 @@ function App() {
   const [timezone, setTimezone] = useState(
     Intl.DateTimeFormat().resolvedOptions().timeZone
   );
-  const [teams, setTeams] = useState([49, 10, 12]);
+  const [teams, setTeams] = useState([49, 10, 12, 67, 11]);
 
   // TODO: change this to an object for the different sports
   const [includeFOne, toggleIncludeFOne] = useState(true);
@@ -44,14 +45,9 @@ function App() {
     ["getFixtures", teams, dateFrom, timezone, includeFOne],
     () =>
       axios.get(
-        `http://localhost:3100/fixtures?startDate=${dateFrom}&teams=${teams.join(
+        `/api/fixtures?startDate=${dateFrom}&teams=${teams.join(
           ","
-        )}&includeFOne=${includeFOne}`,
-        {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-          },
-        }
+        )}&includeFOne=${includeFOne}`
       )
   );
 
@@ -71,19 +67,15 @@ function App() {
     [data, isLoading]
   );
 
-  if (isLoading) return "Loading...";
+  if (isLoading)
+    return (
+      <div className="w-full h-full flex justify-center p-4">
+        <LoadingSpinner />
+      </div>
+    );
 
   return (
     <div className="flex flex-col items-center gap-8 md:gap-10 p-4">
-      {/* <div>
-        <label>Include Formula One: </label>
-        <input
-          name="Include Formula One"
-          type="checkbox"
-          checked={includeFOne}
-          onChange={() => toggleIncludeFOne(!includeFOne)}
-        />
-      </div> */}
       {Object.keys(grouped)
         .sort()
         .map((date) => (
@@ -96,11 +88,11 @@ function App() {
                 (a, b) =>
                   new Date(a.date).valueOf() - new Date(b.date).valueOf()
               )
-              .map((event: Fixture) =>
+              .map((event: Fixture, index: number) =>
                 event.sport === "football" ? (
-                  <FootballCard key={event.id} event={event} />
+                  <FootballCard key={`${event.id}-${index}`} event={event} />
                 ) : (
-                  <FormulaOneCard key={event.id} event={event} />
+                  <FormulaOneCard key={`${event.id}-${index}`} event={event} />
                 )
               )}
           </div>

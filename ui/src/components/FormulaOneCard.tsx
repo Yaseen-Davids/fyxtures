@@ -13,7 +13,7 @@ export const FormulaOneCard: FC<FormulaOneCardProps> = ({ event }) => {
   return (
     <div className="flex flex-col items-center bg-gray-800 rounded p-4 h-full gap-1 text-xs md:text-sm relative hover:bg-gray-700 cursor-pointer">
       <div className="grid grid-cols-[1fr_50px_1fr] items-center gap-5">
-        <div className="grid grid-cols-[1fr_30px] gap-1 items-center text-right">
+        <div className="grid grid-cols-[1fr_30px] gap-2 items-center text-right">
           <p className="font-bold">{type}</p>
           <div>
             {/* <Image alt="Track" src={circuit!.image} width={30} height={30} /> */}
@@ -22,7 +22,7 @@ export const FormulaOneCard: FC<FormulaOneCardProps> = ({ event }) => {
         <p className="border rounded p-2 border-slate-500 justify-self-center">
           {format(date, "kk:mm")}
         </p>
-        <div className="grid grid-cols-[30px_1fr] gap-1 items-center text-right">
+        <div className="grid grid-cols-[30px_1fr] gap-2 items-center text-right">
           <div>
             {/* <Image alt="Track" src={circuit!.image} width={30} height={30} /> */}
           </div>

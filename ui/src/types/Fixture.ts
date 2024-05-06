@@ -3,6 +3,7 @@ export type FixtureTeam = {
   name: string;
   shortName: string;
   abbr: string;
+  logo?: string;
 };
 
 export type FixtureLeague = {

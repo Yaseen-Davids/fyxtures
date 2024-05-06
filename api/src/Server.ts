@@ -5,8 +5,9 @@ import path from "path";
 import dotenv from "dotenv";
 import cors from "cors";
 
-import BaseRouter from "./routes";
+// import BaseRouter from "./routes";
 import indexRouter from "./routes/index";
+import teamRouter from "./routes/teams";
 
 // Init express
 const app = express();
@@ -19,15 +20,15 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, "public")));
-app.use("/api", BaseRouter);
+app.use("/api", indexRouter);
+app.use("/api/teams", teamRouter);
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 const staticDir = path.join(__dirname, "public");
 app.use(express.static(staticDir));
-
-app.use("/", indexRouter);
 
 export default app;

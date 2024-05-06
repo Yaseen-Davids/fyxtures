@@ -1,3 +1,4 @@
+import { footballTeamsDataSet } from "src/db/teams";
 import { Fixture } from "../types/fixture";
 import { Football } from "../types/football";
 import { FormulaOneRace } from "../types/formulaone";
@@ -58,6 +59,11 @@ export const formatFixture = (
           name: team.name,
           abbr: team.club.abbr,
           shortName: team.shortName,
+          logo: (
+            footballTeamsDataSet.find((tds) => tds.id == team.id) || {
+              image: { url: "" },
+            }
+          ).image.url,
         })),
       });
     }

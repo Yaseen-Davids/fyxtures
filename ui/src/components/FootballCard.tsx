@@ -42,26 +42,24 @@ type FootballCardDetailProps = {
 
 const FootballCardDetail: FC<FootballCardDetailProps> = ({ home, teams }) => {
   return home ? (
-    <div className="grid grid-cols-[1fr_30px] gap-1 items-center text-right font-bold">
+    <div className="grid grid-cols-[1fr_30px] gap-2 items-center text-right font-bold">
       <p>{teams.name}</p>
       <div>
-        {/* <Image
-          alt="Home team logo"
-          src={teams["home"]["logo"]}
-          width={30}
-          height={30}
-        /> */}
+        <img
+          alt={teams.abbr}
+          src={teams.logo}
+          style={{ height: "30px", width: "30px" }}
+        />
       </div>
     </div>
   ) : (
-    <div className="grid grid-cols-[30px_1fr] gap-1 items-center text-left font-bold">
+    <div className="grid grid-cols-[30px_1fr] gap-2 items-center text-left font-bold">
       <div>
-        {/* <Image
-          alt="Home team logo"
-          src={teams["away"]["logo"]}
-          width={30}
-          height={30}
-        /> */}
+        <img
+          alt={teams.abbr}
+          src={teams.logo}
+          style={{ height: "30px", width: "30px" }}
+        />
       </div>
       <p>{teams.name}</p>
     </div>
