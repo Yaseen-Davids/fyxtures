@@ -36,7 +36,7 @@ function App() {
   const [timezone, setTimezone] = useState(
     Intl.DateTimeFormat().resolvedOptions().timeZone
   );
-  const [teams, setTeams] = useState([49, 10, 12, 67, 11]);
+  const [teams, setTeams] = useState([10, 12]);
 
   // TODO: change this to an object for the different sports
   const [includeFOne, toggleIncludeFOne] = useState(true);

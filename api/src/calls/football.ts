@@ -1,5 +1,7 @@
 import axios from "axios";
 import { Football } from "src/types/football";
+import { FootballEvent } from "src/types/football-event";
+import { HeadToHeadReponse } from "src/types/football-headtohead";
 
 interface FootballFixtureProps {
   pageSize?: number;
@@ -29,4 +31,32 @@ export const getFootballFixtures = async (
     }
   );
   return data.content;
+};
+
+export const getFootballFixtureById = async (
+  eventId: number
+): Promise<FootballEvent> => {
+  const { data } = await axios.get(
+    `https://footballapi.pulselive.com/football/fixtures/${eventId}`,
+    {
+      headers: {
+        Origin: "https://www.premierleague.com",
+      },
+    }
+  );
+  return data;
+};
+
+export const getFootballHeadToHead = async (
+  teamIds: string
+): Promise<HeadToHeadReponse> => {
+  const { data } = await axios.get(
+    `https://footballapi.pulselive.com/football/stats/headtohead?teams=${teamIds}`,
+    {
+      headers: {
+        Origin: "https://www.premierleague.com",
+      },
+    }
+  );
+  return data;
 };

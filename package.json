@@ -3,7 +3,7 @@
     "client": "cd ui && npm run dev",
     "server": "cd api && npm run start-dev",
     "start": "node -r dotenv/config ./bin/www",
-    "dev": "concurrently -n \"FRONTEND,BACKEND\" -c \"red,blue\" -p \"[{name}]\" \"npm run client\" \"npm run server\" --kill-others-on-fail"
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"red,blue\" -p \"[{name}]\" \"npm run server\" \"npm run client\" --kill-others-on-fail"
   },
   "dependencies": {
     "concurrently": "^8.2.2"

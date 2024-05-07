@@ -68,6 +68,7 @@ export interface TeamTeam {
   teamType:  string;
   shortName: string;
   id:        number;
+  score:     number;
 }
 
 export interface Club {

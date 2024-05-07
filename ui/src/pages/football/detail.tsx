@@ -1,20 +1,20 @@
-"use client";
-
-import React, { FC, useState } from "react";
-import { PreviousGames } from "./previousgames";
+import { FC, useState } from "react";
+import { HeadToHead } from "./headtohead";
 
 type FootballDetailProps = {
   eventId: number;
+  teamsId: number[];
 };
 
-export const FootballDetail: FC<FootballDetailProps> = ({ eventId }) => {
+export const FootballDetail: FC<FootballDetailProps> = ({
+  eventId,
+  teamsId,
+}) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleChangeTab = (tab: number) => {
     setActiveTab(tab);
   };
-
-  console.log("Client eventId", eventId);
 
   return (
     <div>
@@ -25,7 +25,7 @@ export const FootballDetail: FC<FootballDetailProps> = ({ eventId }) => {
           } p-2 rounded-l-lg hover:bg-slate-700 cursor-pointer`}
           onClick={() => handleChangeTab(0)}
         >
-          <p>Previous Games</p>
+          <p>Head to Head</p>
         </div>
         <div
           className={`transition ease-in-out text-center ${
@@ -36,7 +36,7 @@ export const FootballDetail: FC<FootballDetailProps> = ({ eventId }) => {
           <p>Predictions</p>
         </div>
       </div>
-      <div>{activeTab === 0 ? <PreviousGames eventId={eventId} /> : <></>}</div>
+      <div>{activeTab === 0 ? <HeadToHead teamsId={teamsId} /> : <></>}</div>
     </div>
   );
 };

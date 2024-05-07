@@ -3,7 +3,7 @@ export type FixtureTeam = {
   name: string;
   shortName: string;
   abbr: string;
-  logo?: string;
+  score?: number;
 };
 
 export type FixtureLeague = {
@@ -15,6 +15,14 @@ export type FixtureLeague = {
 export type FixtureCircuit = {
   name: string;
   image: string;
+  id: string;
+};
+
+export type FixtureGround = {
+  name: string;
+  city: string;
+  source: string;
+  id: number;
 };
 
 export type Fixture = {
@@ -27,4 +35,5 @@ export type Fixture = {
   type?: string;
   image?: string;
   circuit?: FixtureCircuit;
+  ground?: FixtureGround;
 };

@@ -1,4 +1,3 @@
-import { footballTeamsDataSet } from "src/db/teams";
 import { Fixture } from "../types/fixture";
 import { Football } from "../types/football";
 import { FormulaOneRace } from "../types/formulaone";
@@ -9,6 +8,7 @@ export const formatFixture = (
   return data.reduce((arr, row) => {
     if (row.raceName) {
       arr.push({
+        id: parseInt(row.round),
         sport: "formula-one",
         date: new Date(`${row.date} ${row.time}`),
         competition: row.raceName,
@@ -16,6 +16,7 @@ export const formatFixture = (
         circuit: {
           name: row.Circuit.circuitName,
           image: "",
+          id: row.Circuit.circuitId,
         },
       });
 
@@ -42,13 +43,14 @@ export const formatFixture = (
             circuit: {
               name: row.Circuit.circuitName,
               image: "",
+              id: row.Circuit.circuitId,
             },
           });
         }
       }
     } else {
       arr.push({
-        id: row.gameweek.id,
+        id: row.id,
         sport: "football",
         date: new Date(row.kickoff.millis),
         league: {
@@ -59,12 +61,9 @@ export const formatFixture = (
           name: team.name,
           abbr: team.club.abbr,
           shortName: team.shortName,
-          logo: (
-            footballTeamsDataSet.find((tds) => tds.id == team.id) || {
-              image: { url: "" },
-            }
-          ).image.url,
+          score: team.score,
         })),
+        ground: row.ground,
       });
     }
     return arr;
