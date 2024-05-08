@@ -6,10 +6,7 @@ type FootballDetailProps = {
   teamsId: number[];
 };
 
-export const FootballDetail: FC<FootballDetailProps> = ({
-  eventId,
-  teamsId,
-}) => {
+export const FootballDetail: FC<FootballDetailProps> = ({ teamsId }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleChangeTab = (tab: number) => {

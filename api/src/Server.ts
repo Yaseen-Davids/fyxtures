@@ -30,9 +30,9 @@ app.set("view engine", "ejs");
 
 // Serve static assets in production
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.resolve(__dirname, "../../ui")));
+  app.use(express.static(path.resolve(__dirname, "../../ui/dist")));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../../ui", "index.html"));
+    res.sendFile(path.resolve(__dirname, "../../ui/dist", "index.html"));
   });
 }
 

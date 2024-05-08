@@ -29,17 +29,15 @@ const formatDate = (date: string) =>
   });
 
 function App() {
-  const [dateFrom, setDateFrom] = useState(format(new Date(), "yyyy-MM-dd"));
+  const [dateFrom] = useState(format(new Date(), "yyyy-MM-dd"));
   // const [dateTo, setDateTo] = useState(
   //   format(addDays(new Date(), 31), "yyyy-MM-dd")
   // );
-  const [timezone, setTimezone] = useState(
-    Intl.DateTimeFormat().resolvedOptions().timeZone
-  );
-  const [teams, setTeams] = useState([10, 12]);
+  const [timezone] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone);
+  const [teams] = useState([10, 12]);
 
   // TODO: change this to an object for the different sports
-  const [includeFOne, toggleIncludeFOne] = useState(true);
+  const [includeFOne] = useState(true);
 
   const { data, isLoading } = useQuery(
     ["getFixtures", teams, dateFrom, timezone, includeFOne],

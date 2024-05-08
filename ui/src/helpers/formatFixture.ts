@@ -29,6 +29,7 @@ export const formatFixture = (row: any): Fixture | undefined => {
         competition: row.competition.name,
         type: row.type,
         circuit: {
+          id: row.circuit.circuitId,
           name: row.circuit.name,
           image: row.circuit.image,
         },
