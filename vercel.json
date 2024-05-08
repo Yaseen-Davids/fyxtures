@@ -8,15 +8,10 @@
     {
       "src": "ui/dist/**",
       "use": "@vercel/static"
-    },
-    {
-      "src": "api/src/public/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "api/src/Server.ts" },
-    { "src": "/(.*)", "dest": "/ui/dist/$1" },
-    { "src": "/(.*)", "dest": "/api/src/public/$1" }
+    { "src": "/(.*)", "dest": "/ui/dist/$1" }
   ]
 }
