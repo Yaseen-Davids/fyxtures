@@ -10,7 +10,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "ui/src/public/**",
+      "src": "api/src/public/**",
       "use": "@vercel/static"
     }
   ],
