@@ -3,9 +3,9 @@ import { port } from "../Server";
 
 import { getFootballFixtures } from "../calls/football";
 import { getFormulaOneRaces } from "../calls/formulaone";
-import { formatFixture } from "src/utils/formatFixture";
-import { Football } from "src/types/football";
-import { FormulaOneRace } from "src/types/formulaone";
+import { formatFixture } from "../utils/formatFixture";
+import { Football } from "../types/football";
+import { FormulaOneRace } from "../types/formulaone";
 
 const router = Router();
 

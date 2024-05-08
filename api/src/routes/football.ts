@@ -3,7 +3,7 @@ import { footballTeamsDataSet } from "../db/teams";
 import {
   getFootballFixtureById,
   getFootballHeadToHead,
-} from "src/calls/football";
+} from "../calls/football";
 
 const router = Router();
 

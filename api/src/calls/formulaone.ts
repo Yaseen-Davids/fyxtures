@@ -1,6 +1,6 @@
 import axios from "axios";
 import { addMonths } from "date-fns";
-import { FormulaOneResponse, FormulaOneRace } from "src/types/formulaone";
+import { FormulaOneResponse, FormulaOneRace } from "../types/formulaone";
 
 interface FormulaOneRacesProps {
   next?: boolean;

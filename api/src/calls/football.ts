@@ -1,7 +1,7 @@
 import axios from "axios";
-import { Football } from "src/types/football";
-import { FootballEvent } from "src/types/football-event";
-import { HeadToHeadReponse } from "src/types/football-headtohead";
+import { Football } from "../types/football";
+import { FootballEvent } from "../types/football-event";
+import { HeadToHeadReponse } from "../types/football-headtohead";
 
 interface FootballFixtureProps {
   pageSize?: number;
