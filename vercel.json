@@ -6,12 +6,9 @@
       "use": "@vercel/node"
     },
     {
-      "src": "ui/dist",
+      "src": "ui/dist/**/*",
       "use": "@vercel/static"
     }
   ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "api/src/Server.ts" },
-    { "src": "/(.*)", "dest": "ui/dist/$1" }
-  ]
+  "routes": [{ "src": "/api/(.*)", "dest": "api/src/Server.ts" }]
 }
