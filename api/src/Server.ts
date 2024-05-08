@@ -39,4 +39,9 @@ if (process.env.NODE_ENV === "production") {
 const staticDir = path.join(__dirname, "public");
 app.use(express.static(staticDir));
 
+export const port = Number(process.env.PORT || 4000);
+app.listen(port, () => {
+  console.log("Express server started on port: " + port);
+});
+
 export default app;

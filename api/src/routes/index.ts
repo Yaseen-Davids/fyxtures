@@ -1,5 +1,5 @@
 import { Request, Response, Router, NextFunction } from "express";
-import { port } from "../start";
+import { port } from "../Server";
 
 import { getFootballFixtures } from "../calls/football";
 import { getFormulaOneRaces } from "../calls/formulaone";
