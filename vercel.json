@@ -2,7 +2,7 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/ui/(.*)",
+      "source": "/ui/index.html",
       "destination": "/ui/index.html"
     }
   ]
