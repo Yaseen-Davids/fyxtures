@@ -12,7 +12,7 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "api/src/Server.ts" },
-    { "src": "/ui/(.*)", "dest": "ui/dist/$1" },
+    { "src": "/ui/(.*)", "dest": "ui/dist/index.js" },
     { "src": "/(.*)", "dest": "ui/dist/index.html" }
   ]
 }
