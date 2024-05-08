@@ -5,14 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-    rollupOptions: {
-      output: {
-        format: "es",
-        strict: false,
-        entryFileNames: "[name].js",
-        dir: "dist/",
-      },
-    },
+    outDir: "dist",
   },
   server: {
     host: true,
