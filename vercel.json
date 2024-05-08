@@ -2,22 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "/api/src/Server.ts",
+      "src": "api/src/Server.ts",
       "use": "@vercel/node"
     },
     {
-      "src": "/ui/vite.config.js",
-      "use": "@vercel/node"
+      "src": "ui",
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/src/Server.ts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/ui/index.html"
-    }
+    { "src": "/api/(.*)", "dest": "api/src/Server.ts" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/ui/index.html" }
   ]
 }
