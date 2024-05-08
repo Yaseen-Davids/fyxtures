@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "rewrites": [{ "source": "ui/(.*)", "destination": "/" }],
+  "rewrites": [{ "source": "/ui/(.*)", "destination": "/" }],
   "builds": [
     {
       "src": "api/src/Server.ts",
