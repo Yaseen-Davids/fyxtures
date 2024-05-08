@@ -10,17 +10,13 @@
       "use": "@vercel/static"
     },
     {
-      "src": "ui/public/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "api/public/**",
+      "src": "ui/src/public/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "api/src/Server.ts" },
     { "src": "/(.*)", "dest": "/ui/dist/$1" },
-    { "src": "/images/(.*)", "dest": "/api/public/images/$1" }
+    { "src": "/(.*)", "dest": "/api/src/public/images/$1" }
   ]
 }
