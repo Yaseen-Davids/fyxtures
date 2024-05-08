@@ -16,6 +16,7 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "api/src/Server.ts" },
-    { "src": "/(.*)", "dest": "/ui/dist/$1" }
+    { "src": "/(.*)", "dest": "/ui/dist/$1" },
+    { "src": "/(.*)", "dest": "/api/public/$1" }
   ]
 }
