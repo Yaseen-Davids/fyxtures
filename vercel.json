@@ -2,11 +2,11 @@
   "version": 2,
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/api/src/Server.ts",
       "dest": "api/$1"
     },
     {
-      "src": "/ui/(.*)",
+      "src": "/ui/index.html",
       "dest": "ui/$1"
     }
   ]
