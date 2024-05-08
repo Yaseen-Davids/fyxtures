@@ -1,12 +1,22 @@
 {
   "version": 2,
-  "routes": [
+  "builds": [
     {
       "src": "/api/src/Server.ts",
-      "dest": "api/$1"
+      "use": "@vercel/node"
     },
     {
       "src": "/ui/index.html",
+      "use": "vite"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/src/(.*)",
+      "dest": "api/$1"
+    },
+    {
+      "src": "/ui/(.*)",
       "dest": "ui/$1"
     }
   ]
