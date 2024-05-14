@@ -16,9 +16,8 @@ export const getFormulaOneRaces = async ({
   // only show next races from current date
   if (next) {
     return data.MRData.RaceTable.Races.filter(
-      (row) =>
-        new Date(row.date) >= new Date() &&
-        new Date(row.date) <= addMonths(new Date(), 1)
+      (row) => new Date(row.date) >= new Date()
+      // && new Date(row.date) <= addMonths(new Date(), 2)
     ).sort((a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf());
   }
 

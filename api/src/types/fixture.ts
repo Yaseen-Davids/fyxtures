@@ -25,6 +25,11 @@ export type FixtureGround = {
   id: number;
 };
 
+export type FixtureClock = {
+  secs: number;
+  label: string;
+};
+
 export type Fixture = {
   id?: number;
   sport: "football" | "formula-one";
@@ -36,4 +41,6 @@ export type Fixture = {
   image?: string;
   circuit?: FixtureCircuit;
   ground?: FixtureGround;
+  clock?: FixtureClock;
+  raceName?: string;
 };

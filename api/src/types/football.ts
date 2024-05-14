@@ -15,6 +15,12 @@ export interface Football {
   penaltyShootouts:   any[];
   behindClosedDoors:  boolean;
   id:                 number;
+  clock:              Clock;      
+}
+
+export interface Clock {
+  secs: number;
+  label: string;
 }
 
 export interface Gameweek {
@@ -60,6 +66,7 @@ export interface Kickoff {
 
 export interface TeamElement {
   team: TeamTeam;
+  score: number;
 }
 
 export interface TeamTeam {

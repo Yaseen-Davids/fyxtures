@@ -2,6 +2,14 @@ import { Fixture } from "../types/fixture";
 import { Football } from "../types/football";
 import { FormulaOneRace } from "../types/formulaone";
 
+const formatRaceType: { [index: string]: string } = {
+  FirstPractice: "1st Practice",
+  SecondPractice: "2nd Practice",
+  ThirdPractice: "3rd Practice",
+  Qualifying: "Qualifying",
+  Sprint: "Sprint",
+};
+
 export const formatFixture = (
   data: (Football & FormulaOneRace)[]
 ): Fixture[] => {
@@ -13,6 +21,7 @@ export const formatFixture = (
         date: new Date(`${row.date} ${row.time}`),
         competition: row.raceName,
         type: "Race",
+        raceName: `${row.Circuit.Location.country} GP`,
         circuit: {
           name: row.Circuit.circuitName,
           image: "",
@@ -39,7 +48,8 @@ export const formatFixture = (
             type:
               row["Sprint"] && event === "SecondPractice"
                 ? "Sprint Qualifying"
-                : event.replace(/([A-Z])/g, " $1").trim(), // add space between capital letters
+                : formatRaceType[event],
+            raceName: `${row.Circuit.Location.country} GP`,
             circuit: {
               name: row.Circuit.circuitName,
               image: "",
@@ -56,14 +66,15 @@ export const formatFixture = (
         league: {
           name: row.gameweek.compSeason.competition.description,
         },
-        teams: row.teams.map(({ team }) => ({
+        teams: row.teams.map(({ team, score }) => ({
           id: team.id,
           name: team.name,
           abbr: team.club.abbr,
           shortName: team.shortName,
-          score: team.score,
+          score: score,
         })),
         ground: row.ground,
+        clock: row.clock,
       });
     }
     return arr;

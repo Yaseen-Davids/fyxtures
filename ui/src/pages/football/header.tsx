@@ -13,17 +13,17 @@ type HeaderProps = {
 export const Header: FC<HeaderProps> = ({ fixture }) => {
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex justify-center gap-6 text-xxs md:text-xs text-gray-200">
+      <div className="flex justify-center gap-6 text-xs text-gray-200">
         <div className="flex flex-row gap-1 items-center">
-          <CalendarIcon className="w-2 md:w-4 md:h-4" />
+          <CalendarIcon className="w-3" />
           <p>{format(new Date(fixture.kickoff.millis!), "MMM, dd MMM yyyy")}</p>
         </div>
         <div className="flex flex-row gap-1 items-center">
-          <ClockIcon className="w-2 md:w-4 md:h-4" />
+          <ClockIcon className="w-3" />
           <p>Kick Off: {format(new Date(fixture.kickoff.millis!), "kk:mm")}</p>
         </div>
         <div className="flex flex-row gap-1 items-center">
-          <MapIcon className="w-2 md:w-4 md:h-4" />
+          <MapIcon className="w-3" />
           <p>
             {fixture.ground.name}, {fixture.ground.city}
           </p>
@@ -32,7 +32,7 @@ export const Header: FC<HeaderProps> = ({ fixture }) => {
       <div className="grid grid-cols-[2fr_1fr_2fr] font-bold rounded bg-slate-800 p-2">
         <HeaderTeam team={fixture.teams[0]} />
         <div className="text-center">
-          <p className="text-3xl md:text-7xl">
+          <p className="text-4xl md:text-7xl">
             {format(new Date(fixture.kickoff.millis!), "kk:mm")}
           </p>
         </div>
@@ -49,10 +49,10 @@ const HeaderTeam: FC<{ team: Teams; right?: boolean }> = ({ team, right }) => {
         right ? "flex-row-reverse" : "flex-row"
       }`}
     >
-      <div className="w-6 h-6 md:w-20 md:h-20">
+      <div className="w-10 h-10 md:w-20 md:h-20">
         <FootballImage teamId={team.team.id} />
       </div>
-      <p className="text-md md:text-3xl">{team.team.shortName}</p>
+      <p className="text-2xl md:text-3xl">{team.team.shortName}</p>
     </div>
   );
 };
