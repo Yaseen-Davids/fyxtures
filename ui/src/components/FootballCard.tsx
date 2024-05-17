@@ -67,16 +67,19 @@ type FootballCardDetailProps = {
 };
 
 const FootballCardDetail: FC<FootballCardDetailProps> = ({ home, teams }) => {
-  return (
-    <div
-      className={`grid grid-cols-[1fr_25px] sm:grid-cols-[1fr_30px] gap-3 items-center font-bold ${
-        home ? "flex-row-reverse" : "flex-row"
-      }`}
-    >
+  return home ? (
+    <div className="grid grid-cols-[1fr_25px] sm:grid-cols-[1fr_30px] gap-3 items-center font-bold">
       <p className="text-right">{teams.shortName}</p>
       <div>
         <FootballImage teamId={teams.id} />
       </div>
+    </div>
+  ) : (
+    <div className="grid grid-cols-[25px_1fr] sm:grid-cols-[30px_1fr] gap-3 items-center font-bold">
+      <div>
+        <FootballImage teamId={teams.id} />
+      </div>
+      <p className="text-left">{teams.shortName}</p>
     </div>
   );
 };
