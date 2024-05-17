@@ -42,7 +42,7 @@ export const PreviousRace: FC<PreviousRaceProps> = ({ raceId }) => {
           {data?.data.Results.map((row, i) => (
             <tr
               key={i}
-              className={`border-b dark:border-gray-700 ${
+              className={`${
                 i % 2 == 0 ? "dark:bg-gray-800" : "dark:bg-gray-700"
               }`}
             >

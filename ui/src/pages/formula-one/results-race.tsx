@@ -36,12 +36,12 @@ export const RaceWinners: FC<RaceWinnersProps> = ({ raceId }) => {
             <th className="px-2 sm:px-6 py-2 sm:py-3">No</th>
             <th className="px-2 sm:px-6 py-2 sm:py-3">Driver</th>
             <th className="px-2 sm:px-6 py-2 sm:py-3">Team</th>
-            <th className="px-2 sm:px-6 py-2 sm:py-3">Fastest Lap Time</th>
+            <th className="px-2 sm:px-6 py-2 sm:py-3">Time</th>
           </tr>
           {data?.data.map((row, i) => (
             <tr
               key={i}
-              className={`border-b dark:border-gray-700 ${
+              className={`${
                 i % 2 == 0 ? "dark:bg-gray-800" : "dark:bg-gray-700"
               }`}
             >

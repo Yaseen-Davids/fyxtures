@@ -48,7 +48,7 @@ const HeaderTime: FC<{ time: number }> = ({ time }) => (
 
 const HeaderTeam: FC<{ team: Teams; right?: boolean }> = ({ team, right }) => (
   <div
-    className={`flex items-center gap-6 ${
+    className={`flex items-center gap-2 sm:gap-6 ${
       right ? "flex-row-reverse" : "flex-row"
     }`}
   >

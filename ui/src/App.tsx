@@ -10,6 +10,7 @@ import { Fixture } from "./types/Fixture";
 import { FootballCard } from "./components/FootballCard";
 import { FormulaOneCard } from "./components/FormulaOneCard";
 import { LoadingSpinner } from "./components/LoadingSpinner";
+import { NextEvent } from "./components/NextEvent";
 
 const formatRelativeLocale = {
   other: "EEEE, dd MMM yyyy",
@@ -73,32 +74,35 @@ function App() {
     );
 
   return (
-    // <div className="flex flex-col items-center gap-4 md:gap-10 p-4">
-    //   <div></div>
-    <div className="flex flex-col items-center gap-4 md:gap-10 p-4">
-      {Object.keys(grouped)
-        .sort()
-        .map((date) => (
-          <div key={date} className="flex flex-col gap-2 w-full">
-            <p className="font-bold text-gray-200 capitalize text-sm sm:text-lg">
-              {formatDate(date)}
-            </p>
-            {grouped[date]
-              .sort(
-                (a, b) =>
-                  new Date(a.date).valueOf() - new Date(b.date).valueOf()
-              )
-              .map((event: Fixture, index: number) =>
-                event.sport === "football" ? (
-                  <FootballCard key={`${event.id}-${index}`} event={event} />
-                ) : (
-                  <FormulaOneCard key={`${event.id}-${index}`} event={event} />
+    <div className="flex flex-col gap-4 md:gap-10 p-4">
+      <NextEvent data={data?.data} />
+      <div className="flex flex-col items-center gap-4 md:gap-10">
+        {Object.keys(grouped)
+          .sort()
+          .map((date) => (
+            <div key={date} className="flex flex-col gap-2 w-full">
+              <p className="font-bold text-gray-200 capitalize text-sm sm:text-lg">
+                {formatDate(date)}
+              </p>
+              {grouped[date]
+                .sort(
+                  (a, b) =>
+                    new Date(a.date).valueOf() - new Date(b.date).valueOf()
                 )
-              )}
-          </div>
-        ))}
+                .map((event: Fixture, index: number) =>
+                  event.sport === "football" ? (
+                    <FootballCard key={`${event.id}-${index}`} event={event} />
+                  ) : (
+                    <FormulaOneCard
+                      key={`${event.id}-${index}`}
+                      event={event}
+                    />
+                  )
+                )}
+            </div>
+          ))}
+      </div>
     </div>
-    // </div>
   );
 }
 

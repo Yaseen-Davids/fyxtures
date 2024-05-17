@@ -20,7 +20,7 @@ export const FootballCard: FC<FootballCardProps> = ({ event, completed }) => {
   return (
     <Link to={`/football/${id}`}>
       <div className="flex flex-col items-center bg-gray-800 rounded p-2 sm:p-4 h-full gap-2 sm:gap-2 relative hover:bg-gray-700 cursor-pointer text-xs sm:text-sm">
-        <div className="flex flex-row gap-4 text-gray-400">
+        <div className="flex flex-row gap-4 text-gray-400 text-xxs sm:text-sm">
           {completed && (
             <div className="flex flex-row gap-1">
               <CalendarDaysIcon className="w-3" />
@@ -45,7 +45,7 @@ export const FootballCard: FC<FootballCardProps> = ({ event, completed }) => {
           )}
           <FootballCardDetail teams={teams![1]} />
         </div>
-        <div className="w-full text-center">
+        <div className="w-full text-center text-xxs sm:text-sm">
           <p className="text-gray-400 leading-0">
             <span>{league!.name}</span>
           </p>
@@ -67,19 +67,16 @@ type FootballCardDetailProps = {
 };
 
 const FootballCardDetail: FC<FootballCardDetailProps> = ({ home, teams }) => {
-  return home ? (
-    <div className="grid grid-cols-[1fr_25px] sm:grid-cols-[1fr_30px] gap-3 items-center font-bold">
+  return (
+    <div
+      className={`grid grid-cols-[1fr_25px] sm:grid-cols-[1fr_30px] gap-3 items-center font-bold ${
+        home ? "flex-row-reverse" : "flex-row"
+      }`}
+    >
       <p className="text-right">{teams.shortName}</p>
       <div>
         <FootballImage teamId={teams.id} />
       </div>
-    </div>
-  ) : (
-    <div className="grid grid-cols-[25px_1fr] sm:grid-cols-[30px_1fr] gap-3 items-center font-bold">
-      <div>
-        <FootballImage teamId={teams.id} />
-      </div>
-      <p className="text-left">{teams.shortName}</p>
     </div>
   );
 };
