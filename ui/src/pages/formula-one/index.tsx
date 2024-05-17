@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 import axios from "axios";
-import { useParams, useLocation, useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 
 import { BackButton } from "../../components/BackButton";
