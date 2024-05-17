@@ -28,10 +28,10 @@ export const NextEvent: FC<NextEventProps> = ({ data }) => {
   return (
     <div className="flex flex-col gap-1">
       <p className="font-bold text-gray-200 capitalize text-lg sm:text-lg">
-        Next Events:
+        Next Events
       </p>
-      <div className="flex flex-row gap-4 rounded">
-        <div className="flex flex-row gap-2 rounded bg-gray-800 p-4">
+      <div className="flex flex-col sm:flex-row gap-4 rounded">
+        <div className="flex flex-row gap-4 rounded bg-gray-800 p-4">
           <div className="flex self-center">
             <img
               className="max-w-6 max-h-6"
@@ -40,8 +40,8 @@ export const NextEvent: FC<NextEventProps> = ({ data }) => {
             />
           </div>
           {nextFootballEvent ? (
-            <div className="flex flex-col gap-1 text-xs sm:text-base">
-              <p className="">
+            <div className="flex flex-col gap-0 text-xs sm:text-base">
+              <p className="text-xs">
                 {format(nextFootballEvent?.date, "EEEE, dd MMM yyyy HH:mm")}
               </p>
               <p className="font-bold">
@@ -50,18 +50,22 @@ export const NextEvent: FC<NextEventProps> = ({ data }) => {
               </p>
             </div>
           ) : (
-            <div>
-              <p>No upcoming football events</p>
+            <div className="flex items-center">
+              <p className="text-xs">No upcoming football events</p>
             </div>
           )}
         </div>
-        <div className="flex flex-row gap-2 rounded bg-gray-800 p-4">
+        <div className="flex flex-row gap-4 rounded bg-gray-800 p-4">
           <div className="flex self-center">
-            <img className="max-w-8 max-h-8" alt="F1 Logo" src="/F1-Logo.png" />
+            <img
+              className="max-w-6 max-h-6 sm:max-w-8"
+              alt="F1 Logo"
+              src="/F1-Logo.png"
+            />
           </div>
           {nextFormulaOneEvent ? (
-            <div className="flex flex-col gap-1 text-xs sm:text-base">
-              <p className="">
+            <div className="flex flex-col gap-0 text-xs sm:text-base">
+              <p className="text-xs">
                 {format(nextFormulaOneEvent?.date, "EEEE, dd MMM yyyy HH:mm")}
               </p>
               <p className="font-bold">
@@ -69,8 +73,8 @@ export const NextEvent: FC<NextEventProps> = ({ data }) => {
               </p>
             </div>
           ) : (
-            <div>
-              <p>No upcoming F1 Events</p>
+            <div className="flex items-center">
+              <p className="text-xs">No upcoming F1 events</p>
             </div>
           )}
         </div>
