@@ -2,7 +2,7 @@ import { Request, Response, Router, NextFunction } from "express";
 import { port } from "../Server";
 
 import { getFootballFixtures } from "../calls/football";
-import { getFormulaOneRaces } from "../calls/formulaone";
+import { getFormulaOneRaces } from "../calls/formula-one";
 import { formatFixture } from "../utils/formatFixture";
 import { Football } from "../types/football";
 import { FormulaOneRace } from "../types/formulaone";

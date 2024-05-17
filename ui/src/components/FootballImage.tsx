@@ -15,5 +15,5 @@ export const FootballImage: FC<FootballImageProps> = ({ teamId }) => {
 
   if (isLoading) return <LoadingSpinner />;
 
-  return <img src={data?.data.url} alt="Football Image" />;
+  return <img className="w-full" src={data?.data.url} alt="Football Image" />;
 };

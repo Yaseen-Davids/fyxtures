@@ -1,8 +1,9 @@
 import { FC, useMemo } from "react";
 
-import { useQuery } from "@tanstack/react-query";
-import { HeadToHeadReponse } from "../../types/football-headtohead";
 import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
+
+import { HeadToHeadReponse } from "../../types/football-headtohead";
 import { LoadingSpinner } from "../../components/LoadingSpinner";
 import { FootballCard } from "../../components/FootballCard";
 import { StatsBar } from "../../components/StatsBar";
@@ -54,11 +55,15 @@ export const HeadToHead: FC<HeadToHeadProps> = ({ teamsId }) => {
   return (
     <div className="flex flex-col gap-4 w-full p-4">
       <div className="flex flex-col gap-2">
-        <h3 className="font-bold text-xl">Stats</h3>
+        <h3 className="font-bold text-sm sm:text-base md:text-2xl">Stats</h3>
         <div>
-          <div className="h-20 flex flex-row justify-between pl-20 pr-20">
-            <FootballImage teamId={teamsId[0]} />
-            <FootballImage teamId={teamsId[1]} />
+          <div className="h-10 md:h-20 flex flex-row justify-between pl-8 pr-8 md:pl-20 md:pr-20">
+            <div className="w-10 h-10 md:w-20 md:h-20">
+              <FootballImage teamId={teamsId[0]} />
+            </div>
+            <div className="w-10 h-10 md:w-20 md:h-20">
+              <FootballImage teamId={teamsId[1]} />
+            </div>
           </div>
         </div>
         <div>
@@ -114,7 +119,9 @@ export const HeadToHead: FC<HeadToHeadProps> = ({ teamsId }) => {
         </div>
       </div>
       <div className="flex flex-col gap-2">
-        <h3 className="font-bold text-xl">Recent Premier League Meetings</h3>
+        <h3 className="font-bold text-sm md:text-2xl">
+          Recent Premier League Meetings
+        </h3>
         {data?.data.headToHeads.map((event, index) => (
           <FootballCard
             completed

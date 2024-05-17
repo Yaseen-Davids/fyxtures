@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        xxs: "0.45rem",
+        xxs: "0.5rem",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

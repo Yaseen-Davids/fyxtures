@@ -8,6 +8,7 @@ import cors from "cors";
 // import BaseRouter from "./routes";
 import indexRouter from "./routes/index";
 import footballRouter from "./routes/football";
+import formulaOneRouter from "./routes/formula-one";
 
 // Init express
 const app = express();
@@ -24,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/api", indexRouter);
 app.use("/api/football", footballRouter);
+app.use("/api/formula-one", formulaOneRouter);
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");

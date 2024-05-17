@@ -73,12 +73,12 @@ function App() {
     );
 
   return (
-    <div className="flex flex-col items-center gap-8 md:gap-10 p-4">
+    <div className="flex flex-col items-center gap-4 md:gap-10 p-4">
       {Object.keys(grouped)
         .sort()
         .map((date) => (
           <div key={date} className="flex flex-col gap-2 w-full">
-            <p className="font-bold text-gray-200 capitalize">
+            <p className="font-bold text-gray-200 capitalize text-sm sm:text-lg">
               {formatDate(date)}
             </p>
             {grouped[date]

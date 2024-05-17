@@ -1,12 +1,12 @@
 import { FC, useState } from "react";
-import { HeadToHead } from "./headtohead";
+import { RaceWinners } from "./results-race";
+import { PreviousRace } from "./previous-race";
 
-type FootballDetailProps = {
-  eventId: number;
-  teamsId: number[];
+type FormulaOneDetailProps = {
+  raceId: string;
 };
 
-export const FootballDetail: FC<FootballDetailProps> = ({ teamsId }) => {
+export const FormulaOneDetail: FC<FormulaOneDetailProps> = ({ raceId }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleChangeTab = (tab: number) => {
@@ -22,7 +22,7 @@ export const FootballDetail: FC<FootballDetailProps> = ({ teamsId }) => {
           } p-2 rounded-l-lg hover:bg-slate-700 cursor-pointer`}
           onClick={() => handleChangeTab(0)}
         >
-          <p>Head to Head</p>
+          <p>Results</p>
         </div>
         <div
           className={`transition ease-in-out text-center ${
@@ -30,10 +30,16 @@ export const FootballDetail: FC<FootballDetailProps> = ({ teamsId }) => {
           } p-2 rounded-r-lg hover:bg-slate-700 cursor-pointer`}
           onClick={() => handleChangeTab(1)}
         >
-          <p>Predictions</p>
+          <p>Last Race Results</p>
         </div>
       </div>
-      <div>{activeTab === 0 ? <HeadToHead teamsId={teamsId} /> : <></>}</div>
+      <div>
+        {activeTab === 0 ? (
+          <RaceWinners raceId={raceId} />
+        ) : (
+          <PreviousRace raceId={raceId} />
+        )}
+      </div>
     </div>
   );
 };
