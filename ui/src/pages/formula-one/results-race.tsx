@@ -1,8 +1,9 @@
 import { FC } from "react";
-import { FormulaOneRaceWinResults } from "../../types/formula-one-win";
-import { LoadingSpinner } from "../../components/LoadingSpinner";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
+
+import { FormulaOneRaceWinResults } from "../../types/formula-one-win";
+import { LoadingSpinner } from "../../components/LoadingSpinner";
 
 type RaceWinnersProps = {
   raceId: string;
@@ -31,11 +32,11 @@ export const RaceWinners: FC<RaceWinnersProps> = ({ raceId }) => {
         </h3>
         <table className="w-full text-xxs sm:text-xs text-left rtl:text-right text-gray-500 dark:text-gray-400 rounded">
           <tr className="text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <th className="px-1 sm:px-6 py-1 sm:py-3">Season</th>
-            <th className="px-1 sm:px-6 py-1 sm:py-3">No</th>
-            <th className="px-1 sm:px-6 py-1 sm:py-3">Driver</th>
-            <th className="px-1 sm:px-6 py-1 sm:py-3">Team</th>
-            <th className="px-1 sm:px-6 py-1 sm:py-3">Fastest Lap Time</th>
+            <th className="px-2 sm:px-6 py-2 sm:py-3">Season</th>
+            <th className="px-2 sm:px-6 py-2 sm:py-3">No</th>
+            <th className="px-2 sm:px-6 py-2 sm:py-3">Driver</th>
+            <th className="px-2 sm:px-6 py-2 sm:py-3">Team</th>
+            <th className="px-2 sm:px-6 py-2 sm:py-3">Fastest Lap Time</th>
           </tr>
           {data?.data.map((row, i) => (
             <tr
@@ -44,15 +45,15 @@ export const RaceWinners: FC<RaceWinnersProps> = ({ raceId }) => {
                 i % 2 == 0 ? "dark:bg-gray-800" : "dark:bg-gray-700"
               }`}
             >
-              <td className="px-1 sm:px-6 py-1 sm:py-3">{row.season}</td>
-              <td className="px-1 sm:px-6 py-1 sm:py-3">
+              <td className="px-2 sm:px-6 py-2 sm:py-3">{row.season}</td>
+              <td className="px-2 sm:px-6 py-2 sm:py-3">
                 {row.Results[0].number}
               </td>
-              <td className="px-1 sm:px-6 py-1 sm:py-3">{`${row.Results[0].Driver.givenName} ${row.Results[0].Driver.familyName}`}</td>
-              <td className="px-1 sm:px-6 py-1 sm:py-3">
+              <td className="px-2 sm:px-6 py-2 sm:py-3">{`${row.Results[0].Driver.givenName} ${row.Results[0].Driver.familyName}`}</td>
+              <td className="px-2 sm:px-6 py-2 sm:py-3">
                 {row.Results[0].Constructor.name}
               </td>
-              <td className="px-1 sm:px-6 py-1 sm:py-3">
+              <td className="px-2 sm:px-6 py-2 sm:py-3">
                 {row.Results[0].Time.time}
               </td>
             </tr>

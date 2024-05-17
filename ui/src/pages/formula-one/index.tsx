@@ -4,7 +4,7 @@ import axios from "axios";
 import { useParams, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 
-import { BackButton } from "../../components/BackButton";
+// import { BackButton } from "../../components/BackButton";
 import { Header } from "./header";
 import { FormulaOneDetail } from "./detail";
 import { LoadingSpinner } from "../../components/LoadingSpinner";
@@ -31,7 +31,7 @@ const FormulaOne: FC<FormulaOneProps> = ({}) => {
 
   return (
     <div className="p-4 relative">
-      <BackButton />
+      {/* <BackButton /> */}
       <div className="flex flex-col gap-4">
         <Header race={data!.data} raceType={raceType || "Race"} />
         <FormulaOneDetail raceId={raceId || ""} />

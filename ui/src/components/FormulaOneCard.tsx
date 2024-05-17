@@ -14,13 +14,13 @@ export const FormulaOneCard: FC<FormulaOneCardProps> = ({ event }) => {
 
   return (
     <Link to={`/formula-one/${circuit?.id}?type=${type}`}>
-      <div className="flex flex-col items-center bg-gray-800 rounded p-2 sm:p-4 h-full gap-1 sm:gap-2 text-xs md:text-sm relative hover:bg-gray-700 cursor-pointer text-xxs sm:text-sm">
+      <div className="flex flex-col items-center bg-gray-800 rounded p-2 sm:p-4 h-full gap-2 sm:gap-2 relative hover:bg-gray-700 cursor-pointer text-xs sm:text-sm">
         <div className="flex flex-row gap-1 text-center text-gray-400">
           <GlobeAsiaAustraliaIcon className="w-3" />
           <p className="text-gray-400 leading-0">{circuit!.name}</p>
         </div>
         <div className="grid grid-cols-[1fr_50px_1fr] items-center gap-2 sm:gap-5">
-          <div className="grid grid-cols-[1fr_25px] sm:grid-cols-[1fr_30px] gap-2 items-center">
+          <div className="grid grid-cols-[1fr_25px] sm:grid-cols-[1fr_30px] gap-3 items-center">
             <p className="font-bold text-right">{raceName}</p>
             <div className="w-full">
               <img
@@ -33,7 +33,7 @@ export const FormulaOneCard: FC<FormulaOneCardProps> = ({ event }) => {
           <p className="border rounded p-1 sm:p-2 border-slate-500 justify-self-center text-nowrap">
             {format(date, "kk:mm")}
           </p>
-          <div className="grid grid-cols-[25px_1fr] sm:grid-cols-[30px_1fr gap-2 items-center">
+          <div className="grid grid-cols-[25px_1fr] sm:grid-cols-[30px_1fr gap-3 items-center">
             <div className="w-full">
               <img
                 className="w-6 sm:w-full"

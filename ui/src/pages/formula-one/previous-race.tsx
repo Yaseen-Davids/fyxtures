@@ -33,11 +33,11 @@ export const PreviousRace: FC<PreviousRaceProps> = ({ raceId }) => {
         </h3>
         <table className="w-full text-xxs sm:text-xs text-left rtl:text-right text-gray-500 dark:text-gray-400 rounded">
           <tr className="text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <th className="px-1 sm:px-6 py-1 sm:py-3">Pos</th>
-            <th className="px-1 sm:px-6 py-1 sm:py-3">No</th>
-            <th className="px-1 sm:px-6 py-1 sm:py-3">Driver</th>
-            <th className="px-1 sm:px-6 py-1 sm:py-3">Team</th>
-            <th className="px-1 sm:px-6 py-1 sm:py-3">Time</th>
+            <th className="px-2 sm:px-6 py-2 sm:py-3">Pos</th>
+            <th className="px-2 sm:px-6 py-2 sm:py-3">No</th>
+            <th className="px-2 sm:px-6 py-2 sm:py-3">Driver</th>
+            <th className="px-2 sm:px-6 py-2 sm:py-3">Team</th>
+            <th className="px-2 sm:px-6 py-2 sm:py-3">Time</th>
           </tr>
           {data?.data.Results.map((row, i) => (
             <tr
@@ -46,13 +46,13 @@ export const PreviousRace: FC<PreviousRaceProps> = ({ raceId }) => {
                 i % 2 == 0 ? "dark:bg-gray-800" : "dark:bg-gray-700"
               }`}
             >
-              <td className="px-1 sm:px-6 py-1 sm:py-3">{row.position}</td>
-              <td className="px-1 sm:px-6 py-1 sm:py-3">{row.number}</td>
-              <td className="px-1 sm:px-6 py-1 sm:py-3">{`${row.Driver.givenName} ${row.Driver.familyName}`}</td>
-              <td className="px-1 sm:px-6 py-1 sm:py-3">
+              <td className="px-2 sm:px-6 py-2 sm:py-3">{row.position}</td>
+              <td className="px-2 sm:px-6 py-2 sm:py-3">{row.number}</td>
+              <td className="px-2 sm:px-6 py-2 sm:py-3">{`${row.Driver.givenName} ${row.Driver.familyName}`}</td>
+              <td className="px-2 sm:px-6 py-2 sm:py-3">
                 {row.Constructor.name}
               </td>
-              <td className="px-1 sm:px-6 py-1 sm:py-3">
+              <td className="px-2 sm:px-6 py-2 sm:py-3">
                 {row.Time
                   ? row.Time.time
                   : row.positionText == row.position

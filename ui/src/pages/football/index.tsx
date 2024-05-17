@@ -4,7 +4,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 
-import { BackButton } from "../../components/BackButton";
+// import { BackButton } from "../../components/BackButton";
 import { Header } from "./header";
 import { FootballDetail } from "./detail";
 import { FootballEvent } from "../../types/Football-Event";
@@ -34,7 +34,7 @@ const Football: FC<FootballProps> = ({}) => {
 
   return (
     <div className="p-4 relative">
-      <BackButton />
+      {/* <BackButton /> */}
       <div className="flex flex-col gap-4">
         <Header fixture={fixture!.data} />
         <FootballDetail eventId={parseInt(footballId || "")} teamsId={teams} />
