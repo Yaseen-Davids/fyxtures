@@ -5,6 +5,7 @@ import {
   FormulaOneRaceWin,
   FormulaOneRaceWinResults,
 } from "../types/formula-one-win";
+import { format } from "date-fns";
 
 interface FormulaOneRacesProps {
   next?: boolean;
@@ -20,7 +21,9 @@ export const getFormulaOneRaces = async ({
   // only show next races from current date
   if (next) {
     return data.MRData.RaceTable.Races.filter(
-      (row) => new Date(row.date) >= new Date()
+      (row) =>
+        format(new Date(row.date), "yyyy-MM-dd") >=
+        format(new Date(), "yyyy-MM-dd")
       // && new Date(row.date) <= addMonths(new Date(), 2)
     ).sort((a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf());
   }

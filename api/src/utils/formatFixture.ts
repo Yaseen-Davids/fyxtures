@@ -2,6 +2,8 @@ import { Fixture } from "../types/fixture";
 import { Football } from "../types/football";
 import { FormulaOneRace } from "../types/formulaone";
 
+import { format } from "date-fns";
+
 const formatRaceType: { [index: string]: string } = {
   FirstPractice: "1st Practice",
   SecondPractice: "2nd Practice",
@@ -38,7 +40,11 @@ export const formatFixture = (
       ];
 
       for (const event of f1events) {
-        if ((row as any)[event]) {
+        if (
+          (row as any)[event] &&
+          format((row as any)[event].date, "yyyy-MM-dd") >=
+            format(new Date(), "yyyy-MM-dd")
+        ) {
           arr.push({
             sport: "formula-one",
             date: new Date(
