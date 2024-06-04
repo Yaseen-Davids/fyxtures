@@ -34,7 +34,7 @@ router.get(
     try {
       const { teamId } = req.params;
       const url = footballTeamsDataSet.find(
-        (tds) => tds.id == parseInt(teamId)
+        (tds) => tds.teamId == parseInt(teamId)
       )!.image.url;
       return res.json({ url });
     } catch (err) {
