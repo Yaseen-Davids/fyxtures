@@ -71,15 +71,15 @@ function App() {
 
   // TODO: Cleanup
   return (
-    <div className="grid grid-rows-[1fr] lg:grid-cols-[1fr_2fr_1fr] lg:grid-rows-[1fr] p-4 gap-4">
-      <div className="flex flex-col gap-3">
-        <div className="bg-gray-800 rounded p-1 py-2 pl-2">
+    <div className="grid grid-rows-[1fr] lg:grid-cols-[1fr_2fr_1fr] lg:grid-rows-[1fr]">
+      <div className="flex flex-col">
+        <div className="py-2 pl-4 pr-4">
           <h3 className="font-bold text-3xl text-gray-300">Fyxtures</h3>
           <p className="text-xs text-gray-400">
             One place for all your sporting fixtures
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row gap-2">
+        <div className="flex flex-col sm:flex-row gap-2 p-4">
           <div className="bg-gray-900 p-2 rounded w-full h-full">
             <ComboBox
               loading={isLoadingTeams}
@@ -97,7 +97,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4 md:gap-10">
+      <div className="flex flex-col gap-4 md:gap-10 p-4">
         <NextEvent data={data?.data || []} includeFOne={includeFOne} />
         <div>
           <p className="font-bold text-gray-200 capitalize text-lg sm:text-lg">
