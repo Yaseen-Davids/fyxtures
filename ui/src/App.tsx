@@ -79,20 +79,22 @@ function App() {
             One place for all your sporting fixtures
           </p>
         </div>
-        <div className="bg-gray-900 p-2 rounded">
-          <ComboBox
-            loading={isLoadingTeams}
-            data={teamsData?.data.teams || []}
-            selected={teams}
-            setSelected={setSelected}
-          />
-        </div>
-        <div className="bg-gray-900 p-2 rounded">
-          <Toggle
-            enabled={includeFOne}
-            setEnabled={toggleIncludeFOne}
-            label="Show Formula One"
-          />
+        <div className="flex flex-col sm:flex-row gap-2">
+          <div className="bg-gray-900 p-2 rounded w-full h-full">
+            <ComboBox
+              loading={isLoadingTeams}
+              data={teamsData?.data.teams || []}
+              selected={teams}
+              setSelected={setSelected}
+            />
+          </div>
+          <div className="bg-gray-900 p-2 rounded w-full h-10">
+            <Toggle
+              enabled={includeFOne}
+              setEnabled={toggleIncludeFOne}
+              label="Show Formula One"
+            />
+          </div>
         </div>
       </div>
       <div className="flex flex-col gap-4 md:gap-10">
