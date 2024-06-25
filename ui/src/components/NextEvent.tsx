@@ -38,8 +38,8 @@ export const NextEvent: FC<NextEventProps> = ({ data, includeFOne }) => {
       <p className="font-bold text-gray-200 capitalize text-lg sm:text-lg">
         Upcoming Events
       </p>
-      <div className="flex flex-col sm:flex-row gap-4 rounded">
-        <div className="flex flex-row gap-4 rounded bg-gray-800 p-4">
+      <div className="grid grid-cols-[1fr_1fr] sm:flex-row gap-4 rounded">
+        <div className="flex flex-row gap-4 rounded bg-gray-800 p-2">
           <div className="flex self-center">
             <img
               className="max-w-6 max-h-6"
@@ -50,7 +50,7 @@ export const NextEvent: FC<NextEventProps> = ({ data, includeFOne }) => {
           {nextFootballEvent ? (
             <div className="flex flex-col gap-1 text-xs sm:text-base">
               <p className="text-xs">
-                {format(nextFootballEvent?.date, "EEEE, dd MMM yyyy HH:mm")}
+                {format(nextFootballEvent?.date, "dd MMM yyyy HH:mm")}
               </p>
               <p className="font-bold">
                 {(nextFootballEvent?.teams || [])[0].shortName} vs{" "}
@@ -64,7 +64,7 @@ export const NextEvent: FC<NextEventProps> = ({ data, includeFOne }) => {
           )}
         </div>
         {includeFOne && (
-          <div className="flex flex-row gap-4 rounded bg-gray-800 p-4">
+          <div className="flex flex-row gap-4 rounded bg-gray-800 p-2">
             <div className="flex self-center">
               <img
                 className="max-w-6 max-h-6 sm:max-w-8"
@@ -75,11 +75,9 @@ export const NextEvent: FC<NextEventProps> = ({ data, includeFOne }) => {
             {nextFormulaOneEvent ? (
               <div className="flex flex-col gap-1 text-xs sm:text-base">
                 <p className="text-xs">
-                  {format(nextFormulaOneEvent?.date, "EEEE, dd MMM yyyy HH:mm")}
+                  {format(nextFormulaOneEvent?.date, "dd MMM yyyy HH:mm")}
                 </p>
-                <p className="font-bold">
-                  {nextFormulaOneEvent.raceName} - {nextFormulaOneEvent.type}
-                </p>
+                <p className="font-bold">{nextFormulaOneEvent.type}</p>
               </div>
             ) : (
               <div className="flex items-center">

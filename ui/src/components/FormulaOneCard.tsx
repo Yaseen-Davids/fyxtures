@@ -14,7 +14,7 @@ export const FormulaOneCard: FC<FormulaOneCardProps> = ({ event }) => {
 
   return (
     <Link to={`/formula-one/${circuit?.id}?type=${type}`}>
-      <div className="flex flex-col items-center bg-gray-800 rounded p-2 sm:p-4 h-full gap-2 sm:gap-2 relative hover:bg-gray-700 cursor-pointer text-xs sm:text-sm">
+      <div className="flex flex-col items-center bg-gray-800 rounded p-1 sm:p-2 h-full gap-1 sm:gap-2 relative hover:bg-gray-700 cursor-pointer text-xs sm:text-sm">
         <div className="flex flex-row gap-1 text-center text-gray-400 text-xxs sm:text-sm">
           <GlobeAsiaAustraliaIcon className="w-3" />
           <p className="text-gray-400 leading-0">{circuit!.name}</p>

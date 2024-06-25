@@ -25,7 +25,7 @@ export const FootballCard: FC<FootballCardProps> = ({ event }) => {
 
   return (
     <Link to={sport === "football-uefa" ? "#" : `/football/${id}`}>
-      <div className="flex flex-col items-center bg-gray-800 rounded p-2 sm:p-4 h-full gap-2 sm:gap-2 relative hover:bg-gray-700 cursor-pointer text-xs sm:text-sm">
+      <div className="flex flex-col items-center bg-gray-800 rounded p-1 sm:p-2 h-full gap-1 sm:gap-2 relative hover:bg-gray-700 cursor-pointer text-xs sm:text-sm">
         <div className="flex flex-row gap-4 text-gray-400 text-xxs sm:text-sm">
           {completed && (
             <div className="flex flex-row gap-1">
@@ -59,7 +59,7 @@ export const FootballCard: FC<FootballCardProps> = ({ event }) => {
         <div className="absolute right-2 bottom-2 max-w-4">
           <img alt="Image of soccer ball" src={"/soccer-ball.png"} />
         </div>
-        <div className="absolute right-3 top-2 text-teal-300">
+        <div className="absolute right-3 top-2 text-teal-300 animate-pulse">
           <p>{clock?.label}</p>
         </div>
       </div>
