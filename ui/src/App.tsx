@@ -101,7 +101,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4 md:gap-10 p-4">
+      <div className="flex flex-col gap-4 md:gap-10 p-4 pt-0">
         <NextEvent data={data?.data || []} includeFOne={includeFOne} />
         <div>
           <p className="font-bold text-gray-200 capitalize text-lg sm:text-lg">
