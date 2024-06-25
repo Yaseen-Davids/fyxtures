@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 
-import { formatRelative, format } from "date-fns";
-import { enUS } from "date-fns/locale";
 import axios from "axios";
+import { enUS } from "date-fns/locale";
 import { useQuery } from "@tanstack/react-query";
+import { formatRelative, format } from "date-fns";
 
 import { Fixture } from "./types/Fixture";
 import { FootballCard } from "./components/FootballCard";
@@ -33,7 +33,11 @@ const formatDate = (date: string) =>
 function App() {
   const [dateFrom] = useState(format(new Date(), "yyyy-MM-dd"));
   const [timezone] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone);
-  const [teams, setSelected] = useState<number[]>([10, 12]);
+  const [teams, setSelected] = useState<{ id: number; league: string }[]>([
+    { id: 10, league: "premier-league" },
+    { id: 12, league: "premier-league" },
+    { id: 200110, league: "uefa" },
+  ]);
 
   // TODO: change this to an object for the different sports
   const [includeFOne, toggleIncludeFOne] = useState(true);
@@ -41,11 +45,11 @@ function App() {
   const { data, isLoading } = useQuery(
     ["getFixtures", teams, dateFrom, timezone, includeFOne],
     () =>
-      axios.get(
-        `/api/fixtures?startDate=${dateFrom}&teams=${teams.join(
-          ","
-        )}&includeFOne=${includeFOne}`
-      )
+      axios.post(`/api/fixtures`, {
+        startDate: dateFrom,
+        teams: teams.map((team) => ({ id: team.id, league: team.league })),
+        includeFOne: includeFOne,
+      })
   );
 
   const { data: teamsData, isLoading: isLoadingTeams } = useQuery(
@@ -79,7 +83,7 @@ function App() {
             One place for all your sporting fixtures
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row gap-2 p-4">
+        <div className="flex flex-col gap-2 p-4">
           <div className="bg-gray-900 p-2 rounded w-full h-full">
             <ComboBox
               loading={isLoadingTeams}
@@ -123,7 +127,8 @@ function App() {
                           new Date(b.date).valueOf()
                       )
                       .map((event: Fixture, index: number) =>
-                        event.sport === "football" ? (
+                        event.sport === "football" ||
+                        event.sport === "football-uefa" ? (
                           <FootballCard
                             key={`${event.id}-${index}`}
                             event={event}
@@ -141,7 +146,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="bg-gray-800 rounded"></div>
+      <div className="rounded"></div>
     </div>
   );
 }

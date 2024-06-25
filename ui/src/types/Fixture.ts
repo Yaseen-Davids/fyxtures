@@ -32,7 +32,7 @@ export type FixtureClock = {
 
 export type Fixture = {
   id?: number;
-  sport: "football" | "formula-one";
+  sport: "football" | "formula-one" | "football-uefa";
   date: Date;
   league?: FixtureLeague;
   teams?: FixtureTeam[];

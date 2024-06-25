@@ -3,7 +3,8 @@
 export type FootballTeam = {
   id: number;
   name: string;
-  teamId: number;
+  teamId?: number;
+  league: string;
   image: {
     id: number;
     url: string | null;
@@ -14,6 +15,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1,
     teamId: 1,
+    league: "premier-league",
     name: "Arsenal",
     image: {
       id: 57,
@@ -23,6 +25,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 3,
     teamId: 2,
+    league: "premier-league",
     name: "Aston Villa",
     image: {
       id: 58,
@@ -32,6 +35,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 4,
     teamId: 4,
+    league: "premier-league",
     name: "Chelsea",
     image: {
       id: 61,
@@ -41,6 +45,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 5,
     teamId: 5,
+    league: "premier-league",
     name: "Coventry City",
     image: {
       id: 1076,
@@ -50,6 +55,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 6,
     teamId: 6,
+    league: "premier-league",
     name: "Crystal Palace",
     image: {
       id: 354,
@@ -59,6 +65,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 7,
     teamId: 7,
+    league: "premier-league",
     name: "Everton",
     image: {
       id: 62,
@@ -68,6 +75,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 8,
     teamId: 7,
+    league: "premier-league",
     name: "Everton de Vina del Mar Escudo",
     image: {
       id: 4456,
@@ -77,6 +85,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 9,
     teamId: 8,
+    league: "premier-league",
     name: "Ipswich Town",
     image: {
       id: 349,
@@ -86,6 +95,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 10,
     teamId: 9,
+    league: "premier-league",
     name: "Leeds United",
     image: {
       id: 341,
@@ -95,6 +105,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 11,
     teamId: 10,
+    league: "premier-league",
     name: "Liverpool",
     image: {
       id: 64,
@@ -104,6 +115,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 13,
     teamId: 13,
+    league: "premier-league",
     name: "Middlesbrough",
     image: {
       id: 343,
@@ -113,6 +125,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 14,
     teamId: 20,
+    league: "premier-league",
     name: "Southampton",
     image: {
       id: 340,
@@ -122,6 +135,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 15,
     teamId: 24,
+    league: "premier-league",
     name: "Swindon Town",
     image: {
       id: 1079,
@@ -131,6 +145,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 16,
     teamId: 26,
+    league: "premier-league",
     name: "Leicester City",
     image: {
       id: 338,
@@ -140,6 +155,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 17,
     teamId: 28,
+    league: "premier-league",
     name: "Derby County",
     image: {
       id: 342,
@@ -149,6 +165,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 18,
     teamId: 29,
+    league: "premier-league",
     name: "Sunderland",
     image: {
       id: 71,
@@ -158,6 +175,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 19,
     teamId: 30,
+    league: "premier-league",
     name: "Barnsley",
     image: {
       id: 357,
@@ -167,6 +185,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 20,
     teamId: 32,
+    league: "premier-league",
     name: "Bradford City",
     image: {
       id: 1067,
@@ -176,6 +195,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 21,
     teamId: 33,
+    league: "premier-league",
     name: "Watford",
     image: {
       id: 346,
@@ -185,6 +205,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 22,
     teamId: 34,
+    league: "premier-league",
     name: "Fulham",
     image: {
       id: 63,
@@ -194,6 +215,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 23,
     teamId: 37,
+    league: "premier-league",
     name: "Portsmouth",
     image: {
       id: 325,
@@ -203,6 +225,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 24,
     teamId: 39,
+    league: "premier-league",
     name: "Wigan Athletic",
     image: {
       id: 75,
@@ -212,6 +235,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 25,
     teamId: 40,
+    league: "premier-league",
     name: "Reading",
     image: {
       id: 355,
@@ -221,6 +245,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 26,
     teamId: 41,
+    league: "premier-league",
     name: "Hull City",
     image: {
       id: 322,
@@ -230,6 +255,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 27,
     teamId: 43,
+    league: "premier-league",
     name: "Burnley",
     image: {
       id: 328,
@@ -239,6 +265,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 28,
     teamId: 44,
+    league: "premier-league",
     name: "Blackpool",
     image: {
       id: 336,
@@ -248,6 +275,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 29,
     teamId: 47,
+    league: "premier-league",
     name: "Ajax",
     image: {
       id: 678,
@@ -257,6 +285,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 30,
     teamId: 53,
+    league: "premier-league",
     name: "Celtic",
     image: {
       id: 732,
@@ -266,6 +295,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 31,
     teamId: 61,
+    league: "premier-league",
     name: "Galatasaray",
     image: {
       id: 610,
@@ -275,6 +305,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 32,
     teamId: 62,
+    league: "premier-league",
     name: "Juventus",
     image: {
       id: 109,
@@ -284,6 +315,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 33,
     teamId: 63,
+    league: "premier-league",
     name: "Marseille",
     image: {
       id: 516,
@@ -293,6 +325,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 34,
     teamId: 64,
+    league: "premier-league",
     name: "Milan",
     image: {
       id: 98,
@@ -302,6 +335,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 35,
     teamId: 65,
+    league: "premier-league",
     name: "Napoli",
     image: {
       id: 113,
@@ -311,6 +345,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 36,
     teamId: 66,
+    league: "premier-league",
     name: "Olympiakos",
     image: {
       id: 654,
@@ -320,6 +355,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 37,
     teamId: 68,
+    league: "premier-league",
     name: "Real Madrid",
     image: {
       id: 86,
@@ -329,6 +365,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 38,
     teamId: 69,
+    league: "premier-league",
     name: "Real Sociedad",
     image: {
       id: 92,
@@ -338,6 +375,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 39,
     teamId: 78,
+    league: "premier-league",
     name: "AZ",
     image: {
       id: 682,
@@ -347,6 +385,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 40,
     teamId: 79,
+    league: "premier-league",
     name: "Bordeaux",
     image: {
       id: 526,
@@ -356,6 +395,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 41,
     teamId: 81,
+    league: "premier-league",
     name: "Dinamo Zagreb",
     image: {
       id: 755,
@@ -365,6 +405,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 42,
     teamId: 83,
+    league: "premier-league",
     name: "Dynamo Kyiv",
     image: {
       id: 842,
@@ -374,6 +415,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 43,
     teamId: 86,
+    league: "premier-league",
     name: "Estoril Praia",
     image: {
       id: 582,
@@ -383,6 +425,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 44,
     teamId: 90,
+    league: "premier-league",
     name: "Fiorentina",
     image: {
       id: 99,
@@ -392,6 +435,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 45,
     teamId: 92,
+    league: "premier-league",
     name: "IF Elfsborg",
     image: {
       id: 5284,
@@ -401,6 +445,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 46,
     teamId: 93,
+    league: "premier-league",
     name: "KRC Genk",
     image: {
       id: 1858,
@@ -410,6 +455,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 47,
     teamId: 95,
+    league: "premier-league",
     name: "Lazio",
     image: {
       id: 110,
@@ -419,6 +465,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 48,
     teamId: 99,
+    league: "premier-league",
     name: "Maccabi Haifa",
     image: {
       id: 884,
@@ -428,6 +475,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 49,
     teamId: 106,
+    league: "premier-league",
     name: "Real Betis",
     image: {
       id: 90,
@@ -437,6 +485,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 50,
     teamId: 107,
+    league: "premier-league",
     name: "Rubin Kazan",
     image: {
       id: 882,
@@ -446,6 +495,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 51,
     teamId: 112,
+    league: "premier-league",
     name: "Slovan Liberec",
     image: {
       id: 4472,
@@ -455,6 +505,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 52,
     teamId: 114,
+    league: "premier-league",
     name: "Standard Liège",
     image: {
       id: 1866,
@@ -464,6 +515,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 53,
     teamId: 116,
+    league: "premier-league",
     name: "Trabzonspor",
     image: {
       id: 602,
@@ -473,6 +525,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 54,
     teamId: 117,
+    league: "premier-league",
     name: "Tromsø",
     image: {
       id: 5733,
@@ -482,6 +535,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 55,
     teamId: 121,
+    league: "premier-league",
     name: "AFC Wimbledon",
     image: {
       id: 347,
@@ -491,6 +545,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 56,
     teamId: 122,
+    league: "premier-league",
     name: "Alfreton Town",
     image: {
       id: 1153,
@@ -500,6 +555,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 57,
     teamId: 123,
+    league: "premier-league",
     name: "Barnet",
     image: {
       id: 1134,
@@ -509,6 +565,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 58,
     teamId: 126,
+    league: "premier-league",
     name: "Boreham Wood",
     image: {
       id: 1113,
@@ -518,6 +575,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 59,
     teamId: 127,
+    league: "premier-league",
     name: "Bournemouth",
     image: {
       id: 1044,
@@ -527,6 +585,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 60,
     teamId: 128,
+    league: "premier-league",
     name: "Brackley Town",
     image: {
       id: 1151,
@@ -536,6 +595,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 61,
     teamId: 129,
+    league: "premier-league",
     name: "Braintree Town",
     image: {
       id: 1109,
@@ -545,6 +605,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 62,
     teamId: 130,
+    league: "premier-league",
     name: "Brentford",
     image: {
       id: 402,
@@ -554,6 +615,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 63,
     teamId: 132,
+    league: "premier-league",
     name: "Bristol City",
     image: {
       id: 387,
@@ -563,6 +625,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 64,
     teamId: 133,
+    league: "premier-league",
     name: "Bristol Rovers",
     image: {
       id: 400,
@@ -572,6 +635,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 65,
     teamId: 134,
+    league: "premier-league",
     name: "Burton Albion",
     image: {
       id: 1072,
@@ -581,6 +645,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 66,
     teamId: 135,
+    league: "premier-league",
     name: "Bury",
     image: {
       id: 1068,
@@ -590,6 +655,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 67,
     teamId: 139,
+    league: "premier-league",
     name: "Chesterfield",
     image: {
       id: 363,
@@ -599,6 +665,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 68,
     teamId: 141,
+    league: "premier-league",
     name: "Corby Town",
     image: {
       id: 1399,
@@ -608,6 +675,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 69,
     teamId: 142,
+    league: "premier-league",
     name: "Crawley Town",
     image: {
       id: 1132,
@@ -617,6 +685,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 70,
     teamId: 145,
+    league: "premier-league",
     name: "Dartford",
     image: {
       id: 1160,
@@ -626,6 +695,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 71,
     teamId: 146,
+    league: "premier-league",
     name: "Daventry Town",
     image: {
       id: 1754,
@@ -635,6 +705,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 72,
     teamId: 148,
+    league: "premier-league",
     name: "Dover Athletic",
     image: {
       id: 1111,
@@ -644,6 +715,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 73,
     teamId: 149,
+    league: "premier-league",
     name: "Exeter City",
     image: {
       id: 1135,
@@ -653,6 +725,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 74,
     teamId: 151,
+    league: "premier-league",
     name: "Fleetwood Town",
     image: {
       id: 1073,
@@ -662,6 +735,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 75,
     teamId: 152,
+    league: "premier-league",
     name: "Gateshead",
     image: {
       id: 1117,
@@ -671,6 +745,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 76,
     teamId: 153,
+    league: "premier-league",
     name: "Gillingham",
     image: {
       id: 370,
@@ -680,6 +755,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 77,
     teamId: 155,
+    league: "premier-league",
     name: "Grimsby Town",
     image: {
       id: 1137,
@@ -689,6 +765,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 78,
     teamId: 161,
+    league: "premier-league",
     name: "Leyton Orient",
     image: {
       id: 399,
@@ -698,6 +775,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 79,
     teamId: 162,
+    league: "premier-league",
     name: "Lincoln City",
     image: {
       id: 1126,
@@ -707,6 +785,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 80,
     teamId: 163,
+    league: "premier-league",
     name: "Luton Town",
     image: {
       id: 389,
@@ -716,6 +795,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 81,
     teamId: 165,
+    league: "premier-league",
     name: "Mansfield Town",
     image: {
       id: 1133,
@@ -725,6 +805,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 82,
     teamId: 166,
+    league: "premier-league",
     name: "Millwall",
     image: {
       id: 384,
@@ -734,6 +815,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 83,
     teamId: 168,
+    league: "premier-league",
     name: "Morecambe",
     image: {
       id: 1141,
@@ -743,6 +825,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 84,
     teamId: 169,
+    league: "premier-league",
     name: "Newport County",
     image: {
       id: 1142,
@@ -752,6 +835,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 85,
     teamId: 171,
+    league: "premier-league",
     name: "Notts County",
     image: {
       id: 391,
@@ -761,6 +845,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 86,
     teamId: 172,
+    league: "premier-league",
     name: "Oxford United",
     image: {
       id: 1082,
@@ -770,6 +855,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 87,
     teamId: 175,
+    league: "premier-league",
     name: "Port Vale",
     image: {
       id: 393,
@@ -779,6 +865,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 88,
     teamId: 177,
+    league: "premier-league",
     name: "Rochdale",
     image: {
       id: 361,
@@ -788,6 +875,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 89,
     teamId: 184,
+    league: "premier-league",
     name: "Southport",
     image: {
       id: 1125,
@@ -797,6 +885,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 90,
     teamId: 185,
+    league: "premier-league",
     name: "St Albans City",
     image: {
       id: 1158,
@@ -806,6 +895,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 91,
     teamId: 186,
+    league: "premier-league",
     name: "Staines Town",
     image: {
       id: 1201,
@@ -815,6 +905,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 92,
     teamId: 187,
+    league: "premier-league",
     name: "Stevenage",
     image: {
       id: 1144,
@@ -824,6 +915,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 93,
     teamId: 188,
+    league: "premier-league",
     name: "Stourbridge",
     image: {
       id: 1148,
@@ -833,6 +925,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 94,
     teamId: 189,
+    league: "premier-league",
     name: "Sutton United",
     image: {
       id: 1122,
@@ -842,6 +935,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 95,
     teamId: 190,
+    league: "premier-league",
     name: "Tamworth",
     image: {
       id: 2356,
@@ -851,6 +945,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 96,
     teamId: 193,
+    league: "premier-league",
     name: "Walsall",
     image: {
       id: 369,
@@ -860,6 +955,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 97,
     teamId: 194,
+    league: "premier-league",
     name: "Welling United",
     image: {
       id: 1186,
@@ -869,6 +965,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 98,
     teamId: 195,
+    league: "premier-league",
     name: "Wrexham",
     image: {
       id: 404,
@@ -878,6 +975,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 99,
     teamId: 197,
+    league: "premier-league",
     name: "Yeovil Town",
     image: {
       id: 1131,
@@ -887,6 +985,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 100,
     teamId: 198,
+    league: "premier-league",
     name: "York City",
     image: {
       id: 1129,
@@ -896,6 +995,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 101,
     teamId: 201,
+    league: "premier-league",
     name: "Malmö FF",
     image: {
       id: 749,
@@ -905,6 +1005,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 102,
     teamId: 202,
+    league: "premier-league",
     name: "Monaco",
     image: {
       id: 548,
@@ -914,6 +1015,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 103,
     teamId: 203,
+    league: "premier-league",
     name: "Roma",
     image: {
       id: 100,
@@ -923,6 +1025,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 104,
     teamId: 207,
+    league: "premier-league",
     name: "Aldershot Town",
     image: {
       id: 1108,
@@ -932,6 +1035,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 105,
     teamId: 208,
+    league: "premier-league",
     name: "Altrincham",
     image: {
       id: 1161,
@@ -941,6 +1045,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 106,
     teamId: 210,
+    league: "premier-league",
     name: "Blyth Spartans",
     image: {
       id: 1253,
@@ -950,6 +1055,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 107,
     teamId: 211,
+    league: "premier-league",
     name: "Bromley",
     image: {
       id: 1118,
@@ -959,6 +1065,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 108,
     teamId: 215,
+    league: "premier-league",
     name: "Eastleigh",
     image: {
       id: 1116,
@@ -968,6 +1075,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 109,
     teamId: 224,
+    league: "premier-league",
     name: "Woking",
     image: {
       id: 1115,
@@ -977,6 +1085,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 110,
     teamId: 225,
+    league: "premier-league",
     name: "Worcester City",
     image: {
       id: 1226,
@@ -986,6 +1095,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 111,
     teamId: 228,
+    league: "premier-league",
     name: "Astra Giurgiu",
     image: {
       id: 698,
@@ -995,6 +1105,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 112,
     teamId: 232,
+    league: "premier-league",
     name: "Club Brugge",
     image: {
       id: 851,
@@ -1004,6 +1115,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 113,
     teamId: 235,
+    league: "premier-league",
     name: "FC Zürich",
     image: {
       id: 5273,
@@ -1013,6 +1125,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 114,
     teamId: 236,
+    league: "premier-league",
     name: "Feyenoord",
     image: {
       id: 675,
@@ -1022,6 +1135,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 115,
     teamId: 243,
+    league: "premier-league",
     name: "Lille",
     image: {
       id: 521,
@@ -1031,6 +1145,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 116,
     teamId: 245,
+    league: "premier-league",
     name: "Panathinaikos",
     image: {
       id: 646,
@@ -1040,6 +1155,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 117,
     teamId: 247,
+    league: "premier-league",
     name: "Rio Ave",
     image: {
       id: 496,
@@ -1049,6 +1165,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 118,
     teamId: 251,
+    league: "premier-league",
     name: "Torino",
     image: {
       id: 586,
@@ -1058,6 +1175,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 119,
     teamId: 253,
+    league: "premier-league",
     name: "Villarreal",
     image: {
       id: 94,
@@ -1067,6 +1185,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 120,
     teamId: 254,
+    league: "premier-league",
     name: "Barwell",
     image: {
       id: 1248,
@@ -1076,6 +1195,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 121,
     teamId: 255,
+    league: "premier-league",
     name: "Chesham United",
     image: {
       id: 1164,
@@ -1085,6 +1205,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 122,
     teamId: 256,
+    league: "premier-league",
     name: "Didcot Town",
     image: {
       id: 1462,
@@ -1094,6 +1215,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 123,
     teamId: 261,
+    league: "premier-league",
     name: "Salford City",
     image: {
       id: 1219,
@@ -1103,6 +1225,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 124,
     teamId: 263,
+    league: "premier-league",
     name: "Wealdstone",
     image: {
       id: 1174,
@@ -1112,6 +1235,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 125,
     teamId: 361,
+    league: "premier-league",
     name: "Belenenses",
     image: {
       id: 5568,
@@ -1121,6 +1245,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 126,
     teamId: 366,
+    league: "premier-league",
     name: "Fenerbahçe",
     image: {
       id: 613,
@@ -1130,6 +1255,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 127,
     teamId: 370,
+    league: "premier-league",
     name: "Molde",
     image: {
       id: 5726,
@@ -1139,6 +1265,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 128,
     teamId: 371,
+    league: "premier-league",
     name: "Rosenborg",
     image: {
       id: 889,
@@ -1148,6 +1275,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 129,
     teamId: 378,
+    league: "premier-league",
     name: "FC Porto B",
     image: {
       id: 5532,
@@ -1157,6 +1285,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 130,
     teamId: 380,
+    league: "premier-league",
     name: "Jong PSV",
     image: {
       id: 1925,
@@ -1166,6 +1295,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 131,
     teamId: 384,
+    league: "premier-league",
     name: "Villarreal B",
     image: {
       id: 302,
@@ -1175,6 +1305,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 132,
     teamId: 389,
+    league: "premier-league",
     name: "KAA Gent",
     image: {
       id: 1057,
@@ -1184,6 +1315,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 133,
     teamId: 395,
+    league: "premier-league",
     name: "Barrow",
     image: {
       id: 1110,
@@ -1193,6 +1325,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 134,
     teamId: 396,
+    league: "premier-league",
     name: "Bath City",
     image: {
       id: 1190,
@@ -1202,6 +1335,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 135,
     teamId: 397,
+    league: "premier-league",
     name: "Buxton",
     image: {
       id: 6598,
@@ -1211,6 +1345,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 136,
     teamId: 400,
+    league: "premier-league",
     name: "Darlington",
     image: {
       id: 4610,
@@ -1220,6 +1355,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 137,
     teamId: 401,
+    league: "premier-league",
     name: "Droylsden",
     image: {
       id: 6551,
@@ -1229,6 +1365,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 138,
     teamId: 405,
+    league: "premier-league",
     name: "Farnborough",
     image: {
       id: 1296,
@@ -1238,6 +1375,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 139,
     teamId: 406,
+    league: "premier-league",
     name: "Guiseley",
     image: {
       id: 1119,
@@ -1247,6 +1385,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 140,
     teamId: 407,
+    league: "premier-league",
     name: "Harrow Borough",
     image: {
       id: 1163,
@@ -1256,6 +1395,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 141,
     teamId: 409,
+    league: "premier-league",
     name: "Hendon",
     image: {
       id: 1171,
@@ -1265,6 +1405,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 142,
     teamId: 410,
+    league: "premier-league",
     name: "Histon",
     image: {
       id: 6346,
@@ -1274,6 +1415,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 143,
     teamId: 412,
+    league: "premier-league",
     name: "Kettering Town",
     image: {
       id: 1183,
@@ -1283,6 +1425,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 144,
     teamId: 413,
+    league: "premier-league",
     name: "Leiston",
     image: {
       id: 1187,
@@ -1292,6 +1435,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 145,
     teamId: 416,
+    league: "premier-league",
     name: "Mossley",
     image: {
       id: 6539,
@@ -1301,6 +1445,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 146,
     teamId: 417,
+    league: "premier-league",
     name: "Newcastle Town",
     image: {
       id: 6543,
@@ -1310,6 +1455,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 147,
     teamId: 422,
+    league: "premier-league",
     name: "Sheffield FC",
     image: {
       id: 6557,
@@ -1319,6 +1465,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 148,
     teamId: 427,
+    league: "premier-league",
     name: "Workington",
     image: {
       id: 6614,
@@ -1328,6 +1475,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 149,
     teamId: 435,
+    league: "premier-league",
     name: "Hertha BSC II",
     image: {
       id: 5989,
@@ -1337,6 +1485,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 150,
     teamId: 437,
+    league: "premier-league",
     name: "Dundalk",
     image: {
       id: 1873,
@@ -1346,6 +1495,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 151,
     teamId: 438,
+    league: "premier-league",
     name: "Nice",
     image: {
       id: 522,
@@ -1355,6 +1505,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 152,
     teamId: 440,
+    league: "premier-league",
     name: "Sassuolo",
     image: {
       id: 471,
@@ -1364,6 +1515,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 153,
     teamId: 441,
+    league: "premier-league",
     name: "Zorya Luhansk",
     image: {
       id: 5200,
@@ -1373,6 +1525,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 154,
     teamId: 444,
+    league: "premier-league",
     name: "Konyaspor",
     image: {
       id: 5247,
@@ -1382,6 +1535,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 155,
     teamId: 446,
+    league: "premier-league",
     name: "Merstham",
     image: {
       id: 1166,
@@ -1391,6 +1545,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 156,
     teamId: 449,
+    league: "premier-league",
     name: "Westfields",
     image: {
       id: 1154,
@@ -1400,6 +1555,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 157,
     teamId: 450,
+    league: "premier-league",
     name: "Curzon Ashton",
     image: {
       id: 1150,
@@ -1409,6 +1565,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 158,
     teamId: 451,
+    league: "premier-league",
     name: "Taunton Town",
     image: {
       id: 1152,
@@ -1418,6 +1575,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 159,
     teamId: 452,
+    league: "premier-league",
     name: "Stamford",
     image: {
       id: 5068,
@@ -1427,6 +1585,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 160,
     teamId: 453,
+    league: "premier-league",
     name: "Udinese",
     image: {
       id: 115,
@@ -1436,6 +1595,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 161,
     teamId: 457,
+    league: "premier-league",
     name: "Marítimo",
     image: {
       id: 5575,
@@ -1445,6 +1605,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 162,
     teamId: 464,
+    league: "premier-league",
     name: "Levante",
     image: {
       id: 88,
@@ -1454,6 +1615,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 163,
     teamId: 467,
+    league: "premier-league",
     name: "CFR Cluj",
     image: {
       id: 5515,
@@ -1463,6 +1625,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 164,
     teamId: 470,
+    league: "premier-league",
     name: "Rangers",
     image: {
       id: 5376,
@@ -1472,6 +1635,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 165,
     teamId: 471,
+    league: "premier-league",
     name: "Livorno",
     image: {
       id: 436,
@@ -1481,6 +1645,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 166,
     teamId: 472,
+    league: "premier-league",
     name: "Auxerre",
     image: {
       id: 519,
@@ -1490,6 +1655,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 167,
     teamId: 475,
+    league: "premier-league",
     name: "Parma",
     image: {
       id: 112,
@@ -1499,6 +1665,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 168,
     teamId: 476,
+    league: "premier-league",
     name: "Osasuna",
     image: {
       id: 79,
@@ -1508,6 +1675,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 169,
     teamId: 480,
+    league: "premier-league",
     name: "Nancy",
     image: {
       id: 520,
@@ -1517,6 +1685,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 170,
     teamId: 482,
+    league: "premier-league",
     name: "Espanyol",
     image: {
       id: 80,
@@ -1526,6 +1695,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 171,
     teamId: 484,
+    league: "premier-league",
     name: "Mladá Boleslav",
     image: {
       id: 4477,
@@ -1535,6 +1705,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 172,
     teamId: 485,
+    league: "premier-league",
     name: "Palermo",
     image: {
       id: 114,
@@ -1544,6 +1715,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 173,
     teamId: 488,
+    league: "premier-league",
     name: "Hertha BSC",
     image: {
       id: 9,
@@ -1553,6 +1725,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 174,
     teamId: 491,
+    league: "premier-league",
     name: "Chievo",
     image: {
       id: 106,
@@ -1562,6 +1735,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 175,
     teamId: 495,
+    league: "premier-league",
     name: "Derry City",
     image: {
       id: 5521,
@@ -1571,6 +1745,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 176,
     teamId: 497,
+    league: "premier-league",
     name: "Kayserispor",
     image: {
       id: 608,
@@ -1580,6 +1755,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 177,
     teamId: 499,
+    league: "premier-league",
     name: "IK Start",
     image: {
       id: 5723,
@@ -1589,6 +1765,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 178,
     teamId: 502,
+    league: "premier-league",
     name: "CSKA Sofia",
     image: {
       id: 4396,
@@ -1598,6 +1775,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 179,
     teamId: 514,
+    league: "premier-league",
     name: "CD Nacional",
     image: {
       id: 5529,
@@ -1607,6 +1785,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 180,
     teamId: 520,
+    league: "premier-league",
     name: "Sydney FC",
     image: {
       id: 1834,
@@ -1616,6 +1795,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 181,
     teamId: 525,
+    league: "premier-league",
     name: "Monterrey",
     image: {
       id: 5780,
@@ -1625,6 +1805,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 182,
     teamId: 526,
+    league: "premier-league",
     name: "LA Galaxy",
     image: {
       id: 7452,
@@ -1634,6 +1815,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 183,
     teamId: 528,
+    league: "premier-league",
     name: "Real Salt Lake",
     image: {
       id: 7461,
@@ -1643,6 +1825,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 184,
     teamId: 529,
+    league: "premier-league",
     name: "Sampdoria",
     image: {
       id: 584,
@@ -1652,6 +1835,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 185,
     teamId: 530,
+    league: "premier-league",
     name: "Vålerenga",
     image: {
       id: 5734,
@@ -1661,6 +1845,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 186,
     teamId: 537,
+    league: "premier-league",
     name: "Toluca",
     image: {
       id: 5790,
@@ -1670,6 +1855,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 187,
     teamId: 541,
+    league: "premier-league",
     name: "Atalanta",
     image: {
       id: 102,
@@ -1679,6 +1865,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 188,
     teamId: 554,
+    league: "premier-league",
     name: "Racing Club",
     image: {
       id: 2083,
@@ -1688,6 +1875,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 189,
     teamId: 558,
+    league: "premier-league",
     name: "Vitesse",
     image: {
       id: 679,
@@ -1697,6 +1885,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 190,
     teamId: 560,
+    league: "premier-league",
     name: "Latina",
     image: {
       id: 722,
@@ -1706,6 +1895,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 191,
     teamId: 571,
+    league: "premier-league",
     name: "Chicago Fire",
     image: {
       id: 7456,
@@ -1715,6 +1905,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 192,
     teamId: 577,
+    league: "premier-league",
     name: "San Lorenzo",
     image: {
       id: 2071,
@@ -1724,6 +1915,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 193,
     teamId: 578,
+    league: "premier-league",
     name: "Lanús",
     image: {
       id: 2066,
@@ -1733,6 +1925,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 194,
     teamId: 580,
+    league: "premier-league",
     name: "D.C. United",
     image: {
       id: 7454,
@@ -1742,6 +1935,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 195,
     teamId: 594,
+    league: "premier-league",
     name: "Houston Dynamo",
     image: {
       id: 7458,
@@ -1751,6 +1945,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 196,
     teamId: 596,
+    league: "premier-league",
     name: "FC Dallas",
     image: {
       id: 7459,
@@ -1760,6 +1955,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 197,
     teamId: 597,
+    league: "premier-league",
     name: "KAS Eupen",
     image: {
       id: 1857,
@@ -1769,6 +1965,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 198,
     teamId: 603,
+    league: "premier-league",
     name: "Akhmat Grozny",
     image: {
       id: 5491,
@@ -1778,6 +1975,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 199,
     teamId: 607,
+    league: "premier-league",
     name: "River Plate",
     image: {
       id: 2069,
@@ -1787,6 +1985,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 200,
     teamId: 609,
+    league: "premier-league",
     name: "Excelsior",
     image: {
       id: 670,
@@ -1796,6 +1995,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 201,
     teamId: 611,
+    league: "premier-league",
     name: "Numancia",
     image: {
       id: 260,
@@ -1805,6 +2005,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 202,
     teamId: 613,
+    league: "premier-league",
     name: "FC Lisse",
     image: {
       id: 6951,
@@ -1814,6 +2015,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 203,
     teamId: 614,
+    league: "premier-league",
     name: "Slovácko",
     image: {
       id: 4468,
@@ -1823,6 +2025,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 204,
     teamId: 633,
+    league: "premier-league",
     name: "Málaga",
     image: {
       id: 84,
@@ -1832,6 +2035,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 205,
     teamId: 634,
+    league: "premier-league",
     name: "Guadalajara",
     image: {
       id: 551,
@@ -1841,6 +2045,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 206,
     teamId: 635,
+    league: "premier-league",
     name: "RB Leipzig",
     image: {
       id: 721,
@@ -1850,6 +2055,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 207,
     teamId: 636,
+    league: "premier-league",
     name: "1. FC Köln",
     image: {
       id: 1,
@@ -1859,6 +2065,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 208,
     teamId: 639,
+    league: "premier-league",
     name: "Leganés",
     image: {
       id: 745,
@@ -1868,6 +2075,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 209,
     teamId: 640,
+    league: "premier-league",
     name: "Getafe",
     image: {
       id: 82,
@@ -1877,6 +2085,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 210,
     teamId: 641,
+    league: "premier-league",
     name: "Girona",
     image: {
       id: 298,
@@ -1886,6 +2095,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 211,
     teamId: 651,
+    league: "premier-league",
     name: "Chapecoense",
     image: {
       id: 1772,
@@ -1895,6 +2105,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 212,
     teamId: 688,
+    league: "premier-league",
     name: "Oxford City",
     image: {
       id: 1235,
@@ -1904,6 +2115,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 213,
     teamId: 689,
+    league: "premier-league",
     name: "Nantwich Town",
     image: {
       id: 1182,
@@ -1913,6 +2125,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 214,
     teamId: 691,
+    league: "premier-league",
     name: "Redbridge",
     image: {
       id: 6445,
@@ -1922,6 +2135,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 215,
     teamId: 694,
+    league: "premier-league",
     name: "Yate Town",
     image: {
       id: 6586,
@@ -1931,6 +2145,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 216,
     teamId: 695,
+    league: "premier-league",
     name: "Bury Town",
     image: {
       id: 1479,
@@ -1940,6 +2155,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 217,
     teamId: 708,
+    league: "premier-league",
     name: "Truro City",
     image: {
       id: 1304,
@@ -1949,6 +2165,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 218,
     teamId: 710,
+    league: "premier-league",
     name: "Leatherhead",
     image: {
       id: 1380,
@@ -1958,6 +2175,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 219,
     teamId: 711,
+    league: "premier-league",
     name: "Hyde United",
     image: {
       id: 1294,
@@ -1967,6 +2185,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 220,
     teamId: 714,
+    league: "premier-league",
     name: "Chorley",
     image: {
       id: 1217,
@@ -1976,6 +2195,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 221,
     teamId: 715,
+    league: "premier-league",
     name: "Quick Boys",
     image: {
       id: 6958,
@@ -1985,6 +2205,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 222,
     teamId: 724,
+    league: "premier-league",
     name: "Corinthians",
     image: {
       id: 1779,
@@ -1994,6 +2215,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 223,
     teamId: 725,
+    league: "premier-league",
     name: "Fluminense",
     image: {
       id: 1765,
@@ -2003,6 +2225,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 224,
     teamId: 728,
+    league: "premier-league",
     name: "Telstar",
     image: {
       id: 1912,
@@ -2012,6 +2235,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 225,
     teamId: 734,
+    league: "premier-league",
     name: "Luzern",
     image: {
       id: 5266,
@@ -2021,6 +2245,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 226,
     teamId: 737,
+    league: "premier-league",
     name: "MSV Duisburg",
     image: {
       id: 7630,
@@ -2030,6 +2255,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 227,
     teamId: 742,
+    league: "premier-league",
     name: "Kendal Town",
     image: {
       id: 1551,
@@ -2039,6 +2265,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 228,
     teamId: 745,
+    league: "premier-league",
     name: "Thurrock",
     image: {
       id: 1568,
@@ -2048,6 +2275,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 229,
     teamId: 748,
+    league: "premier-league",
     name: "Genoa",
     image: {
       id: 107,
@@ -2057,6 +2285,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 230,
     teamId: 750,
+    league: "premier-league",
     name: "Levski Sofia",
     image: {
       id: 928,
@@ -2066,6 +2295,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 231,
     teamId: 753,
+    league: "premier-league",
     name: "Toulouse",
     image: {
       id: 511,
@@ -2075,6 +2305,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 232,
     teamId: 755,
+    league: "premier-league",
     name: "Ventspils",
     image: {
       id: 5824,
@@ -2084,6 +2315,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 233,
     teamId: 759,
+    league: "premier-league",
     name: "Mallorca",
     image: {
       id: 89,
@@ -2093,6 +2325,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 234,
     teamId: 761,
+    league: "premier-league",
     name: "Hércules",
     image: {
       id: 269,
@@ -2102,6 +2335,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 235,
     teamId: 763,
+    league: "premier-league",
     name: "Real Zaragoza",
     image: {
       id: 91,
@@ -2111,6 +2345,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 236,
     teamId: 764,
+    league: "premier-league",
     name: "Almería",
     image: {
       id: 267,
@@ -2120,6 +2355,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 237,
     teamId: 765,
+    league: "premier-league",
     name: "Albacete",
     image: {
       id: 237,
@@ -2129,6 +2365,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 238,
     teamId: 768,
+    league: "premier-league",
     name: "Cartagena",
     image: {
       id: 300,
@@ -2138,6 +2375,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 239,
     teamId: 769,
+    league: "premier-league",
     name: "Córdoba",
     image: {
       id: 295,
@@ -2147,6 +2385,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 240,
     teamId: 770,
+    league: "premier-league",
     name: "Elche",
     image: {
       id: 285,
@@ -2156,6 +2395,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 241,
     teamId: 772,
+    league: "premier-league",
     name: "Huesca",
     image: {
       id: 299,
@@ -2165,6 +2405,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 242,
     teamId: 773,
+    league: "premier-league",
     name: "Las Palmas",
     image: {
       id: 275,
@@ -2174,6 +2415,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 243,
     teamId: 774,
+    league: "premier-league",
     name: "Ponferradina",
     image: {
       id: 286,
@@ -2183,6 +2425,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 244,
     teamId: 775,
+    league: "premier-league",
     name: "Rayo Vallecano",
     image: {
       id: 87,
@@ -2192,6 +2435,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 245,
     teamId: 781,
+    league: "premier-league",
     name: "Alcoyano",
     image: {
       id: 550,
@@ -2201,6 +2445,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 246,
     teamId: 783,
+    league: "premier-league",
     name: "Real Murcia",
     image: {
       id: 258,
@@ -2210,6 +2455,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 247,
     teamId: 785,
+    league: "premier-league",
     name: "Lugo",
     image: {
       id: 596,
@@ -2219,6 +2465,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 248,
     teamId: 788,
+    league: "premier-league",
     name: "Alavés",
     image: {
       id: 263,
@@ -2228,6 +2475,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 249,
     teamId: 789,
+    league: "premier-league",
     name: "Eibar",
     image: {
       id: 278,
@@ -2237,6 +2485,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 250,
     teamId: 790,
+    league: "premier-league",
     name: "Real Jaén",
     image: {
       id: 7437,
@@ -2246,6 +2495,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 251,
     teamId: 793,
+    league: "premier-league",
     name: "Real Oviedo",
     image: {
       id: 1048,
@@ -2255,6 +2505,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 252,
     teamId: 797,
+    league: "premier-league",
     name: "UCAM Murcia",
     image: {
       id: 1100,
@@ -2264,6 +2515,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 253,
     teamId: 804,
+    league: "premier-league",
     name: "Castellón",
     image: {
       id: 7446,
@@ -2273,6 +2525,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 254,
     teamId: 816,
+    league: "premier-league",
     name: "Melilla",
     image: {
       id: 5341,
@@ -2282,6 +2535,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 255,
     teamId: 818,
+    league: "premier-league",
     name: "Ontinyent",
     image: {
       id: 7435,
@@ -2291,6 +2545,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 256,
     teamId: 825,
+    league: "premier-league",
     name: "Real Unión",
     image: {
       id: 5315,
@@ -2300,6 +2555,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 257,
     teamId: 826,
+    league: "premier-league",
     name: "Sant Andreu",
     image: {
       id: 7436,
@@ -2309,6 +2565,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 258,
     teamId: 828,
+    league: "premier-league",
     name: "Teruel",
     image: {
       id: 7450,
@@ -2318,6 +2575,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 259,
     teamId: 829,
+    league: "premier-league",
     name: "Tudelano",
     image: {
       id: 7443,
@@ -2327,6 +2585,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 260,
     teamId: 830,
+    league: "premier-league",
     name: "UD Logroñés",
     image: {
       id: 5340,
@@ -2336,6 +2595,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 261,
     teamId: 836,
+    league: "premier-league",
     name: "Barakaldo",
     image: {
       id: 7432,
@@ -2345,6 +2605,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 262,
     teamId: 840,
+    league: "premier-league",
     name: "Fuenlabrada",
     image: {
       id: 5325,
@@ -2354,6 +2615,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 263,
     teamId: 849,
+    league: "premier-league",
     name: "Olot",
     image: {
       id: 6853,
@@ -2363,6 +2625,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 264,
     teamId: 855,
+    league: "premier-league",
     name: "Toledo",
     image: {
       id: 279,
@@ -2372,6 +2635,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 265,
     teamId: 861,
+    league: "premier-league",
     name: "Compostela",
     image: {
       id: 7448,
@@ -2381,6 +2645,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 266,
     teamId: 868,
+    league: "premier-league",
     name: "Mensajero",
     image: {
       id: 7441,
@@ -2390,6 +2655,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 267,
     teamId: 870,
+    league: "premier-league",
     name: "Peña Sport",
     image: {
       id: 5316,
@@ -2399,6 +2665,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 268,
     teamId: 879,
+    league: "premier-league",
     name: "Internacional",
     image: {
       id: 1839,
@@ -2408,6 +2675,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 269,
     teamId: 880,
+    league: "premier-league",
     name: "Villanovense",
     image: {
       id: 5329,
@@ -2417,6 +2685,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 270,
     teamId: 881,
+    league: "premier-league",
     name: "Pachuca",
     image: {
       id: 5781,
@@ -2426,6 +2695,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 271,
     teamId: 887,
+    league: "premier-league",
     name: "Kashiwa Reysol",
     image: {
       id: 5866,
@@ -2435,6 +2705,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 272,
     teamId: 888,
+    league: "premier-league",
     name: "Santos",
     image: {
       id: 6685,
@@ -2444,6 +2715,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 273,
     teamId: 894,
+    league: "premier-league",
     name: "Cruz Azul",
     image: {
       id: 5789,
@@ -2453,6 +2725,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 274,
     teamId: 897,
+    league: "premier-league",
     name: "América",
     image: {
       id: 5776,
@@ -2462,6 +2735,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 275,
     teamId: 901,
+    league: "premier-league",
     name: "Beijing Guoan",
     image: {
       id: 4412,
@@ -2471,6 +2745,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 276,
     teamId: 904,
+    league: "premier-league",
     name: "BK Häcken",
     image: {
       id: 5278,
@@ -2480,6 +2755,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 277,
     teamId: 905,
+    league: "premier-league",
     name: "Boca Juniors",
     image: {
       id: 2061,
@@ -2489,6 +2765,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 278,
     teamId: 908,
+    league: "premier-league",
     name: "Kuwait",
     image: {
       id: 8066,
@@ -2498,6 +2775,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 279,
     teamId: 917,
+    league: "premier-league",
     name: "Kaizer Chiefs",
     image: {
       id: 5360,
@@ -2507,6 +2785,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 280,
     teamId: 932,
+    league: "premier-league",
     name: "Jong Ajax",
     image: {
       id: 1922,
@@ -2516,6 +2795,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 281,
     teamId: 938,
+    league: "premier-league",
     name: "Nagoya Grampus",
     image: {
       id: 5854,
@@ -2525,6 +2805,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 282,
     teamId: 949,
+    league: "premier-league",
     name: "Thailand",
     image: {
       id: 8059,
@@ -2534,6 +2815,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 283,
     teamId: 950,
+    league: "premier-league",
     name: "Verona",
     image: {
       id: 450,
@@ -2543,6 +2825,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 284,
     teamId: 953,
+    league: "premier-league",
     name: "Willem II",
     image: {
       id: 672,
@@ -2552,6 +2835,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 285,
     teamId: 955,
+    league: "premier-league",
     name: "Montpellier",
     image: {
       id: 518,
@@ -2561,6 +2845,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 286,
     teamId: 956,
+    league: "premier-league",
     name: "São Paulo",
     image: {
       id: 1776,
@@ -2570,6 +2855,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 287,
     teamId: 957,
+    league: "premier-league",
     name: "Bursaspor",
     image: {
       id: 607,
@@ -2579,6 +2865,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 288,
     teamId: 968,
+    league: "premier-league",
     name: "Marbella",
     image: {
       id: 5330,
@@ -2588,6 +2875,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 289,
     teamId: 969,
+    league: "premier-league",
     name: "Real Avilés",
     image: {
       id: 5334,
@@ -2597,6 +2885,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 290,
     teamId: 974,
+    league: "premier-league",
     name: "Zamora",
     image: {
       id: 5178,
@@ -2606,6 +2895,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 291,
     teamId: 982,
+    league: "premier-league",
     name: "Conquense",
     image: {
       id: 7440,
@@ -2615,6 +2905,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 292,
     teamId: 991,
+    league: "premier-league",
     name: "China PR",
     image: {
       id: 8052,
@@ -2624,6 +2915,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 293,
     teamId: 1005,
+    league: "premier-league",
     name: "Peñarol",
     image: {
       id: 5184,
@@ -2633,6 +2925,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 294,
     teamId: 1061,
+    league: "premier-league",
     name: "Badalona",
     image: {
       id: 5317,
@@ -2642,6 +2935,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 295,
     teamId: 1062,
+    league: "premier-league",
     name: "Cacereño",
     image: {
       id: 6856,
@@ -2651,6 +2945,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 296,
     teamId: 1064,
+    league: "premier-league",
     name: "Durango",
     image: {
       id: 6854,
@@ -2660,6 +2955,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 297,
     teamId: 1067,
+    league: "premier-league",
     name: "Grêmio",
     image: {
       id: 1767,
@@ -2669,6 +2965,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 298,
     teamId: 1069,
+    league: "premier-league",
     name: "Tarazona",
     image: {
       id: 6858,
@@ -2678,6 +2975,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 299,
     teamId: 1071,
+    league: "premier-league",
     name: "Boluspor",
     image: {
       id: 5238,
@@ -2687,6 +2985,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 300,
     teamId: 1083,
+    league: "premier-league",
     name: "Lleida",
     image: {
       id: 280,
@@ -2696,6 +2995,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 301,
     teamId: 1089,
+    league: "premier-league",
     name: "Yeclano",
     image: {
       id: 7444,
@@ -2705,6 +3005,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 302,
     teamId: 1136,
+    league: "premier-league",
     name: "FC Biel-Bienne",
     image: {
       id: 5258,
@@ -2714,6 +3015,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 303,
     teamId: 1142,
+    league: "premier-league",
     name: "Lillestrøm",
     image: {
       id: 5725,
@@ -2723,6 +3025,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 304,
     teamId: 1147,
+    league: "premier-league",
     name: "Olhanense",
     image: {
       id: 499,
@@ -2732,6 +3035,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 305,
     teamId: 1148,
+    league: "premier-league",
     name: "Sivasspor",
     image: {
       id: 612,
@@ -2741,6 +3045,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 306,
     teamId: 1150,
+    league: "premier-league",
     name: "Stabæk",
     image: {
       id: 5731,
@@ -2750,6 +3055,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 307,
     teamId: 1166,
+    league: "premier-league",
     name: "",
     image: {
       id: 691,
@@ -2759,6 +3065,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 308,
     teamId: 1168,
+    league: "premier-league",
     name: "Perth Glory",
     image: {
       id: 1835,
@@ -2768,6 +3075,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 309,
     teamId: 1175,
+    league: "premier-league",
     name: "Cagliari",
     image: {
       id: 104,
@@ -2777,6 +3085,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 310,
     teamId: 1177,
+    league: "premier-league",
     name: "Avellino",
     image: {
       id: 486,
@@ -2786,6 +3095,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 311,
     teamId: 1182,
+    league: "premier-league",
     name: "BFC Siófok",
     image: {
       id: 6031,
@@ -2795,6 +3105,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 312,
     teamId: 1185,
+    league: "premier-league",
     name: "Novara",
     image: {
       id: 587,
@@ -2804,6 +3115,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 313,
     teamId: 1187,
+    league: "premier-league",
     name: "Samsunspor",
     image: {
       id: 603,
@@ -2813,6 +3125,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 314,
     teamId: 1188,
+    league: "premier-league",
     name: "Mutilvera",
     image: {
       id: 7433,
@@ -2822,6 +3135,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 315,
     teamId: 1189,
+    league: "premier-league",
     name: "Navalcarnero",
     image: {
       id: 7431,
@@ -2831,6 +3145,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 316,
     teamId: 1190,
+    league: "premier-league",
     name: "Don Benito",
     image: {
       id: 7438,
@@ -2840,6 +3155,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 317,
     teamId: 1191,
+    league: "premier-league",
     name: "Langreo",
     image: {
       id: 7447,
@@ -2849,6 +3165,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 318,
     teamId: 1193,
+    league: "premier-league",
     name: "Poblense",
     image: {
       id: 7434,
@@ -2858,6 +3175,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 319,
     teamId: 1196,
+    league: "premier-league",
     name: "AD Ceuta",
     image: {
       id: 7445,
@@ -2867,6 +3185,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 320,
     teamId: 1198,
+    league: "premier-league",
     name: "Nantes",
     image: {
       id: 543,
@@ -2876,6 +3195,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 321,
     teamId: 1199,
+    league: "premier-league",
     name: "Porto",
     image: {
       id: 503,
@@ -2885,6 +3205,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 322,
     teamId: 1241,
+    league: "premier-league",
     name: "F91 Dudelange",
     image: {
       id: 1875,
@@ -2894,6 +3215,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 323,
     teamId: 1242,
+    league: "premier-league",
     name: "Sarpsborg 08",
     image: {
       id: 5729,
@@ -2903,6 +3225,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 324,
     teamId: 1243,
+    league: "premier-league",
     name: "Spartak Trnava",
     image: {
       id: 7288,
@@ -2912,6 +3235,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 325,
     teamId: 1245,
+    league: "premier-league",
     name: "Benevento",
     image: {
       id: 1106,
@@ -2921,6 +3245,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 326,
     teamId: 1259,
+    league: "premier-league",
     name: "Bretteville",
     image: {
       id: 6250,
@@ -2930,6 +3255,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 327,
     teamId: 1262,
+    league: "premier-league",
     name: "Mondeville",
     image: {
       id: 7739,
@@ -2939,6 +3265,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 328,
     teamId: 1269,
+    league: "premier-league",
     name: "Orléans",
     image: {
       id: 742,
@@ -2948,6 +3275,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 329,
     teamId: 1292,
+    league: "premier-league",
     name: "Helmond Sport",
     image: {
       id: 1921,
@@ -2957,6 +3285,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 330,
     teamId: 1294,
+    league: "premier-league",
     name: "MTK Budapest",
     image: {
       id: 6086,
@@ -2966,6 +3295,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 331,
     teamId: 1296,
+    league: "premier-league",
     name: "Vissel Kobe",
     image: {
       id: 5862,
@@ -2975,6 +3305,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 332,
     teamId: 1313,
+    league: "premier-league",
     name: "Botev Plovdiv",
     image: {
       id: 4376,
@@ -2984,6 +3315,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 333,
     teamId: 1315,
+    league: "premier-league",
     name: "Glenavon",
     image: {
       id: 5742,
@@ -2993,6 +3325,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 334,
     teamId: 1317,
+    league: "premier-league",
     name: "Jelgava",
     image: {
       id: 5821,
@@ -3002,6 +3335,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 335,
     teamId: 1321,
+    league: "premier-league",
     name: "Raith Rovers",
     image: {
       id: 5389,
@@ -3011,6 +3345,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 336,
     teamId: 1326,
+    league: "premier-league",
     name: "Strasbourg",
     image: {
       id: 576,
@@ -3020,6 +3355,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 337,
     teamId: 1332,
+    league: "premier-league",
     name: "Baník Ostrava",
     image: {
       id: 4470,
@@ -3029,6 +3365,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 338,
     teamId: 1333,
+    league: "premier-league",
     name: "Boavista",
     image: {
       id: 810,
@@ -3038,6 +3375,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 339,
     teamId: 1334,
+    league: "premier-league",
     name: "Bohemians",
     image: {
       id: 5518,
@@ -3047,6 +3385,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 340,
     teamId: 1336,
+    league: "premier-league",
     name: "Coleraine",
     image: {
       id: 5739,
@@ -3056,6 +3395,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 341,
     teamId: 1338,
+    league: "premier-league",
     name: "Dundee United",
     image: {
       id: 5381,
@@ -3065,6 +3405,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 342,
     teamId: 1341,
+    league: "premier-league",
     name: "Hajduk Split",
     image: {
       id: 4447,
@@ -3074,6 +3415,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 343,
     teamId: 1345,
+    league: "premier-league",
     name: "LASK",
     image: {
       id: 2016,
@@ -3083,6 +3425,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 344,
     teamId: 1348,
+    league: "premier-league",
     name: "Portimonense",
     image: {
       id: 5601,
@@ -3092,6 +3435,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 345,
     teamId: 1349,
+    league: "premier-league",
     name: "RFC Liège",
     image: {
       id: 3884,
@@ -3101,6 +3445,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 346,
     teamId: 1351,
+    league: "premier-league",
     name: "St. Mirren",
     image: {
       id: 5387,
@@ -3110,6 +3455,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 347,
     teamId: 1356,
+    league: "premier-league",
     name: "Dinamo Tbilisi",
     image: {
       id: 7482,
@@ -3119,6 +3465,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 348,
     teamId: 1365,
+    league: "premier-league",
     name: "Glentoran",
     image: {
       id: 5743,
@@ -3128,6 +3475,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 349,
     teamId: 1366,
+    league: "premier-league",
     name: "Grazer AK",
     image: {
       id: 7129,
@@ -3137,6 +3485,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 350,
     teamId: 1368,
+    league: "premier-league",
     name: "IFK Norrköping",
     image: {
       id: 5286,
@@ -3146,6 +3495,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 351,
     teamId: 1373,
+    league: "premier-league",
     name: "Servette",
     image: {
       id: 5276,
@@ -3155,6 +3505,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 352,
     teamId: 1375,
+    league: "premier-league",
     name: "Slavia Sofia",
     image: {
       id: 4401,
@@ -3164,6 +3515,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 353,
     teamId: 1376,
+    league: "premier-league",
     name: "Sochaux",
     image: {
       id: 517,
@@ -3173,6 +3525,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 354,
     teamId: 1377,
+    league: "premier-league",
     name: "Stal Mielec",
     image: {
       id: 5636,
@@ -3182,6 +3535,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 355,
     teamId: 1385,
+    league: "premier-league",
     name: "IFK Göteborg",
     image: {
       id: 5285,
@@ -3191,6 +3545,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 356,
     teamId: 1393,
+    league: "premier-league",
     name: "Vasas",
     image: {
       id: 5960,
@@ -3200,6 +3555,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 357,
     teamId: 1396,
+    league: "premier-league",
     name: "Adanaspor",
     image: {
       id: 5234,
@@ -3209,6 +3565,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 358,
     teamId: 1399,
+    league: "premier-league",
     name: "BFC Dynamo",
     image: {
       id: 1825,
@@ -3218,6 +3575,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 359,
     teamId: 1400,
+    league: "premier-league",
     name: "Brann",
     image: {
       id: 5730,
@@ -3227,6 +3585,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 360,
     teamId: 1402,
+    league: "premier-league",
     name: "Cesena",
     image: {
       id: 591,
@@ -3236,6 +3595,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 361,
     teamId: 1405,
+    league: "premier-league",
     name: "Finn Harps",
     image: {
       id: 7645,
@@ -3245,6 +3605,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 362,
     teamId: 1407,
+    league: "premier-league",
     name: "Hibernian",
     image: {
       id: 5372,
@@ -3254,6 +3615,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 363,
     teamId: 1411,
+    league: "premier-league",
     name: "Östers IF",
     image: {
       id: 5306,
@@ -3263,6 +3625,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 364,
     teamId: 1414,
+    league: "premier-league",
     name: "Dunav Ruse",
     image: {
       id: 4378,
@@ -3272,6 +3635,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 365,
     teamId: 1417,
+    league: "premier-league",
     name: "GAIS",
     image: {
       id: 5295,
@@ -3281,6 +3645,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 366,
     teamId: 1422,
+    league: "premier-league",
     name: "Aberdeen",
     image: {
       id: 5368,
@@ -3290,6 +3655,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 367,
     teamId: 1424,
+    league: "premier-league",
     name: "Ararat",
     image: {
       id: 5433,
@@ -3299,6 +3665,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 368,
     teamId: 1425,
+    league: "premier-league",
     name: "BK Frem",
     image: {
       id: 6999,
@@ -3308,6 +3675,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 369,
     teamId: 1435,
+    league: "premier-league",
     name: "Ruch Chorzów",
     image: {
       id: 5641,
@@ -3317,6 +3685,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 370,
     teamId: 1450,
+    league: "premier-league",
     name: "Club Tijuana",
     image: {
       id: 5788,
@@ -3326,6 +3695,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 371,
     teamId: 1474,
+    league: "premier-league",
     name: "Peterhead",
     image: {
       id: 6899,
@@ -3335,6 +3705,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 372,
     teamId: 1475,
+    league: "premier-league",
     name: "Edinburgh City",
     image: {
       id: 6907,
@@ -3344,6 +3715,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 373,
     teamId: 1476,
+    league: "premier-league",
     name: "Clyde",
     image: {
       id: 6896,
@@ -3353,6 +3725,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 374,
     teamId: 1477,
+    league: "premier-league",
     name: "Annan Athletic",
     image: {
       id: 6901,
@@ -3362,6 +3735,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 375,
     teamId: 1479,
+    league: "premier-league",
     name: "Queen's Park",
     image: {
       id: 6908,
@@ -3371,6 +3745,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 376,
     teamId: 1480,
+    league: "premier-league",
     name: "Elgin City",
     image: {
       id: 6902,
@@ -3380,6 +3755,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 377,
     teamId: 1481,
+    league: "premier-league",
     name: "Cowdenbeath",
     image: {
       id: 6897,
@@ -3389,6 +3765,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 378,
     teamId: 1482,
+    league: "premier-league",
     name: "Albion Rovers",
     image: {
       id: 2289,
@@ -3398,6 +3775,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 379,
     teamId: 1484,
+    league: "premier-league",
     name: "Ross County",
     image: {
       id: 5377,
@@ -3407,6 +3785,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 380,
     teamId: 1486,
+    league: "premier-league",
     name: "Ayr United",
     image: {
       id: 6909,
@@ -3416,6 +3795,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 381,
     teamId: 1490,
+    league: "premier-league",
     name: "Alloa Athletic",
     image: {
       id: 5388,
@@ -3425,6 +3805,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 382,
     teamId: 1491,
+    league: "premier-league",
     name: "Falkirk",
     image: {
       id: 5382,
@@ -3434,6 +3815,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 383,
     teamId: 1503,
+    league: "premier-league",
     name: "Kilmarnock",
     image: {
       id: 5373,
@@ -3443,6 +3825,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 384,
     teamId: 1504,
+    league: "premier-league",
     name: "Livingston",
     image: {
       id: 5385,
@@ -3452,6 +3835,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 385,
     teamId: 1505,
+    league: "premier-league",
     name: "St. Johnstone",
     image: {
       id: 5378,
@@ -3461,6 +3845,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 386,
     teamId: 1506,
+    league: "premier-league",
     name: "Motherwell",
     image: {
       id: 5374,
@@ -3470,6 +3855,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 387,
     teamId: 1507,
+    league: "premier-league",
     name: "Dumbarton",
     image: {
       id: 5380,
@@ -3479,6 +3865,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 388,
     teamId: 1508,
+    league: "premier-league",
     name: "Airdrieonians",
     image: {
       id: 5395,
@@ -3488,6 +3875,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 389,
     teamId: 1509,
+    league: "premier-league",
     name: "Stranraer",
     image: {
       id: 6913,
@@ -3497,6 +3885,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 390,
     teamId: 1510,
+    league: "premier-league",
     name: "Brechin City",
     image: {
       id: 6911,
@@ -3506,6 +3895,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 391,
     teamId: 1512,
+    league: "premier-league",
     name: "Montrose",
     image: {
       id: 5402,
@@ -3515,6 +3905,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 392,
     teamId: 1514,
+    league: "premier-league",
     name: "East Fife",
     image: {
       id: 5397,
@@ -3524,6 +3915,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 393,
     teamId: 1515,
+    league: "premier-league",
     name: "Stenhousemuir",
     image: {
       id: 6900,
@@ -3533,6 +3925,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 394,
     teamId: 1519,
+    league: "premier-league",
     name: "Cove Rangers",
     image: {
       id: 6905,
@@ -3542,6 +3935,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 395,
     teamId: 1543,
+    league: "premier-league",
     name: "Brescia",
     image: {
       id: 449,
@@ -3551,6 +3945,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 396,
     teamId: 1700,
+    league: "premier-league",
     name: "OFI",
     image: {
       id: 6135,
@@ -3560,6 +3955,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 397,
     teamId: 1702,
+    league: "premier-league",
     name: "Perugia",
     image: {
       id: 452,
@@ -3569,6 +3965,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 398,
     teamId: 1703,
+    league: "premier-league",
     name: "Guangzhou R&F",
     image: {
       id: 4417,
@@ -3578,6 +3975,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 399,
     teamId: 1816,
+    league: "premier-league",
     name: "Feronikeli",
     image: {
       id: 8101,
@@ -3587,6 +3985,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 400,
     teamId: 1820,
+    league: "premier-league",
     name: "Arezzo",
     image: {
       id: 489,
@@ -3596,6 +3995,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 401,
     teamId: 1918,
+    league: "premier-league",
     name: "Valencia",
     image: {
       id: 95,
@@ -3605,6 +4005,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 402,
     teamId: 1986,
+    league: "premier-league",
     name: "Boston United",
     image: {
       id: 1210,
@@ -3614,6 +4015,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 403,
     teamId: 1987,
+    league: "premier-league",
     name: "Dulwich Hamlet",
     image: {
       id: 1265,
@@ -3623,6 +4025,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 404,
     teamId: 1989,
+    league: "premier-league",
     name: "Kingstonian",
     image: {
       id: 1413,
@@ -3632,6 +4035,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 405,
     teamId: 2008,
+    league: "premier-league",
     name: "Flamengo",
     image: {
       id: 1783,
@@ -3641,6 +4045,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 406,
     teamId: 2024,
+    league: "premier-league",
     name: "Honka",
     image: {
       id: 5114,
@@ -3650,6 +4055,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 407,
     teamId: 2025,
+    league: "premier-league",
     name: "Kalmar FF",
     image: {
       id: 5288,
@@ -3659,6 +4065,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 408,
     teamId: 2035,
+    league: "premier-league",
     name: "Southend Manor",
     image: {
       id: 1612,
@@ -3668,6 +4075,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 409,
     teamId: 2092,
+    league: "premier-league",
     name: "Le Havre",
     image: {
       id: 533,
@@ -3677,6 +4085,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 410,
     teamId: 2101,
+    league: "premier-league",
     name: "TOP Oss",
     image: {
       id: 1917,
@@ -3686,6 +4095,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 411,
     teamId: 2102,
+    league: "premier-league",
     name: "De Graafschap",
     image: {
       id: 1913,
@@ -3695,6 +4105,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 412,
     teamId: 2115,
+    league: "premier-league",
     name: "VV UNA",
     image: {
       id: 5765,
@@ -3704,6 +4115,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 413,
     teamId: 2118,
+    league: "premier-league",
     name: "De Treffers",
     image: {
       id: 6980,
@@ -3713,6 +4125,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 414,
     teamId: 2120,
+    league: "premier-league",
     name: "Holstein Kiel",
     image: {
       id: 720,
@@ -3722,6 +4135,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 415,
     teamId: 2124,
+    league: "premier-league",
     name: "Alanyaspor",
     image: {
       id: 5249,
@@ -3731,6 +4145,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 416,
     teamId: 2128,
+    league: "premier-league",
     name: "Antalyaspor",
     image: {
       id: 605,
@@ -3740,6 +4155,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 417,
     teamId: 2132,
+    league: "premier-league",
     name: "BB Erzurumspor",
     image: {
       id: 5237,
@@ -3749,6 +4165,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 418,
     teamId: 2133,
+    league: "premier-league",
     name: "Hatayspor",
     image: {
       id: 7314,
@@ -3758,6 +4175,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 419,
     teamId: 2134,
+    league: "premier-league",
     name: "Monza",
     image: {
       id: 5911,
@@ -3767,6 +4185,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 420,
     teamId: 2135,
+    league: "premier-league",
     name: "Vicenza Virtus",
     image: {
       id: 451,
@@ -3776,6 +4195,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 421,
     teamId: 2137,
+    league: "premier-league",
     name: "Frosinone",
     image: {
       id: 470,
@@ -3785,6 +4205,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 422,
     teamId: 2156,
+    league: "premier-league",
     name: "Altona 93",
     image: {
       id: 5967,
@@ -3794,6 +4215,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 423,
     teamId: 2163,
+    league: "premier-league",
     name: "VfB Oldenburg",
     image: {
       id: 6015,
@@ -3803,6 +4225,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 424,
     teamId: 2170,
+    league: "premier-league",
     name: "Cercle Brugge",
     image: {
       id: 3939,
@@ -3812,6 +4235,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 425,
     teamId: 2171,
+    league: "premier-league",
     name: "OH Leuven",
     image: {
       id: 3840,
@@ -3821,6 +4245,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 426,
     teamId: 2177,
+    league: "premier-league",
     name: "Marine",
     image: {
       id: 6606,
@@ -3830,6 +4255,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 427,
     teamId: 2259,
+    league: "premier-league",
     name: "Palmeiras",
     image: {
       id: 1769,
@@ -3839,6 +4265,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 428,
     teamId: 2308,
+    league: "premier-league",
     name: "Kelty Hearts",
     image: {
       id: 5390,
@@ -3848,6 +4275,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 429,
     teamId: 2312,
+    league: "premier-league",
     name: "Mexico",
     image: {
       id: 769,
@@ -3857,6 +4285,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 430,
     teamId: 2319,
+    league: "premier-league",
     name: "Bologna",
     image: {
       id: 103,
@@ -3866,6 +4295,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 431,
     teamId: 2320,
+    league: "premier-league",
     name: "RWDM",
     image: {
       id: 4200,
@@ -3875,6 +4305,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 432,
     teamId: 2324,
+    league: "premier-league",
     name: "Le Mans",
     image: {
       id: 535,
@@ -3884,6 +4315,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 433,
     teamId: 2335,
+    league: "premier-league",
     name: "Troyes",
     image: {
       id: 531,
@@ -3893,6 +4325,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 434,
     teamId: 2337,
+    league: "premier-league",
     name: "Modena",
     image: {
       id: 460,
@@ -3902,6 +4335,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 435,
     teamId: 2344,
+    league: "premier-league",
     name: "Crotone",
     image: {
       id: 472,
@@ -3911,6 +4345,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 436,
     teamId: 2351,
+    league: "premier-league",
     name: "Giresunspor",
     image: {
       id: 5243,
@@ -3920,6 +4355,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 437,
     teamId: 2439,
+    league: "premier-league",
     name: "Alessandria",
     image: {
       id: 5889,
@@ -3929,6 +4365,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 438,
     teamId: 2443,
+    league: "premier-league",
     name: "Horsham",
     image: {
       id: 1550,
@@ -3938,6 +4375,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 439,
     teamId: 2446,
+    league: "premier-league",
     name: "Halifax Town",
     image: {
       id: 1149,
@@ -3947,6 +4385,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 440,
     teamId: 2520,
+    league: "premier-league",
     name: "Vélez",
     image: {
       id: 2078,
@@ -3956,6 +4395,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 441,
     teamId: 2544,
+    league: "premier-league",
     name: "Platense",
     image: {
       id: 7580,
@@ -3965,6 +4405,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 442,
     teamId: 2552,
+    league: "premier-league",
     name: "Bodø/Glimt",
     image: {
       id: 5721,
@@ -3974,6 +4415,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 443,
     teamId: 2553,
+    league: "premier-league",
     name: "Flora",
     image: {
       id: 5100,
@@ -3983,6 +4425,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 444,
     teamId: 2560,
+    league: "premier-league",
     name: "Bonnyrigg Rose",
     image: {
       id: 7552,
@@ -3992,6 +4435,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 445,
     teamId: 2576,
+    league: "premier-league",
     name: "Gamba Osaka",
     image: {
       id: 5851,
@@ -4001,6 +4445,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 446,
     teamId: 2581,
+    league: "premier-league",
     name: "Bohemians 1905",
     image: {
       id: 4469,
@@ -4010,6 +4455,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 447,
     teamId: 2583,
+    league: "premier-league",
     name: "Valenciennes",
     image: {
       id: 515,
@@ -4019,6 +4465,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 448,
     teamId: 2584,
+    league: "premier-league",
     name: "Paris FC",
     image: {
       id: 1045,
@@ -4028,6 +4475,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 449,
     teamId: 2585,
+    league: "premier-league",
     name: "Salernitana",
     image: {
       id: 455,
@@ -4037,6 +4485,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 450,
     teamId: 2593,
+    league: "premier-league",
     name: "Sigma Olomouc",
     image: {
       id: 4480,
@@ -4046,6 +4495,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 451,
     teamId: 2595,
+    league: "premier-league",
     name: "Zalaegerszeg",
     image: {
       id: 6131,
@@ -4055,6 +4505,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 452,
     teamId: 2600,
+    league: "premier-league",
     name: "Pumas UNAM",
     image: {
       id: 5796,
@@ -4064,6 +4515,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 453,
     teamId: 2604,
+    league: "premier-league",
     name: "Empoli",
     image: {
       id: 445,
@@ -4073,6 +4525,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 454,
     teamId: 2605,
+    league: "premier-league",
     name: "Atlas",
     image: {
       id: 5771,
@@ -4082,6 +4535,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 455,
     teamId: 2631,
+    league: "premier-league",
     name: "Qatar",
     image: {
       id: 8030,
@@ -4091,6 +4545,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 456,
     teamId: 2654,
+    league: "premier-league",
     name: "Jamaica",
     image: {
       id: 819,
@@ -4100,6 +4555,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 457,
     teamId: 2659,
+    league: "premier-league",
     name: "Pyunik",
     image: {
       id: 7497,
@@ -4109,6 +4565,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 458,
     teamId: 2722,
+    league: "premier-league",
     name: "Alvechurch",
     image: {
       id: 1510,
@@ -4118,6 +4575,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 459,
     teamId: 2724,
+    league: "premier-league",
     name: "Merthyr Town",
     image: {
       id: 1225,
@@ -4127,6 +4585,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 460,
     teamId: 2725,
+    league: "premier-league",
     name: "Weymouth",
     image: {
       id: 1178,
@@ -4136,6 +4595,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 461,
     teamId: 2765,
+    league: "premier-league",
     name: "Colo-Colo",
     image: {
       id: 4410,
@@ -4145,6 +4605,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 462,
     teamId: 2783,
+    league: "premier-league",
     name: "Vietnam",
     image: {
       id: 8060,
@@ -4154,6 +4615,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 463,
     teamId: 2787,
+    league: "premier-league",
     name: "Botafogo",
     image: {
       id: 1770,
@@ -4163,6 +4625,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 464,
     teamId: 2790,
+    league: "premier-league",
     name: "Millonarios",
     image: {
       id: 4444,
@@ -4172,6 +4635,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 465,
     teamId: 2796,
+    league: "premier-league",
     name: "Barking",
     image: {
       id: 1445,
@@ -4181,6 +4645,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 466,
     teamId: 2798,
+    league: "premier-league",
     name: "Burscough",
     image: {
       id: 6531,
@@ -4190,6 +4655,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 467,
     teamId: 2799,
+    league: "premier-league",
     name: "Croydon",
     image: {
       id: 1675,
@@ -4199,6 +4665,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 468,
     teamId: 2801,
+    league: "premier-league",
     name: "Fareham Town",
     image: {
       id: 6351,
@@ -4208,6 +4675,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 469,
     teamId: 2808,
+    league: "premier-league",
     name: "Scarborough",
     image: {
       id: 6555,
@@ -4217,6 +4685,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 470,
     teamId: 2811,
+    league: "premier-league",
     name: "Bideford",
     image: {
       id: 6547,
@@ -4226,6 +4695,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 471,
     teamId: 2815,
+    league: "premier-league",
     name: "Grantham Town",
     image: {
       id: 1312,
@@ -4235,6 +4705,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 472,
     teamId: 2821,
+    league: "premier-league",
     name: "Runcorn Town",
     image: {
       id: 6399,
@@ -4244,6 +4715,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 473,
     teamId: 2828,
+    league: "premier-league",
     name: "Vasco da Gama",
     image: {
       id: 1780,
@@ -4253,6 +4725,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 474,
     teamId: 4076,
+    league: "premier-league",
     name: "Cerezo Osaka",
     image: {
       id: 5864,
@@ -4262,6 +4735,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 475,
     teamId: 5710,
+    league: "premier-league",
     name: "Annecy",
     image: {
       id: 6208,
@@ -4271,6 +4745,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 476,
     teamId: 5712,
+    league: "premier-league",
     name: "Châteauroux",
     image: {
       id: 539,
@@ -4280,6 +4755,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 477,
     teamId: 5713,
+    league: "premier-league",
     name: "Grenoble",
     image: {
       id: 6242,
@@ -4289,6 +4765,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 478,
     teamId: 5719,
+    league: "premier-league",
     name: "Lorient",
     image: {
       id: 525,
@@ -4298,6 +4775,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 479,
     teamId: 5813,
+    league: "premier-league",
     name: "Russia",
     image: {
       id: 808,
@@ -4307,6 +4785,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 480,
     teamId: 5853,
+    league: "premier-league",
     name: "Worthing",
     image: {
       id: 1218,
@@ -4316,6 +4795,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 481,
     teamId: 5854,
+    league: "premier-league",
     name: "Ramsgate",
     image: {
       id: 1398,
@@ -4325,6 +4805,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 482,
     teamId: 5975,
+    league: "premier-league",
     name: "Whitby Town",
     image: {
       id: 1292,
@@ -4334,6 +4815,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 483,
     teamId: 16387,
+    league: "premier-league",
     name: "FC Kufstein",
     image: {
       id: 2642,
@@ -4343,6 +4825,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 484,
     teamId: 30648,
+    league: "premier-league",
     name: "Threave Rovers",
     image: {
       id: 6865,
@@ -4352,6 +4835,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 485,
     teamId: 30649,
+    league: "premier-league",
     name: "Lossiemouth",
     image: {
       id: 6886,
@@ -4361,6 +4845,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 486,
     teamId: 30656,
+    league: "premier-league",
     name: "Brora Rangers",
     image: {
       id: 6895,
@@ -4370,6 +4855,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 487,
     teamId: 30675,
+    league: "premier-league",
     name: "Beith Juniors",
     image: {
       id: 7553,
@@ -4379,6 +4865,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 488,
     teamId: 30676,
+    league: "premier-league",
     name: "Wick Academy",
     image: {
       id: 6883,
@@ -4388,6 +4875,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 489,
     teamId: 30677,
+    league: "premier-league",
     name: "Buckie Thistle",
     image: {
       id: 6906,
@@ -4397,6 +4885,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 490,
     teamId: 30678,
+    league: "premier-league",
     name: "Clachnacuddin",
     image: {
       id: 6894,
@@ -4406,6 +4895,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 491,
     teamId: 30680,
+    league: "premier-league",
     name: "Banks O'Dee",
     image: {
       id: 6860,
@@ -4415,6 +4905,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 492,
     teamId: 30681,
+    league: "premier-league",
     name: "Rothes",
     image: {
       id: 6884,
@@ -4424,6 +4915,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 493,
     teamId: 30682,
+    league: "premier-league",
     name: "Nairn County",
     image: {
       id: 6885,
@@ -4433,6 +4925,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 494,
     teamId: 30683,
+    league: "premier-league",
     name: "Fraserburgh",
     image: {
       id: 6890,
@@ -4442,6 +4935,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 495,
     teamId: 30684,
+    league: "premier-league",
     name: "Keith",
     image: {
       id: 6887,
@@ -4451,6 +4945,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 496,
     teamId: 30685,
+    league: "premier-league",
     name: "East Kilbride",
     image: {
       id: 6904,
@@ -4460,6 +4955,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 497,
     teamId: 30690,
+    league: "premier-league",
     name: "Huntly",
     image: {
       id: 6889,
@@ -4469,6 +4965,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 498,
     teamId: 30698,
+    league: "premier-league",
     name: "Deveronvale",
     image: {
       id: 6893,
@@ -4478,6 +4975,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 499,
     teamId: 30738,
+    league: "premier-league",
     name: "Mohun Bagan",
     image: {
       id: 5937,
@@ -4487,6 +4985,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 500,
     teamId: 49,
+    league: "premier-league",
     name: "FC Barcelona",
     image: {
       id: 81,
@@ -4496,6 +4995,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 501,
     teamId: 50,
+    league: "premier-league",
     name: "Bayer 04 Leverkusen",
     image: {
       id: 3,
@@ -4505,6 +5005,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 502,
     teamId: 52,
+    league: "premier-league",
     name: "Borussia Dortmund",
     image: {
       id: 4,
@@ -4514,6 +5015,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 503,
     teamId: 56,
+    league: "premier-league",
     name: "FC Bayern München",
     image: {
       id: 5,
@@ -4523,6 +5025,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 504,
     teamId: 57,
+    league: "premier-league",
     name: "FC København",
     image: {
       id: 1876,
@@ -4532,6 +5035,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 505,
     teamId: 58,
+    league: "premier-league",
     name: "FC Porto",
     image: {
       id: 503,
@@ -4541,6 +5045,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 506,
     teamId: 59,
+    league: "premier-league",
     name: "FC Schalke 04",
     image: {
       id: 6,
@@ -4550,6 +5055,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 507,
     teamId: 60,
+    league: "premier-league",
     name: "FK Austria Wien",
     image: {
       id: 2020,
@@ -4559,6 +5065,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 508,
     teamId: 70,
+    league: "premier-league",
     name: "RSC Anderlecht",
     image: {
       id: 726,
@@ -4568,6 +5075,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 509,
     teamId: 84,
+    league: "premier-league",
     name: "Eintracht Frankfurt",
     image: {
       id: 19,
@@ -4577,6 +5085,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 510,
     teamId: 85,
+    league: "premier-league",
     name: "Esbjerg fB",
     image: {
       id: 4494,
@@ -4586,6 +5095,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 511,
     teamId: 87,
+    league: "premier-league",
     name: "FC Red Bull Salzburg",
     image: {
       id: 1877,
@@ -4595,6 +5105,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 512,
     teamId: 88,
+    league: "premier-league",
     name: "FC St. Gallen",
     image: {
       id: 5269,
@@ -4604,6 +5115,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 513,
     teamId: 89,
+    league: "premier-league",
     name: "FC Thun",
     image: {
       id: 1003,
@@ -4613,6 +5125,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 514,
     teamId: 91,
+    league: "premier-league",
     name: "HNK Rijeka",
     image: {
       id: 1893,
@@ -4622,6 +5135,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 515,
     teamId: 101,
+    league: "premier-league",
     name: "NK Maribor",
     image: {
       id: 734,
@@ -4631,6 +5145,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 516,
     teamId: 111,
+    league: "premier-league",
     name: "SK Rapid Wien",
     image: {
       id: 2014,
@@ -4640,6 +5155,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 517,
     teamId: 118,
+    league: "premier-league",
     name: "Valencia CF",
     image: {
       id: 95,
@@ -4649,6 +5165,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 518,
     teamId: 150,
+    league: "premier-league",
     name: "FC Halifax Town",
     image: {
       id: 1149,
@@ -4658,6 +5175,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 519,
     teamId: 199,
+    league: "premier-league",
     name: "Athletic Club",
     image: {
       id: 77,
@@ -4667,6 +5185,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 520,
     teamId: 205,
+    league: "premier-league",
     name: "AFC Fylde",
     image: {
       id: 1243,
@@ -4676,6 +5195,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 521,
     teamId: 206,
+    league: "premier-league",
     name: "AFC Telford United",
     image: {
       id: 1229,
@@ -4685,6 +5205,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 522,
     teamId: 212,
+    league: "premier-league",
     name: "Chester FC",
     image: {
       id: 1112,
@@ -4694,6 +5215,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 523,
     teamId: 226,
+    league: "premier-league",
     name: "Aalborg BK",
     image: {
       id: 946,
@@ -4703,6 +5225,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 524,
     teamId: 230,
+    league: "premier-league",
     name: "Borussia Mönchengladbach",
     image: {
       id: 18,
@@ -4712,6 +5235,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 525,
     teamId: 231,
+    league: "premier-league",
     name: "BSC Young Boys",
     image: {
       id: 1871,
@@ -4721,6 +5245,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 526,
     teamId: 237,
+    league: "premier-league",
     name: "FK Krasnodar",
     image: {
       id: 5452,
@@ -4730,6 +5255,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 527,
     teamId: 252,
+    league: "premier-league",
     name: "VfL Wolfsburg",
     image: {
       id: 11,
@@ -4739,6 +5265,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 528,
     teamId: 257,
+    league: "premier-league",
     name: "FC United of Manchester",
     image: {
       id: 4622,
@@ -4748,6 +5275,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 529,
     teamId: 333,
+    league: "premier-league",
     name: "AFC Bournemouth",
     image: {
       id: 1044,
@@ -4757,6 +5285,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 530,
     teamId: 362,
+    league: "premier-league",
     name: "FC Augsburg",
     image: {
       id: 16,
@@ -4766,6 +5295,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 531,
     teamId: 363,
+    league: "premier-league",
     name: "FC Groningen",
     image: {
       id: 677,
@@ -4775,6 +5305,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 532,
     teamId: 364,
+    league: "premier-league",
     name: "FC Midtjylland",
     image: {
       id: 4485,
@@ -4784,6 +5315,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 533,
     teamId: 365,
+    league: "premier-league",
     name: "FC Sion",
     image: {
       id: 5268,
@@ -4793,6 +5325,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 534,
     teamId: 376,
+    league: "premier-league",
     name: "Borussia Mönchengladbach II",
     image: {
       id: 5969,
@@ -4802,6 +5335,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 535,
     teamId: 431,
+    league: "premier-league",
     name: "VfL Wolfsburg II",
     image: {
       id: 6016,
@@ -4811,6 +5345,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 536,
     teamId: 445,
+    league: "premier-league",
     name: "1. FSV Mainz 05",
     image: {
       id: 15,
@@ -4820,6 +5355,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 537,
     teamId: 458,
+    league: "premier-league",
     name: "VfB Stuttgart",
     image: {
       id: 10,
@@ -4829,6 +5365,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 538,
     teamId: 463,
+    league: "premier-league",
     name: "Hannover 96",
     image: {
       id: 8,
@@ -4838,6 +5375,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 539,
     teamId: 465,
+    league: "premier-league",
     name: "Helsingborgs IF",
     image: {
       id: 5298,
@@ -4847,6 +5385,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 540,
     teamId: 505,
+    league: "premier-league",
     name: "Brøndby IF",
     image: {
       id: 4483,
@@ -4856,6 +5395,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 541,
     teamId: 511,
+    league: "premier-league",
     name: "Randers FC",
     image: {
       id: 4490,
@@ -4865,6 +5405,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 542,
     teamId: 513,
+    league: "premier-league",
     name: "SV Werder Bremen",
     image: {
       id: 12,
@@ -4874,6 +5415,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 543,
     teamId: 515,
+    league: "premier-league",
     name: "AFC Totton",
     image: {
       id: 1504,
@@ -4883,6 +5425,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 544,
     teamId: 523,
+    league: "premier-league",
     name: "Urawa Red Diamonds",
     image: {
       id: 5859,
@@ -4892,6 +5435,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 545,
     teamId: 527,
+    league: "premier-league",
     name: "Western Sydney Wanderers FC",
     image: {
       id: 1831,
@@ -4901,6 +5445,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 546,
     teamId: 535,
+    league: "premier-league",
     name: "FC Rot-Weiß Erfurt",
     image: {
       id: 2009,
@@ -4910,6 +5455,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 547,
     teamId: 536,
+    league: "premier-league",
     name: "Rot-Weiss Essen",
     image: {
       id: 2002,
@@ -4919,6 +5465,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 548,
     teamId: 538,
+    league: "premier-league",
     name: "FC Lugano",
     image: {
       id: 5265,
@@ -4928,6 +5475,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 549,
     teamId: 540,
+    league: "premier-league",
     name: "1. FC Nürnberg",
     image: {
       id: 14,
@@ -4937,6 +5485,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 550,
     teamId: 542,
+    league: "premier-league",
     name: "FSV Zwickau",
     image: {
       id: 198,
@@ -4946,6 +5495,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 551,
     teamId: 543,
+    league: "premier-league",
     name: "VfL Bochum 1848",
     image: {
       id: 36,
@@ -4955,6 +5505,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 552,
     teamId: 549,
+    league: "premier-league",
     name: "Philadelphia Union",
     image: {
       id: 1796,
@@ -4964,6 +5515,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 553,
     teamId: 551,
+    league: "premier-league",
     name: "Seattle Sounders FC",
     image: {
       id: 7464,
@@ -4973,6 +5525,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 554,
     teamId: 553,
+    league: "premier-league",
     name: "TSG 1899 Hoffenheim",
     image: {
       id: 2,
@@ -4982,6 +5535,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 555,
     teamId: 555,
+    league: "premier-league",
     name: "Columbus Crew SC",
     image: {
       id: 7460,
@@ -4991,6 +5545,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 556,
     teamId: 556,
+    league: "premier-league",
     name: "Orlando City SC",
     image: {
       id: 7468,
@@ -5000,6 +5555,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 557,
     teamId: 563,
+    league: "premier-league",
     name: "Portland Timbers",
     image: {
       id: 1798,
@@ -5009,6 +5565,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 558,
     teamId: 564,
+    league: "premier-league",
     name: "FC Eindhoven",
     image: {
       id: 1918,
@@ -5018,6 +5575,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 559,
     teamId: 565,
+    league: "premier-league",
     name: "Toronto FC",
     image: {
       id: 1785,
@@ -5027,6 +5585,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 560,
     teamId: 567,
+    league: "premier-league",
     name: "ADO Den Haag",
     image: {
       id: 680,
@@ -5036,6 +5595,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 561,
     teamId: 569,
+    league: "premier-league",
     name: "SC Paderborn 07",
     image: {
       id: 29,
@@ -5045,6 +5605,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 562,
     teamId: 582,
+    league: "premier-league",
     name: "FC Liefering",
     image: {
       id: 2024,
@@ -5054,6 +5615,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 563,
     teamId: 583,
+    league: "premier-league",
     name: "Atlanta United FC",
     image: {
       id: 7470,
@@ -5063,6 +5625,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 564,
     teamId: 586,
+    league: "premier-league",
     name: "FK Jablonec",
     image: {
       id: 4476,
@@ -5072,6 +5635,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 565,
     teamId: 587,
+    league: "premier-league",
     name: "New York City FC",
     image: {
       id: 7469,
@@ -5081,6 +5645,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 566,
     teamId: 590,
+    league: "premier-league",
     name: "New England Revolution",
     image: {
       id: 7453,
@@ -5090,6 +5655,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 567,
     teamId: 591,
+    league: "premier-league",
     name: "Sporting Kansas City",
     image: {
       id: 7455,
@@ -5099,6 +5665,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 568,
     teamId: 592,
+    league: "premier-league",
     name: "San Jose Earthquakes",
     image: {
       id: 7463,
@@ -5108,6 +5675,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 569,
     teamId: 599,
+    league: "premier-league",
     name: "New York Red Bulls",
     image: {
       id: 7462,
@@ -5117,6 +5685,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 570,
     teamId: 601,
+    league: "premier-league",
     name: "Jönköpings Södra IF",
     image: {
       id: 5302,
@@ -5126,6 +5695,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 571,
     teamId: 605,
+    league: "premier-league",
     name: "Colorado Rapids",
     image: {
       id: 1803,
@@ -5135,6 +5705,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 572,
     teamId: 608,
+    league: "premier-league",
     name: "Minnesota United FC",
     image: {
       id: 7467,
@@ -5144,6 +5715,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 573,
     teamId: 610,
+    league: "premier-league",
     name: "Vancouver Whitecaps FC",
     image: {
       id: 4406,
@@ -5153,6 +5725,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 574,
     teamId: 615,
+    league: "premier-league",
     name: "SDC Putten",
     image: {
       id: 6939,
@@ -5162,6 +5735,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 575,
     teamId: 644,
+    league: "premier-league",
     name: "FC Bayern München II",
     image: {
       id: 5974,
@@ -5171,6 +5745,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 576,
     teamId: 677,
+    league: "premier-league",
     name: "Östersunds FK",
     image: {
       id: 5290,
@@ -5180,6 +5755,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 577,
     teamId: 681,
+    league: "premier-league",
     name: "AG Caennaise",
     image: {
       id: 7683,
@@ -5189,6 +5765,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 578,
     teamId: 696,
+    league: "premier-league",
     name: "AFC Hornchurch",
     image: {
       id: 1326,
@@ -5198,6 +5775,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 579,
     teamId: 709,
+    league: "premier-league",
     name: "Hereford FC",
     image: {
       id: 372,
@@ -5207,6 +5785,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 580,
     teamId: 727,
+    league: "premier-league",
     name: "Sparta Rotterdam",
     image: {
       id: 6806,
@@ -5216,6 +5795,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 581,
     teamId: 730,
+    league: "premier-league",
     name: "SG Sonnenhof Großaspach",
     image: {
       id: 741,
@@ -5225,6 +5805,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 582,
     teamId: 736,
+    league: "premier-league",
     name: "Lyngby BK",
     image: {
       id: 4488,
@@ -5234,6 +5815,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 583,
     teamId: 749,
+    league: "premier-league",
     name: "Hamburger SV",
     image: {
       id: 7,
@@ -5243,6 +5825,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 584,
     teamId: 771,
+    league: "premier-league",
     name: "Granada CF",
     image: {
       id: 83,
@@ -5252,6 +5835,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 585,
     teamId: 787,
+    league: "premier-league",
     name: "Real Madrid Castilla",
     image: {
       id: 289,
@@ -5261,6 +5845,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 586,
     teamId: 822,
+    league: "premier-league",
     name: "Pontevedra CF",
     image: {
       id: 5332,
@@ -5270,6 +5855,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 587,
     teamId: 839,
+    league: "premier-league",
     name: "Extremadura UD",
     image: {
       id: 7396,
@@ -5279,6 +5865,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 588,
     teamId: 860,
+    league: "premier-league",
     name: "CD Ebro",
     image: {
       id: 7439,
@@ -5288,6 +5875,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 589,
     teamId: 869,
+    league: "premier-league",
     name: "Mérida AD",
     image: {
       id: 270,
@@ -5297,6 +5885,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 590,
     teamId: 889,
+    league: "premier-league",
     name: "Sanfrecce Hiroshima",
     image: {
       id: 5856,
@@ -5306,6 +5895,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 591,
     teamId: 899,
+    league: "premier-league",
     name: "Kashima Antlers",
     image: {
       id: 5865,
@@ -5315,6 +5905,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 592,
     teamId: 928,
+    league: "premier-league",
     name: "FC Dordrecht",
     image: {
       id: 1908,
@@ -5324,6 +5915,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 593,
     teamId: 929,
+    league: "premier-league",
     name: "Heracles Almelo",
     image: {
       id: 671,
@@ -5333,6 +5925,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 594,
     teamId: 940,
+    league: "premier-league",
     name: "PEC Zwolle",
     image: {
       id: 684,
@@ -5342,6 +5935,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 595,
     teamId: 942,
+    league: "premier-league",
     name: "RKC Waalwijk",
     image: {
       id: 683,
@@ -5351,6 +5945,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 596,
     teamId: 944,
+    league: "premier-league",
     name: "SG Dynamo Dresden",
     image: {
       id: 35,
@@ -5360,6 +5955,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 597,
     teamId: 954,
+    league: "premier-league",
     name: "FC Nordsjælland",
     image: {
       id: 4486,
@@ -5369,6 +5965,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 598,
     teamId: 959,
+    league: "premier-league",
     name: "Otelul Galati",
     image: {
       id: 704,
@@ -5378,6 +5975,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 599,
     teamId: 976,
+    league: "premier-league",
     name: "CD Calahorra",
     image: {
       id: 5314,
@@ -5387,6 +5985,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 600,
     teamId: 989,
+    league: "premier-league",
     name: "Ferencvárosi TC",
     image: {
       id: 5954,
@@ -5396,6 +5995,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 601,
     teamId: 999,
+    league: "premier-league",
     name: "FC Emmen",
     image: {
       id: 1914,
@@ -5405,6 +6005,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 602,
     teamId: 1058,
+    league: "premier-league",
     name: "AD Unión Adarve",
     image: {
       id: 7122,
@@ -5414,6 +6015,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 603,
     teamId: 1063,
+    league: "premier-league",
     name: "Club Rápido de Bouzas",
     image: {
       id: 6857,
@@ -5423,6 +6025,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 604,
     teamId: 1070,
+    league: "premier-league",
     name: "UD San Fernando",
     image: {
       id: 5342,
@@ -5432,6 +6035,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 605,
     teamId: 1125,
+    league: "premier-league",
     name: "1. FC Union Berlin",
     image: {
       id: 28,
@@ -5441,6 +6045,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 606,
     teamId: 1129,
+    league: "premier-league",
     name: "Brisbane Roar FC",
     image: {
       id: 1826,
@@ -5450,6 +6055,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 607,
     teamId: 1130,
+    league: "premier-league",
     name: "Çaykur Rizespor",
     image: {
       id: 5239,
@@ -5459,6 +6065,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 608,
     teamId: 1137,
+    league: "premier-league",
     name: "FC Erzgebirge Aue",
     image: {
       id: 22,
@@ -5468,6 +6075,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 609,
     teamId: 1139,
+    league: "premier-league",
     name: "Karlsruher SC",
     image: {
       id: 32,
@@ -5477,6 +6085,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 610,
     teamId: 1146,
+    league: "premier-league",
     name: "Melbourne City FC",
     image: {
       id: 6801,
@@ -5486,6 +6095,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 611,
     teamId: 1153,
+    league: "premier-league",
     name: "SV Grödig",
     image: {
       id: 2580,
@@ -5495,6 +6105,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 612,
     teamId: 1154,
+    league: "premier-league",
     name: "SV Mattersburg",
     image: {
       id: 2015,
@@ -5504,6 +6115,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 613,
     teamId: 1155,
+    league: "premier-league",
     name: "SV Meppen",
     image: {
       id: 6308,
@@ -5513,6 +6125,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 614,
     teamId: 1156,
+    league: "premier-league",
     name: "SV Wehen Wiesbaden",
     image: {
       id: 39,
@@ -5522,6 +6135,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 615,
     teamId: 1157,
+    league: "premier-league",
     name: "TSV 1860 München",
     image: {
       id: 26,
@@ -5531,6 +6145,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 616,
     teamId: 1162,
+    league: "premier-league",
     name: "Fortuna Sittard",
     image: {
       id: 1920,
@@ -5540,6 +6155,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 617,
     teamId: 1184,
+    league: "premier-league",
     name: "FC Wil 1900",
     image: {
       id: 5270,
@@ -5549,6 +6165,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 618,
     teamId: 1244,
+    league: "premier-league",
     name: "VfL Osnabrück",
     image: {
       id: 7418,
@@ -5558,6 +6175,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 619,
     teamId: 1249,
+    league: "premier-league",
     name: "AF Virois",
     image: {
       id: 6157,
@@ -5567,6 +6185,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 620,
     teamId: 1251,
+    league: "premier-league",
     name: "Alemannia Aachen",
     image: {
       id: 27,
@@ -5576,6 +6195,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 621,
     teamId: 1293,
+    league: "premier-league",
     name: "Afjet Afyonspor",
     image: {
       id: 7315,
@@ -5585,6 +6205,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 622,
     teamId: 1299,
+    league: "premier-league",
     name: "KR Reykjavík",
     image: {
       id: 5947,
@@ -5594,6 +6215,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 623,
     teamId: 1306,
+    league: "premier-league",
     name: "V-Varen Nagasaki",
     image: {
       id: 5860,
@@ -5603,6 +6225,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 624,
     teamId: 1310,
+    league: "premier-league",
     name: "1. FC Kaiserslautern",
     image: {
       id: 13,
@@ -5612,6 +6235,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 625,
     teamId: 1320,
+    league: "premier-league",
     name: "Omonia Nicosia",
     image: {
       id: 910,
@@ -5621,6 +6245,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 626,
     teamId: 1322,
+    league: "premier-league",
     name: "Roda JC Kerkrade",
     image: {
       id: 665,
@@ -5630,6 +6255,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 627,
     teamId: 1324,
+    league: "premier-league",
     name: "SC Farense",
     image: {
       id: 5602,
@@ -5639,6 +6265,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 628,
     teamId: 1325,
+    league: "premier-league",
     name: "Silkeborg IF",
     image: {
       id: 4491,
@@ -5648,6 +6275,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 629,
     teamId: 1327,
+    league: "premier-league",
     name: "Viking FK",
     image: {
       id: 5720,
@@ -5657,6 +6285,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 630,
     teamId: 1340,
+    league: "premier-league",
     name: "FC Wacker Innsbruck",
     image: {
       id: 2026,
@@ -5666,6 +6295,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 631,
     teamId: 1350,
+    league: "premier-league",
     name: "Sportul Studentesc",
     image: {
       id: 702,
@@ -5675,6 +6305,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 632,
     teamId: 1357,
+    league: "premier-league",
     name: "FC Carl Zeiss Jena",
     image: {
       id: 49,
@@ -5684,6 +6315,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 633,
     teamId: 1359,
+    league: "premier-league",
     name: "FC Tatabánya",
     image: {
       id: 7592,
@@ -5693,6 +6325,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 634,
     teamId: 1361,
+    league: "premier-league",
     name: "FC Utrecht",
     image: {
       id: 676,
@@ -5702,6 +6335,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 635,
     teamId: 1362,
+    league: "premier-league",
     name: "FK Sarajevo",
     image: {
       id: 4275,
@@ -5711,6 +6345,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 636,
     teamId: 1369,
+    league: "premier-league",
     name: "IK Brage",
     image: {
       id: 5300,
@@ -5720,6 +6355,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 637,
     teamId: 1379,
+    league: "premier-league",
     name: "1. FC Magdeburg",
     image: {
       id: 1054,
@@ -5729,6 +6365,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 638,
     teamId: 1391,
+    league: "premier-league",
     name: "RWD Molenbeek",
     image: {
       id: 4200,
@@ -5738,6 +6375,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 639,
     teamId: 1403,
+    league: "premier-league",
     name: "Eintracht Braunschweig",
     image: {
       id: 33,
@@ -5747,6 +6385,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 640,
     teamId: 1406,
+    league: "premier-league",
     name: "GKS Tychy",
     image: {
       id: 7077,
@@ -5756,6 +6395,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 641,
     teamId: 1408,
+    league: "premier-league",
     name: "Hibernians FC",
     image: {
       id: 1892,
@@ -5765,6 +6405,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 642,
     teamId: 1429,
+    league: "premier-league",
     name: "Hvidovre IF",
     image: {
       id: 6998,
@@ -5774,6 +6415,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 643,
     teamId: 1440,
+    league: "premier-league",
     name: "Valletta FC",
     image: {
       id: 5813,
@@ -5783,6 +6425,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 644,
     teamId: 1532,
+    league: "premier-league",
     name: "Kristiansund BK",
     image: {
       id: 5724,
@@ -5792,6 +6435,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 645,
     teamId: 1533,
+    league: "premier-league",
     name: "Atlético San Luis",
     image: {
       id: 5772,
@@ -5801,6 +6445,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 646,
     teamId: 1540,
+    league: "premier-league",
     name: "SV Darmstadt 98",
     image: {
       id: 55,
@@ -5810,6 +6455,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 647,
     teamId: 1709,
+    league: "premier-league",
     name: "SC Preußen Münster",
     image: {
       id: 6307,
@@ -5819,6 +6465,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 648,
     teamId: 1961,
+    league: "premier-league",
     name: "FC Energie Cottbus",
     image: {
       id: 23,
@@ -5828,6 +6475,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 649,
     teamId: 2016,
+    league: "premier-league",
     name: "Adana Demirspor",
     image: {
       id: 5233,
@@ -5837,6 +6485,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 650,
     teamId: 2018,
+    league: "premier-league",
     name: "AC Bellinzona",
     image: {
       id: 7316,
@@ -5846,6 +6495,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 651,
     teamId: 2023,
+    league: "premier-league",
     name: "FC Vaslui",
     image: {
       id: 689,
@@ -5855,6 +6505,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 652,
     teamId: 2046,
+    league: "premier-league",
     name: "Debreceni VSC",
     image: {
       id: 5952,
@@ -5864,6 +6515,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 653,
     teamId: 2094,
+    league: "premier-league",
     name: "Go Ahead Eagles",
     image: {
       id: 718,
@@ -5873,6 +6525,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 654,
     teamId: 2095,
+    league: "premier-league",
     name: "FC Den Bosch",
     image: {
       id: 1916,
@@ -5882,6 +6535,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 655,
     teamId: 2096,
+    league: "premier-league",
     name: "Almere City FC",
     image: {
       id: 1911,
@@ -5891,6 +6545,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 656,
     teamId: 2098,
+    league: "premier-league",
     name: "Jong FC Utrecht",
     image: {
       id: 1924,
@@ -5900,6 +6555,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 657,
     teamId: 2099,
+    league: "premier-league",
     name: "NAC Breda",
     image: {
       id: 681,
@@ -5909,6 +6565,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 658,
     teamId: 2100,
+    league: "premier-league",
     name: "FC Volendam",
     image: {
       id: 1919,
@@ -5918,6 +6575,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 659,
     teamId: 2114,
+    league: "premier-league",
     name: "MVV Maastricht",
     image: {
       id: 1910,
@@ -5927,6 +6585,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 660,
     teamId: 2116,
+    league: "premier-league",
     name: "SC Verl",
     image: {
       id: 5994,
@@ -5936,6 +6595,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 661,
     teamId: 2117,
+    league: "premier-league",
     name: "KFC Uerdingen 05",
     image: {
       id: 5990,
@@ -5945,6 +6605,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 662,
     teamId: 2147,
+    league: "premier-league",
     name: "SC Weiche Flensburg 08",
     image: {
       id: 1994,
@@ -5954,6 +6615,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 663,
     teamId: 2151,
+    league: "premier-league",
     name: "Hamburger SV II",
     image: {
       id: 5988,
@@ -5963,6 +6625,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 664,
     teamId: 2152,
+    league: "premier-league",
     name: "SV Drochtersen/Assel",
     image: {
       id: 1089,
@@ -5972,6 +6635,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 665,
     teamId: 2153,
+    league: "premier-league",
     name: "Lüneburger SK Hansa",
     image: {
       id: 2005,
@@ -5981,6 +6645,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 666,
     teamId: 2155,
+    league: "premier-league",
     name: "Holstein Kiel II",
     image: {
       id: 7301,
@@ -5990,6 +6655,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 667,
     teamId: 2158,
+    league: "premier-league",
     name: "TSV Havelse",
     image: {
       id: 6011,
@@ -5999,6 +6665,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 668,
     teamId: 2159,
+    league: "premier-league",
     name: "BSV Schwarz-Weiß Rehden",
     image: {
       id: 5970,
@@ -6008,6 +6675,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 669,
     teamId: 2160,
+    league: "premier-league",
     name: "SV Werder Bremen II",
     image: {
       id: 6309,
@@ -6017,6 +6685,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 670,
     teamId: 2161,
+    league: "premier-league",
     name: "Hannover 96 II",
     image: {
       id: 7289,
@@ -6026,6 +6695,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 671,
     teamId: 2162,
+    league: "premier-league",
     name: "SSV Jeddeloh II",
     image: {
       id: 1995,
@@ -6035,6 +6705,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 672,
     teamId: 2164,
+    league: "premier-league",
     name: "FC Oberneuland",
     image: {
       id: 8097,
@@ -6044,6 +6715,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 673,
     teamId: 2167,
+    league: "premier-league",
     name: "SV Atlas Delmenhorst",
     image: {
       id: 8098,
@@ -6053,6 +6725,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 674,
     teamId: 2172,
+    league: "premier-league",
     name: "KV Kortrijk",
     image: {
       id: 1859,
@@ -6062,6 +6735,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 675,
     teamId: 2173,
+    league: "premier-league",
     name: "KV Oostende",
     image: {
       id: 1862,
@@ -6071,6 +6745,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 676,
     teamId: 2176,
+    league: "premier-league",
     name: "Royal Excel Mouscron",
     image: {
       id: 1865,
@@ -6080,6 +6755,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 677,
     teamId: 2323,
+    league: "premier-league",
     name: "Koninklijke HFC",
     image: {
       id: 6974,
@@ -6089,6 +6765,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 678,
     teamId: 2343,
+    league: "premier-league",
     name: "Red Star FC",
     image: {
       id: 567,
@@ -6098,6 +6775,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 679,
     teamId: 2440,
+    league: "premier-league",
     name: "SKU Ertl Glas Amstetten",
     image: {
       id: 3548,
@@ -6107,6 +6785,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 680,
     teamId: 2444,
+    league: "premier-league",
     name: "AFC Sudbury",
     image: {
       id: 1269,
@@ -6116,6 +6795,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 681,
     teamId: 2540,
+    league: "premier-league",
     name: "First Vienna FC 1894",
     image: {
       id: 2572,
@@ -6125,6 +6805,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 682,
     teamId: 2545,
+    league: "premier-league",
     name: "FC Juniors OÖ",
     image: {
       id: 7126,
@@ -6134,6 +6815,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 683,
     teamId: 2568,
+    league: "premier-league",
     name: "ZFC Meuselwitz",
     image: {
       id: 6021,
@@ -6143,6 +6825,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 684,
     teamId: 2577,
+    league: "premier-league",
     name: "Kawasaki Frontale",
     image: {
       id: 5867,
@@ -6152,6 +6835,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 685,
     teamId: 2588,
+    league: "premier-league",
     name: "KVC Westerlo",
     image: {
       id: 3803,
@@ -6161,6 +6845,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 686,
     teamId: 2590,
+    league: "premier-league",
     name: "SK Vorwärts Steyr",
     image: {
       id: 3547,
@@ -6170,6 +6855,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 687,
     teamId: 2661,
+    league: "premier-league",
     name: "FC Vaduz",
     image: {
       id: 7513,
@@ -6179,6 +6865,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 688,
     teamId: 2800,
+    league: "premier-league",
     name: "Enfield FC",
     image: {
       id: 6442,
@@ -6188,6 +6875,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 689,
     teamId: 2826,
+    league: "premier-league",
     name: "Casa Pia AC",
     image: {
       id: 6618,
@@ -6197,6 +6885,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 690,
     teamId: 2837,
+    league: "premier-league",
     name: "SpVgg Unterhaching",
     image: {
       id: 48,
@@ -6206,6 +6895,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 691,
     teamId: 5125,
+    league: "premier-league",
     name: "SK Austria Klagenfurt",
     image: {
       id: 3546,
@@ -6215,6 +6905,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 692,
     teamId: 5126,
+    league: "premier-league",
     name: "Union Raiffeisen Gurten",
     image: {
       id: 2653,
@@ -6224,6 +6915,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 693,
     teamId: 5739,
+    league: "premier-league",
     name: "1. FFC Turbine Potsdam",
     image: {
       id: 6150,
@@ -6233,6 +6925,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 694,
     teamId: 5823,
+    league: "premier-league",
     name: "1. FFC Frankfurt",
     image: {
       id: 7519,
@@ -6242,6 +6935,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 695,
     teamId: 6059,
+    league: "premier-league",
     name: "SK Brann",
     image: {
       id: 5730,
@@ -6251,6 +6945,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 696,
     teamId: 13322,
+    league: "premier-league",
     name: "El Salvador",
     image: {
       id: 830,
@@ -6260,6 +6955,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 697,
     teamId: 14025,
+    league: "premier-league",
     name: "SV 07 Elversberg",
     image: {
       id: 719,
@@ -6269,6 +6965,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 698,
     teamId: 16388,
+    league: "premier-league",
     name: "FC Augsburg II",
     image: {
       id: 5973,
@@ -6278,6 +6975,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 699,
     teamId: 16560,
+    league: "premier-league",
     name: "FC Pinzgau Saalfelden",
     image: {
       id: 2619,
@@ -6287,6 +6985,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 700,
     teamId: 3,
+    league: "premier-league",
     name: "Blackburn Rovers",
     image: {
       id: 59,
@@ -6296,6 +6995,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 701,
     teamId: 11,
+    league: "premier-league",
     name: "Manchester City",
     image: {
       id: 65,
@@ -6305,6 +7005,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 702,
     teamId: 12,
+    league: "premier-league",
     name: "Manchester United",
     image: {
       id: 66,
@@ -6314,6 +7015,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 703,
     teamId: 14,
+    league: "premier-league",
     name: "Norwich City",
     image: {
       id: 68,
@@ -6323,6 +7025,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 704,
     teamId: 15,
+    league: "premier-league",
     name: "Nottingham Forest",
     image: {
       id: 351,
@@ -6332,6 +7035,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 705,
     teamId: 16,
+    league: "premier-league",
     name: "Oldham Athletic",
     image: {
       id: 1075,
@@ -6341,6 +7045,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 706,
     teamId: 17,
+    league: "premier-league",
     name: "Queens Park Rangers",
     image: {
       id: 69,
@@ -6350,6 +7055,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 707,
     teamId: 18,
+    league: "premier-league",
     name: "Sheffield United",
     image: {
       id: 356,
@@ -6359,6 +7065,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 708,
     teamId: 19,
+    league: "premier-league",
     name: "Sheffield Wednesday",
     image: {
       id: 345,
@@ -6368,6 +7075,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 709,
     teamId: 21,
+    league: "premier-league",
     name: "Tottenham Hotspur",
     image: {
       id: 73,
@@ -6377,6 +7085,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 710,
     teamId: 22,
+    league: "premier-league",
     name: "Wimbledon",
     image: {
       id: 347,
@@ -6386,6 +7095,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 711,
     teamId: 23,
+    league: "premier-league",
     name: "Newcastle United",
     image: {
       id: 67,
@@ -6395,6 +7105,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 712,
     teamId: 25,
+    league: "premier-league",
     name: "West Ham United",
     image: {
       id: 563,
@@ -6404,6 +7115,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 713,
     teamId: 27,
+    league: "premier-league",
     name: "Bolton Wanderers",
     image: {
       id: 60,
@@ -6413,6 +7125,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 714,
     teamId: 31,
+    league: "premier-league",
     name: "Charlton Athletic",
     image: {
       id: 348,
@@ -6422,6 +7135,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 715,
     teamId: 35,
+    league: "premier-league",
     name: "Birmingham City",
     image: {
       id: 332,
@@ -6431,6 +7145,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 716,
     teamId: 36,
+    league: "premier-league",
     name: "West Bromwich Albion",
     image: {
       id: 74,
@@ -6440,6 +7155,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 717,
     teamId: 38,
+    league: "premier-league",
     name: "Wolverhampton Wanderers",
     image: {
       id: 76,
@@ -6449,6 +7165,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 718,
     teamId: 42,
+    league: "premier-league",
     name: "Stoke City",
     image: {
       id: 70,
@@ -6458,6 +7175,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 719,
     teamId: 45,
+    league: "premier-league",
     name: "Swansea City",
     image: {
       id: 72,
@@ -6467,6 +7185,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 720,
     teamId: 46,
+    league: "premier-league",
     name: "Cardiff City",
     image: {
       id: 715,
@@ -6476,6 +7195,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 721,
     teamId: 51,
+    league: "premier-league",
     name: "Benfica",
     image: {
       id: 1903,
@@ -6485,6 +7205,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 722,
     teamId: 55,
+    league: "premier-league",
     name: "FC Basel",
     image: {
       id: 729,
@@ -6494,6 +7215,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 723,
     teamId: 71,
+    league: "premier-league",
     name: "Shakhtar Donetsk",
     image: {
       id: 1887,
@@ -6503,6 +7225,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 724,
     teamId: 75,
+    league: "premier-league",
     name: "Anzhi Makhachkala",
     image: {
       id: 5424,
@@ -6512,6 +7235,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 725,
     teamId: 94,
+    league: "premier-league",
     name: "Kuban Krasnodar",
     image: {
       id: 5410,
@@ -6521,6 +7245,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 726,
     teamId: 98,
+    league: "premier-league",
     name: "Lyon",
     image: {
       id: 523,
@@ -6530,6 +7255,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 727,
     teamId: 100,
+    league: "premier-league",
     name: "Maccabi Tel Aviv",
     image: {
       id: 5929,
@@ -6539,6 +7265,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 728,
     teamId: 102,
+    league: "premier-league",
     name: "Paços de Ferreira",
     image: {
       id: 507,
@@ -6548,6 +7275,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 729,
     teamId: 108,
+    league: "premier-league",
     name: "Sevilla",
     image: {
       id: 559,
@@ -6557,6 +7285,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 730,
     teamId: 110,
+    league: "premier-league",
     name: "Sheriff Tiraspol",
     image: {
       id: 1880,
@@ -6566,6 +7295,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 731,
     teamId: 120,
+    league: "premier-league",
     name: "Accrington Stanley",
     image: {
       id: 1145,
@@ -6575,6 +7305,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 732,
     teamId: 124,
+    league: "premier-league",
     name: "Biggleswade Town",
     image: {
       id: 4569,
@@ -6584,6 +7315,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 733,
     teamId: 125,
+    league: "premier-league",
     name: "Bishop's Stortford",
     image: {
       id: 4574,
@@ -6593,6 +7325,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 734,
     teamId: 131,
+    league: "premier-league",
     name: "Brighton & Hove Albion",
     image: {
       id: 397,
@@ -6602,6 +7335,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 735,
     teamId: 136,
+    league: "premier-league",
     name: "Cambridge United",
     image: {
       id: 1147,
@@ -6611,6 +7345,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 736,
     teamId: 137,
+    league: "premier-league",
     name: "Carlisle United",
     image: {
       id: 1136,
@@ -6620,6 +7355,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 737,
     teamId: 138,
+    league: "premier-league",
     name: "Cheltenham Town",
     image: {
       id: 411,
@@ -6629,6 +7365,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 738,
     teamId: 140,
+    league: "premier-league",
     name: "Colchester United",
     image: {
       id: 365,
@@ -6638,6 +7375,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 739,
     teamId: 143,
+    league: "premier-league",
     name: "Crewe Alexandra",
     image: {
       id: 1074,
@@ -6647,6 +7385,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 740,
     teamId: 147,
+    league: "premier-league",
     name: "Doncaster Rovers",
     image: {
       id: 1071,
@@ -6656,6 +7395,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 741,
     teamId: 154,
+    league: "premier-league",
     name: "Gloucester City",
     image: {
       id: 4630,
@@ -6665,6 +7405,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 742,
     teamId: 156,
+    league: "premier-league",
     name: "Hartlepool United",
     image: {
       id: 4532,
@@ -6674,6 +7415,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 743,
     teamId: 157,
+    league: "premier-league",
     name: "Hednesford Town",
     image: {
       id: 4839,
@@ -6683,6 +7425,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 744,
     teamId: 159,
+    league: "premier-league",
     name: "Huddersfield Town",
     image: {
       id: 394,
@@ -6692,6 +7435,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 745,
     teamId: 160,
+    league: "premier-league",
     name: "Kidderminster Harriers",
     image: {
       id: 4879,
@@ -6701,6 +7445,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 746,
     teamId: 164,
+    league: "premier-league",
     name: "Macclesfield Town",
     image: {
       id: 4533,
@@ -6710,6 +7455,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 747,
     teamId: 170,
+    league: "premier-league",
     name: "Northampton Town",
     image: {
       id: 376,
@@ -6719,6 +7465,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 748,
     teamId: 173,
+    league: "premier-league",
     name: "Peterborough United",
     image: {
       id: 1077,
@@ -6728,6 +7475,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 749,
     teamId: 174,
+    league: "premier-league",
     name: "Plymouth Argyle",
     image: {
       id: 1138,
@@ -6737,6 +7485,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 750,
     teamId: 176,
+    league: "premier-league",
     name: "Preston North End",
     image: {
       id: 1081,
@@ -6746,6 +7495,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 751,
     teamId: 178,
+    league: "premier-league",
     name: "Rotherham United",
     image: {
       id: 385,
@@ -6755,6 +7505,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 752,
     teamId: 180,
+    league: "premier-league",
     name: "Scunthorpe United",
     image: {
       id: 1078,
@@ -6764,6 +7515,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 753,
     teamId: 181,
+    league: "premier-league",
     name: "Shortwood United",
     image: {
       id: 6582,
@@ -6773,6 +7525,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 754,
     teamId: 182,
+    league: "premier-league",
     name: "Shrewsbury Town",
     image: {
       id: 1080,
@@ -6782,6 +7535,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 755,
     teamId: 183,
+    league: "premier-league",
     name: "Southend United",
     image: {
       id: 1069,
@@ -6791,6 +7545,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 756,
     teamId: 191,
+    league: "premier-league",
     name: "Torquay United",
     image: {
       id: 366,
@@ -6800,6 +7555,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 757,
     teamId: 192,
+    league: "premier-league",
     name: "Tranmere Rovers",
     image: {
       id: 4536,
@@ -6809,6 +7565,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 758,
     teamId: 196,
+    league: "premier-league",
     name: "Wycombe Wanderers",
     image: {
       id: 1146,
@@ -6818,6 +7575,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 759,
     teamId: 209,
+    league: "premier-league",
     name: "Basingstoke Town",
     image: {
       id: 4566,
@@ -6827,6 +7585,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 760,
     teamId: 213,
+    league: "premier-league",
     name: "Concord Rangers",
     image: {
       id: 4607,
@@ -6836,6 +7595,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 761,
     teamId: 214,
+    league: "premier-league",
     name: "East Thurrock United",
     image: {
       id: 4617,
@@ -6845,6 +7605,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 762,
     teamId: 216,
+    league: "premier-league",
     name: "Forest Green Rovers",
     image: {
       id: 1130,
@@ -6854,6 +7615,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 763,
     teamId: 217,
+    league: "premier-league",
     name: "Gosport Borough",
     image: {
       id: 4632,
@@ -6863,6 +7625,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 764,
     teamId: 218,
+    league: "premier-league",
     name: "Havant & Waterlooville",
     image: {
       id: 4821,
@@ -6872,6 +7635,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 765,
     teamId: 219,
+    league: "premier-league",
     name: "Hemel Hempstead Town",
     image: {
       id: 4842,
@@ -6881,6 +7645,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 766,
     teamId: 220,
+    league: "premier-league",
     name: "Maidstone United",
     image: {
       id: 2142,
@@ -6890,6 +7655,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 767,
     teamId: 222,
+    league: "premier-league",
     name: "Warrington Town",
     image: {
       id: 5083,
@@ -6899,6 +7665,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 768,
     teamId: 227,
+    league: "premier-league",
     name: "Asteras Tripolis",
     image: {
       id: 6139,
@@ -6908,6 +7675,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 769,
     teamId: 239,
+    league: "premier-league",
     name: "Guingamp",
     image: {
       id: 538,
@@ -6917,6 +7685,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 770,
     teamId: 241,
+    league: "premier-league",
     name: "Internazionale",
     image: {
       id: 108,
@@ -6926,6 +7695,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 771,
     teamId: 242,
+    league: "premier-league",
     name: "KSC Lokeren",
     image: {
       id: 1861,
@@ -6935,6 +7705,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 772,
     teamId: 244,
+    league: "premier-league",
     name: "Metalist Kharkiv",
     image: {
       id: 7428,
@@ -6944,6 +7715,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 773,
     teamId: 248,
+    league: "premier-league",
     name: "Slovan Bratislava",
     image: {
       id: 7509,
@@ -6953,6 +7725,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 774,
     teamId: 258,
+    league: "premier-league",
     name: "Gainsborough Trinity",
     image: {
       id: 4627,
@@ -6962,6 +7735,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 775,
     teamId: 259,
+    league: "premier-league",
     name: "Maidenhead United",
     image: {
       id: 4534,
@@ -6971,6 +7745,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 776,
     teamId: 260,
+    league: "premier-league",
     name: "Northwich Victoria",
     image: {
       id: 5030,
@@ -6980,6 +7755,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 777,
     teamId: 262,
+    league: "premier-league",
     name: "Stalybridge Celtic",
     image: {
       id: 5067,
@@ -6989,6 +7765,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 778,
     teamId: 264,
+    league: "premier-league",
     name: "Whitehawk",
     image: {
       id: 1155,
@@ -6998,6 +7775,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 779,
     teamId: 375,
+    league: "premier-league",
     name: "Benfica B",
     image: {
       id: 5537,
@@ -7007,6 +7785,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 780,
     teamId: 398,
+    league: "premier-league",
     name: "Carshalton Athletic",
     image: {
       id: 4592,
@@ -7016,6 +7795,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 781,
     teamId: 399,
+    league: "premier-league",
     name: "Chelmsford City",
     image: {
       id: 4597,
@@ -7025,6 +7805,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 782,
     teamId: 402,
+    league: "premier-league",
     name: "Eastbourne Borough",
     image: {
       id: 4618,
@@ -7034,6 +7815,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 783,
     teamId: 404,
+    league: "premier-league",
     name: "Ebbsfleet United",
     image: {
       id: 4531,
@@ -7043,6 +7825,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 784,
     teamId: 408,
+    league: "premier-league",
     name: "Hayes & Yeading",
     image: {
       id: 4829,
@@ -7052,6 +7835,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 785,
     teamId: 411,
+    league: "premier-league",
     name: "Hythe Town",
     image: {
       id: 4871,
@@ -7061,6 +7845,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 786,
     teamId: 414,
+    league: "premier-league",
     name: "Lewes",
     image: {
       id: 5018,
@@ -7070,6 +7855,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 787,
     teamId: 415,
+    league: "premier-league",
     name: "Metropolitan Police",
     image: {
       id: 5025,
@@ -7079,6 +7865,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 788,
     teamId: 419,
+    league: "premier-league",
     name: "Poole Town",
     image: {
       id: 5037,
@@ -7088,6 +7875,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 789,
     teamId: 420,
+    league: "premier-league",
     name: "Redditch United",
     image: {
       id: 5043,
@@ -7097,6 +7885,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 790,
     teamId: 421,
+    league: "premier-league",
     name: "Rushden & Diamonds",
     image: {
       id: 4549,
@@ -7106,6 +7895,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 791,
     teamId: 423,
+    league: "premier-league",
     name: "Stockport County",
     image: {
       id: 396,
@@ -7115,6 +7905,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 792,
     teamId: 424,
+    league: "premier-league",
     name: "Swindon Supermarine",
     image: {
       id: 6563,
@@ -7124,6 +7915,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 793,
     teamId: 442,
+    league: "premier-league",
     name: "Hapoel Be'er Sheva",
     image: {
       id: 1891,
@@ -7133,6 +7925,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 794,
     teamId: 443,
+    league: "premier-league",
     name: "Celta de Vigo",
     image: {
       id: 558,
@@ -7142,6 +7935,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 795,
     teamId: 447,
+    league: "premier-league",
     name: "Solihull Moors",
     image: {
       id: 4535,
@@ -7151,6 +7945,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 796,
     teamId: 448,
+    league: "premier-league",
     name: "Spennymoor Town",
     image: {
       id: 5062,
@@ -7160,6 +7955,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 797,
     teamId: 455,
+    league: "premier-league",
     name: "Hapoel Tel Aviv",
     image: {
       id: 7353,
@@ -7169,6 +7965,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 798,
     teamId: 459,
+    league: "premier-league",
     name: "AIK",
     image: {
       id: 5277,
@@ -7178,6 +7975,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 799,
     teamId: 462,
+    league: "premier-league",
     name: "Hapoel Ironi Kiryat Shmona",
     image: {
       id: 5924,
@@ -7187,6 +7985,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 800,
     teamId: 466,
+    league: "premier-league",
     name: "FC Twente",
     image: {
       id: 666,
@@ -7196,6 +7995,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 801,
     teamId: 477,
+    league: "premier-league",
     name: "Lens",
     image: {
       id: 546,
@@ -7205,6 +8005,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 802,
     teamId: 494,
+    league: "premier-league",
     name: "Crvena Zvezda",
     image: {
       id: 7283,
@@ -7214,6 +8015,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 803,
     teamId: 496,
+    league: "premier-league",
     name: "Iraklis",
     image: {
       id: 6134,
@@ -7223,6 +8025,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 804,
     teamId: 503,
+    league: "premier-league",
     name: "Heart of Midlothian",
     image: {
       id: 5371,
@@ -7232,6 +8035,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 805,
     teamId: 509,
+    league: "premier-league",
     name: "Xanthi",
     image: {
       id: 6144,
@@ -7241,6 +8045,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 806,
     teamId: 516,
+    league: "premier-league",
     name: "Dorchester Town",
     image: {
       id: 4613,
@@ -7250,6 +8055,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 807,
     teamId: 517,
+    league: "premier-league",
     name: "Harrogate Town",
     image: {
       id: 4809,
@@ -7259,6 +8065,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 808,
     teamId: 518,
+    league: "premier-league",
     name: "Hastings United",
     image: {
       id: 4816,
@@ -7268,6 +8075,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 809,
     teamId: 519,
+    league: "premier-league",
     name: "Cambridge City",
     image: {
       id: 4590,
@@ -7277,6 +8085,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 810,
     teamId: 524,
+    league: "premier-league",
     name: "Tigres",
     image: {
       id: 5799,
@@ -7286,6 +8095,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 811,
     teamId: 547,
+    league: "premier-league",
     name: "Cincinnati",
     image: {
       id: 7869,
@@ -7295,6 +8105,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 812,
     teamId: 550,
+    league: "premier-league",
     name: "Reims",
     image: {
       id: 547,
@@ -7304,6 +8115,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 813,
     teamId: 562,
+    league: "premier-league",
     name: "Melbourne Victory",
     image: {
       id: 1827,
@@ -7313,6 +8125,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 814,
     teamId: 574,
+    league: "premier-league",
     name: "Montreal Impact",
     image: {
       id: 7121,
@@ -7322,6 +8135,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 815,
     teamId: 584,
+    league: "premier-league",
     name: "Emelec",
     image: {
       id: 4523,
@@ -7331,6 +8145,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 816,
     teamId: 589,
+    league: "premier-league",
     name: "Ferro Carril Oeste",
     image: {
       id: 2049,
@@ -7340,6 +8155,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 817,
     teamId: 616,
+    league: "premier-league",
     name: "Bridlington Town",
     image: {
       id: 6385,
@@ -7349,6 +8165,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 818,
     teamId: 637,
+    league: "premier-league",
     name: "Zlín",
     image: {
       id: 4471,
@@ -7358,6 +8175,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 819,
     teamId: 638,
+    league: "premier-league",
     name: "FC St. Pauli",
     image: {
       id: 20,
@@ -7367,6 +8185,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 820,
     teamId: 643,
+    league: "premier-league",
     name: "Gimnàstic de Tarragona",
     image: {
       id: 5313,
@@ -7376,6 +8195,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 821,
     teamId: 678,
+    league: "premier-league",
     name: "Vardar",
     image: {
       id: 1889,
@@ -7385,6 +8205,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 822,
     teamId: 679,
+    league: "premier-league",
     name: "Atlético Nacional",
     image: {
       id: 4438,
@@ -7394,6 +8215,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 823,
     teamId: 686,
+    league: "premier-league",
     name: "Avranches",
     image: {
       id: 6282,
@@ -7403,6 +8225,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 824,
     teamId: 687,
+    league: "premier-league",
     name: "Bradford Park Avenue",
     image: {
       id: 4578,
@@ -7412,6 +8235,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 825,
     teamId: 690,
+    league: "premier-league",
     name: "Arlesey Town",
     image: {
       id: 4553,
@@ -7421,6 +8245,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 826,
     teamId: 693,
+    league: "premier-league",
     name: "Slough Town",
     image: {
       id: 5056,
@@ -7430,6 +8255,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 827,
     teamId: 698,
+    league: "premier-league",
     name: "Harlow Town",
     image: {
       id: 4806,
@@ -7439,6 +8265,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 828,
     teamId: 699,
+    league: "premier-league",
     name: "Grays Athletic",
     image: {
       id: 4633,
@@ -7448,6 +8275,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 829,
     teamId: 701,
+    league: "premier-league",
     name: "Evesham United",
     image: {
       id: 6544,
@@ -7457,6 +8285,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 830,
     teamId: 703,
+    league: "premier-league",
     name: "Paulton Rovers",
     image: {
       id: 6575,
@@ -7466,6 +8295,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 831,
     teamId: 704,
+    league: "premier-league",
     name: "Tooting & Mitcham United",
     image: {
       id: 5078,
@@ -7475,6 +8305,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 832,
     teamId: 705,
+    league: "premier-league",
     name: "Lowestoft Town",
     image: {
       id: 5022,
@@ -7484,6 +8315,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 833,
     teamId: 712,
+    league: "premier-league",
     name: "Heybridge Swifts",
     image: {
       id: 4846,
@@ -7493,6 +8325,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 834,
     teamId: 713,
+    league: "premier-league",
     name: "Billericay Town",
     image: {
       id: 4570,
@@ -7502,6 +8335,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 835,
     teamId: 731,
+    league: "premier-league",
     name: "Luftëtari Gjirokastër",
     image: {
       id: 7499,
@@ -7511,6 +8345,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 836,
     teamId: 738,
+    league: "premier-league",
     name: "Aylesbury United",
     image: {
       id: 4559,
@@ -7520,6 +8355,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 837,
     teamId: 739,
+    league: "premier-league",
     name: "Bedworth United",
     image: {
       id: 6548,
@@ -7529,6 +8365,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 838,
     teamId: 740,
+    league: "premier-league",
     name: "Chippenham Town",
     image: {
       id: 4600,
@@ -7538,6 +8375,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 839,
     teamId: 741,
+    league: "premier-league",
     name: "Hampton & Richmond",
     image: {
       id: 4796,
@@ -7547,6 +8385,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 840,
     teamId: 743,
+    league: "premier-league",
     name: "Lincoln United",
     image: {
       id: 5019,
@@ -7556,6 +8395,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 841,
     teamId: 744,
+    league: "premier-league",
     name: "Mangotsfield United",
     image: {
       id: 5024,
@@ -7565,6 +8405,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 842,
     teamId: 762,
+    league: "premier-league",
     name: "Sporting de Gijón",
     image: {
       id: 96,
@@ -7574,6 +8415,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 843,
     teamId: 766,
+    league: "premier-league",
     name: "Alcorcón",
     image: {
       id: 304,
@@ -7583,6 +8425,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 844,
     teamId: 776,
+    league: "premier-league",
     name: "Real Valladolid",
     image: {
       id: 250,
@@ -7592,6 +8435,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 845,
     teamId: 778,
+    league: "premier-league",
     name: "Salamanca",
     image: {
       id: 7451,
@@ -7601,6 +8445,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 846,
     teamId: 779,
+    league: "premier-league",
     name: "Tenerife",
     image: {
       id: 254,
@@ -7610,6 +8455,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 847,
     teamId: 780,
+    league: "premier-league",
     name: "Xerez",
     image: {
       id: 268,
@@ -7619,6 +8465,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 848,
     teamId: 786,
+    league: "premier-league",
     name: "Mirandés",
     image: {
       id: 595,
@@ -7628,6 +8475,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 849,
     teamId: 794,
+    league: "premier-league",
     name: "Cádiz",
     image: {
       id: 264,
@@ -7637,6 +8485,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 850,
     teamId: 795,
+    league: "premier-league",
     name: "Reus Deportiu",
     image: {
       id: 1099,
@@ -7646,6 +8495,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 851,
     teamId: 800,
+    league: "premier-league",
     name: "Atlético Baleares",
     image: {
       id: 5323,
@@ -7655,6 +8505,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 852,
     teamId: 809,
+    league: "premier-league",
     name: "Ceuta",
     image: {
       id: 7445,
@@ -7664,6 +8515,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 853,
     teamId: 838,
+    league: "premier-league",
     name: "Écija",
     image: {
       id: 314,
@@ -7673,6 +8525,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 854,
     teamId: 844,
+    league: "premier-league",
     name: "Linense",
     image: {
       id: 4349,
@@ -7682,6 +8535,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 855,
     teamId: 845,
+    league: "premier-league",
     name: "Lleida Esportiu",
     image: {
       id: 280,
@@ -7691,6 +8545,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 856,
     teamId: 846,
+    league: "premier-league",
     name: "Lorca",
     image: {
       id: 5310,
@@ -7700,6 +8555,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 857,
     teamId: 848,
+    league: "premier-league",
     name: "Olímpic de Xàtiva",
     image: {
       id: 6852,
@@ -7709,6 +8565,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 858,
     teamId: 864,
+    league: "premier-league",
     name: "Formentera",
     image: {
       id: 5338,
@@ -7718,6 +8575,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 859,
     teamId: 872,
+    league: "premier-league",
     name: "Rayo Majadahonda",
     image: {
       id: 5327,
@@ -7727,6 +8585,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 860,
     teamId: 873,
+    league: "premier-league",
     name: "Talavera de la Reina",
     image: {
       id: 5328,
@@ -7736,6 +8595,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 861,
     teamId: 892,
+    league: "premier-league",
     name: "Guangzhou Evergrande",
     image: {
       id: 4416,
@@ -7745,6 +8605,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 862,
     teamId: 900,
+    league: "premier-league",
     name: "Mamelodi Sundowns",
     image: {
       id: 5362,
@@ -7754,6 +8615,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 863,
     teamId: 921,
+    league: "premier-league",
     name: "Orlando Pirates",
     image: {
       id: 5364,
@@ -7763,6 +8625,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 864,
     teamId: 924,
+    league: "premier-league",
     name: "AmaZulu",
     image: {
       id: 5353,
@@ -7772,6 +8635,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 865,
     teamId: 943,
+    league: "premier-league",
     name: "SC Cambuur",
     image: {
       id: 1909,
@@ -7781,6 +8645,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 866,
     teamId: 945,
+    league: "premier-league",
     name: "Shamrock Rovers",
     image: {
       id: 2921,
@@ -7790,6 +8655,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 867,
     teamId: 962,
+    league: "premier-league",
     name: "Leioa",
     image: {
       id: 5339,
@@ -7799,6 +8665,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 868,
     teamId: 980,
+    league: "premier-league",
     name: "Lorca Deportiva",
     image: {
       id: 5326,
@@ -7808,6 +8675,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 869,
     teamId: 986,
+    league: "premier-league",
     name: "Arenas Club",
     image: {
       id: 5322,
@@ -7817,6 +8685,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 870,
     teamId: 992,
+    league: "premier-league",
     name: "Olimpija Ljubljana",
     image: {
       id: 7287,
@@ -7826,6 +8695,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 871,
     teamId: 994,
+    league: "premier-league",
     name: "Dundee",
     image: {
       id: 5369,
@@ -7835,6 +8705,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 872,
     teamId: 996,
+    league: "premier-league",
     name: "Nacional",
     image: {
       id: 501,
@@ -7844,6 +8715,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 873,
     teamId: 997,
+    league: "premier-league",
     name: "Vélez Sarsfield",
     image: {
       id: 2078,
@@ -7853,6 +8725,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 874,
     teamId: 998,
+    league: "premier-league",
     name: "León",
     image: {
       id: 5784,
@@ -7862,6 +8735,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 875,
     teamId: 1004,
+    league: "premier-league",
     name: "Universitario de Deportes",
     image: {
       id: 4268,
@@ -7871,6 +8745,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 876,
     teamId: 1059,
+    league: "premier-league",
     name: "Antequera",
     image: {
       id: 6855,
@@ -7880,6 +8755,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 877,
     teamId: 1060,
+    league: "premier-league",
     name: "Arcos",
     image: {
       id: 5559,
@@ -7889,6 +8765,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 878,
     teamId: 1065,
+    league: "premier-league",
     name: "Gimnástica Segoviana",
     image: {
       id: 6317,
@@ -7898,6 +8775,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 879,
     teamId: 1126,
+    league: "premier-league",
     name: "Adelaide United",
     image: {
       id: 1833,
@@ -7907,6 +8785,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 880,
     teamId: 1131,
+    league: "premier-league",
     name: "Djurgårdens IF",
     image: {
       id: 5280,
@@ -7916,6 +8795,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 881,
     teamId: 1149,
+    league: "premier-league",
     name: "SpVgg Greuther Fürth",
     image: {
       id: 21,
@@ -7925,6 +8805,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 882,
     teamId: 1158,
+    league: "premier-league",
     name: "Újpest",
     image: {
       id: 5959,
@@ -7934,6 +8815,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 883,
     teamId: 1171,
+    league: "premier-league",
     name: "Vorskla Poltava",
     image: {
       id: 5198,
@@ -7943,6 +8825,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 884,
     teamId: 1173,
+    league: "premier-league",
     name: "Lokomotiva Zagreb",
     image: {
       id: 4450,
@@ -7952,6 +8835,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 885,
     teamId: 1174,
+    league: "premier-league",
     name: "Lausanne",
     image: {
       id: 5263,
@@ -7961,6 +8845,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 886,
     teamId: 1176,
+    league: "premier-league",
     name: "Neuchâtel Xamax",
     image: {
       id: 5255,
@@ -7970,6 +8855,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 887,
     teamId: 1178,
+    league: "premier-league",
     name: "Sainte-Geneviève",
     image: {
       id: 7710,
@@ -7979,6 +8865,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 888,
     teamId: 1180,
+    league: "premier-league",
     name: "Chambly",
     image: {
       id: 6211,
@@ -7988,6 +8875,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 889,
     teamId: 1192,
+    league: "premier-league",
     name: "Internacional de Madrid",
     image: {
       id: 7442,
@@ -7997,6 +8885,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 890,
     teamId: 1194,
+    league: "premier-league",
     name: "Gernika",
     image: {
       id: 7430,
@@ -8006,6 +8895,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 891,
     teamId: 1195,
+    league: "premier-league",
     name: "Unionistas",
     image: {
       id: 7451,
@@ -8015,6 +8905,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 892,
     teamId: 67,
+    league: "premier-league",
     name: "Paris Saint Germain",
     image: {
       id: 524,
@@ -8024,6 +8915,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 893,
     teamId: 1228,
+    league: "premier-league",
     name: "ASPTT Caen",
     image: {
       id: 6184,
@@ -8033,6 +8925,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 894,
     teamId: 1235,
+    league: "premier-league",
     name: "Central Coast Mariners",
     image: {
       id: 1830,
@@ -8042,6 +8935,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 895,
     teamId: 1265,
+    league: "premier-league",
     name: "Haringey Borough",
     image: {
       id: 4802,
@@ -8051,6 +8945,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 896,
     teamId: 1266,
+    league: "premier-league",
     name: "Hitchin Town",
     image: {
       id: 4851,
@@ -8060,6 +8955,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 897,
     teamId: 1267,
+    league: "premier-league",
     name: "Sportfreunde Lotte",
     image: {
       id: 6310,
@@ -8069,6 +8965,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 898,
     teamId: 1311,
+    league: "premier-league",
     name: "Alania Vladikavkaz",
     image: {
       id: 5472,
@@ -8078,6 +8975,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 899,
     teamId: 1314,
+    league: "premier-league",
     name: "Eendracht Aalst",
     image: {
       id: 4203,
@@ -8087,6 +8985,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 900,
     teamId: 1319,
+    league: "premier-league",
     name: "MyPa",
     image: {
       id: 7922,
@@ -8096,6 +8995,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 901,
     teamId: 1323,
+    league: "premier-league",
     name: "Rotor Volgograd",
     image: {
       id: 5414,
@@ -8105,6 +9005,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 902,
     teamId: 1346,
+    league: "premier-league",
     name: "Metz",
     image: {
       id: 545,
@@ -8114,6 +9015,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 903,
     teamId: 1347,
+    league: "premier-league",
     name: "Pirin Blagoevgrad",
     image: {
       id: 4392,
@@ -8123,6 +9025,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 904,
     teamId: 1372,
+    league: "premier-league",
     name: "Progrès Niederkorn",
     image: {
       id: 7487,
@@ -8132,6 +9035,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 905,
     teamId: 1381,
+    league: "premier-league",
     name: "Aris",
     image: {
       id: 644,
@@ -8141,6 +9045,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 906,
     teamId: 1382,
+    league: "premier-league",
     name: "Ballymena United",
     image: {
       id: 5737,
@@ -8150,6 +9055,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 907,
     teamId: 1383,
+    league: "premier-league",
     name: "Beroe Stara Zagora",
     image: {
       id: 4394,
@@ -8159,6 +9065,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 908,
     teamId: 1392,
+    league: "premier-league",
     name: "Sliema Wanderers",
     image: {
       id: 5811,
@@ -8168,6 +9075,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 909,
     teamId: 1395,
+    league: "premier-league",
     name: "Zbrojovka Brno",
     image: {
       id: 4474,
@@ -8177,6 +9085,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 910,
     teamId: 1401,
+    league: "premier-league",
     name: "Budapest Honvéd",
     image: {
       id: 1872,
@@ -8186,6 +9095,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 911,
     teamId: 1409,
+    league: "premier-league",
     name: "Holbæk",
     image: {
       id: 4505,
@@ -8195,6 +9105,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 912,
     teamId: 1420,
+    league: "premier-league",
     name: "Royal Antwerp",
     image: {
       id: 1864,
@@ -8204,6 +9115,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 913,
     teamId: 1423,
+    league: "premier-league",
     name: "Angers",
     image: {
       id: 532,
@@ -8213,6 +9125,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 914,
     teamId: 1431,
+    league: "premier-league",
     name: "Lyn",
     image: {
       id: 2169,
@@ -8222,6 +9135,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 915,
     teamId: 1432,
+    league: "premier-league",
     name: "Nîmes",
     image: {
       id: 556,
@@ -8231,6 +9145,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 916,
     teamId: 1434,
+    league: "premier-league",
     name: "Partick Thistle",
     image: {
       id: 5375,
@@ -8240,6 +9155,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 917,
     teamId: 1436,
+    league: "premier-league",
     name: "Salgótarján",
     image: {
       id: 6102,
@@ -8249,6 +9165,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 918,
     teamId: 1439,
+    league: "premier-league",
     name: "UTA Arad",
     image: {
       id: 5500,
@@ -8258,6 +9175,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 919,
     teamId: 1478,
+    league: "premier-league",
     name: "Stirling Albion",
     image: {
       id: 6898,
@@ -8267,6 +9185,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 920,
     teamId: 1483,
+    league: "premier-league",
     name: "Berwick Rangers",
     image: {
       id: 6903,
@@ -8276,6 +9195,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 921,
     teamId: 1485,
+    league: "premier-league",
     name: "Inverness Caledonian Thistle",
     image: {
       id: 5384,
@@ -8285,6 +9205,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 922,
     teamId: 1487,
+    league: "premier-league",
     name: "Dunfermline Athletic",
     image: {
       id: 5379,
@@ -8294,6 +9215,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 923,
     teamId: 1488,
+    league: "premier-league",
     name: "Morton",
     image: {
       id: 5383,
@@ -8303,6 +9225,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 924,
     teamId: 1489,
+    league: "premier-league",
     name: "Queen of the South",
     image: {
       id: 5386,
@@ -8312,6 +9235,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 925,
     teamId: 1502,
+    league: "premier-league",
     name: "Hamilton Academical",
     image: {
       id: 5370,
@@ -8321,6 +9245,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 926,
     teamId: 1511,
+    league: "premier-league",
     name: "Forfar Athletic",
     image: {
       id: 6912,
@@ -8330,6 +9255,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 927,
     teamId: 1520,
+    league: "premier-league",
     name: "Beitar Jerusalem",
     image: {
       id: 5918,
@@ -8339,6 +9265,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 928,
     teamId: 1708,
+    league: "premier-league",
     name: "Adelaide Raiders",
     image: {
       id: 2393,
@@ -8348,6 +9275,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 929,
     teamId: 1819,
+    league: "premier-league",
     name: "Triestina",
     image: {
       id: 5892,
@@ -8357,6 +9285,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 930,
     teamId: 1887,
+    league: "premier-league",
     name: "Spartak Subotica",
     image: {
       id: 7496,
@@ -8366,6 +9295,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 931,
     teamId: 1891,
+    league: "premier-league",
     name: "Minsk",
     image: {
       id: 7488,
@@ -8375,6 +9305,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 932,
     teamId: 1892,
+    league: "premier-league",
     name: "Göteborg",
     image: {
       id: 5285,
@@ -8384,6 +9315,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 933,
     teamId: 1902,
+    league: "premier-league",
     name: "Atlético de Madrid",
     image: {
       id: 78,
@@ -8393,6 +9325,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 934,
     teamId: 1988,
+    league: "premier-league",
     name: "Maldon & Tiptree",
     image: {
       id: 5023,
@@ -8402,6 +9335,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 935,
     teamId: 1991,
+    league: "premier-league",
     name: "Chichester City",
     image: {
       id: 6527,
@@ -8411,6 +9345,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 936,
     teamId: 2015,
+    league: "premier-league",
     name: "Altay",
     image: {
       id: 7313,
@@ -8420,6 +9355,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 937,
     teamId: 2020,
+    league: "premier-league",
     name: "Cherno More Varna",
     image: {
       id: 4395,
@@ -8429,6 +9365,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 938,
     teamId: 2029,
+    league: "premier-league",
     name: "Godalming Town",
     image: {
       id: 6354,
@@ -8438,6 +9375,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 939,
     teamId: 2030,
+    league: "premier-league",
     name: "Hanworth Villa",
     image: {
       id: 6485,
@@ -8447,6 +9385,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 940,
     teamId: 2031,
+    league: "premier-league",
     name: "Hebburn Town",
     image: {
       id: 7370,
@@ -8456,6 +9395,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 941,
     teamId: 2032,
+    league: "premier-league",
     name: "Kidsgrove Athletic",
     image: {
       id: 6553,
@@ -8465,6 +9405,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 942,
     teamId: 2034,
+    league: "premier-league",
     name: "Rushall Olympic",
     image: {
       id: 6596,
@@ -8474,6 +9415,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 943,
     teamId: 2036,
+    league: "premier-league",
     name: "Witton Albion",
     image: {
       id: 6612,
@@ -8483,6 +9425,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 944,
     teamId: 2044,
+    league: "premier-league",
     name: "Delfín",
     image: {
       id: 4526,
@@ -8492,6 +9435,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 945,
     teamId: 2047,
+    league: "premier-league",
     name: "Karpaty Lviv",
     image: {
       id: 5194,
@@ -8501,6 +9445,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 946,
     teamId: 2093,
+    league: "premier-league",
     name: "Dorking Wanderers",
     image: {
       id: 4614,
@@ -8510,6 +9455,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 947,
     teamId: 2127,
+    league: "premier-league",
     name: "Gaziantep",
     image: {
       id: 606,
@@ -8519,6 +9465,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 948,
     teamId: 2136,
+    league: "premier-league",
     name: "FC Viktoria Köln",
     image: {
       id: 1097,
@@ -8528,6 +9475,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 949,
     teamId: 2143,
+    league: "premier-league",
     name: "Pisa",
     image: {
       id: 487,
@@ -8537,6 +9485,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 950,
     teamId: 2146,
+    league: "premier-league",
     name: "East Stirlingshire",
     image: {
       id: 5398,
@@ -8546,6 +9495,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 951,
     teamId: 2149,
+    league: "premier-league",
     name: "FC Eintracht Norderstedt",
     image: {
       id: 2011,
@@ -8555,6 +9505,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 952,
     teamId: 2169,
+    league: "premier-league",
     name: "Beerschot",
     image: {
       id: 3611,
@@ -8564,6 +9515,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 953,
     teamId: 2174,
+    league: "premier-league",
     name: "Mechelen",
     image: {
       id: 1869,
@@ -8573,6 +9525,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 954,
     teamId: 2175,
+    league: "premier-league",
     name: "Sint-Truidense VV",
     image: {
       id: 1860,
@@ -8582,6 +9535,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 955,
     teamId: 2178,
+    league: "premier-league",
     name: "Canvey Island",
     image: {
       id: 4591,
@@ -8591,6 +9545,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 956,
     teamId: 2179,
+    league: "premier-league",
     name: "Cray Wanderers",
     image: {
       id: 4609,
@@ -8600,6 +9555,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 957,
     teamId: 2180,
+    league: "premier-league",
     name: "Skelmersdale United",
     image: {
       id: 6576,
@@ -8609,6 +9565,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 958,
     teamId: 2181,
+    league: "premier-league",
     name: "Tonbridge Angels",
     image: {
       id: 5077,
@@ -8618,6 +9575,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 959,
     teamId: 2182,
+    league: "premier-league",
     name: "South Shields",
     image: {
       id: 5059,
@@ -8627,6 +9585,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 960,
     teamId: 2183,
+    league: "premier-league",
     name: "Banbury United",
     image: {
       id: 4563,
@@ -8636,6 +9595,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 961,
     teamId: 2184,
+    league: "premier-league",
     name: "Cray Valley Paper Mills",
     image: {
       id: 6369,
@@ -8645,6 +9605,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 962,
     teamId: 2237,
+    league: "premier-league",
     name: "Independiente del Valle",
     image: {
       id: 6989,
@@ -8654,6 +9615,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 963,
     teamId: 2315,
+    league: "premier-league",
     name: "Union Saint-Gilloise",
     image: {
       id: 3929,
@@ -8663,6 +9625,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 964,
     teamId: 2341,
+    league: "premier-league",
     name: "Clermont",
     image: {
       id: 541,
@@ -8672,6 +9635,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 965,
     teamId: 2405,
+    league: "premier-league",
     name: "AEM",
     image: {
       id: 5795,
@@ -8681,6 +9645,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 966,
     teamId: 2445,
+    league: "premier-league",
     name: "Bowers & Pitsea",
     image: {
       id: 4577,
@@ -8690,6 +9655,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 967,
     teamId: 2447,
+    league: "premier-league",
     name: "Stratford Town",
     image: {
       id: 2525,
@@ -8699,6 +9665,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 968,
     teamId: 2467,
+    league: "premier-league",
     name: "Mora",
     image: {
       id: 5590,
@@ -8708,6 +9675,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 969,
     teamId: 2518,
+    league: "premier-league",
     name: "Shkupi",
     image: {
       id: 7485,
@@ -8717,6 +9685,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 970,
     teamId: 2528,
+    league: "premier-league",
     name: "Brea",
     image: {
       id: 2820,
@@ -8726,6 +9695,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 971,
     teamId: 2529,
+    league: "premier-league",
     name: "Montijo",
     image: {
       id: 5573,
@@ -8735,6 +9705,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 972,
     teamId: 2530,
+    league: "premier-league",
     name: "Águilas",
     image: {
       id: 4445,
@@ -8744,6 +9715,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 973,
     teamId: 2551,
+    league: "premier-league",
     name: "Lincoln Red Imps",
     image: {
       id: 7281,
@@ -8753,6 +9725,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 974,
     teamId: 2561,
+    league: "premier-league",
     name: "Maccabi Netanya",
     image: {
       id: 5927,
@@ -8762,6 +9735,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 975,
     teamId: 2662,
+    league: "premier-league",
     name: "Dnipro-1",
     image: {
       id: 5230,
@@ -8771,6 +9745,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 976,
     teamId: 2721,
+    league: "premier-league",
     name: "Coalville Town",
     image: {
       id: 6610,
@@ -8780,6 +9755,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 977,
     teamId: 2723,
+    league: "premier-league",
     name: "Bracknell Town",
     image: {
       id: 6311,
@@ -8789,6 +9765,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 978,
     teamId: 2726,
+    league: "premier-league",
     name: "Needham Market",
     image: {
       id: 5027,
@@ -8798,6 +9775,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 979,
     teamId: 2802,
+    league: "premier-league",
     name: "Hungerford Town",
     image: {
       id: 4864,
@@ -8807,6 +9785,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 980,
     teamId: 2809,
+    league: "premier-league",
     name: "Stafford Rangers",
     image: {
       id: 6616,
@@ -8816,6 +9795,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 981,
     teamId: 2810,
+    league: "premier-league",
     name: "Reggina",
     image: {
       id: 5917,
@@ -8825,6 +9805,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 982,
     teamId: 2812,
+    league: "premier-league",
     name: "Dagenham",
     image: {
       id: 4530,
@@ -8834,6 +9815,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 983,
     teamId: 2816,
+    league: "premier-league",
     name: "Guildford City",
     image: {
       id: 6511,
@@ -8843,6 +9825,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 984,
     teamId: 2817,
+    league: "premier-league",
     name: "Hayes",
     image: {
       id: 1485,
@@ -8852,6 +9835,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 985,
     teamId: 2823,
+    league: "premier-league",
     name: "Walton & Hersham",
     image: {
       id: 5081,
@@ -8861,6 +9845,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 986,
     teamId: 2827,
+    league: "premier-league",
     name: "Unión La Calera",
     image: {
       id: 4409,
@@ -8870,6 +9855,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 987,
     teamId: 2831,
+    league: "premier-league",
     name: "Independiente",
     image: {
       id: 2052,
@@ -8879,6 +9865,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 988,
     teamId: 2838,
+    league: "premier-league",
     name: "Aucas",
     image: {
       id: 4529,
@@ -8888,6 +9875,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 989,
     teamId: 2908,
+    league: "premier-league",
     name: "Universidad de Chile",
     image: {
       id: 4466,
@@ -8897,6 +9885,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 990,
     teamId: 2931,
+    league: "premier-league",
     name: "The Spartans",
     image: {
       id: 6880,
@@ -8906,6 +9895,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 991,
     teamId: 5123,
+    league: "premier-league",
     name: "Kisvárda",
     image: {
       id: 6075,
@@ -8915,6 +9905,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 992,
     teamId: 5124,
+    league: "premier-league",
     name: "Rot-Weiß Oberhausen",
     image: {
       id: 37,
@@ -8924,6 +9915,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 993,
     teamId: 5711,
+    league: "premier-league",
     name: "Bastia",
     image: {
       id: 536,
@@ -8933,6 +9925,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 994,
     teamId: 5716,
+    league: "premier-league",
     name: "Estrela",
     image: {
       id: 5580,
@@ -8942,6 +9935,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 995,
     teamId: 5789,
+    league: "premier-league",
     name: "Zrinjski Mostar",
     image: {
       id: 1894,
@@ -8951,6 +9945,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 996,
     teamId: 5814,
+    league: "premier-league",
     name: "Universidad Católica",
     image: {
       id: 4463,
@@ -8960,6 +9955,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 997,
     teamId: 5836,
+    league: "premier-league",
     name: "Monte",
     image: {
       id: 796,
@@ -8969,6 +9965,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 998,
     teamId: 5855,
+    league: "premier-league",
     name: "Worksop Town",
     image: {
       id: 6426,
@@ -8978,6 +9975,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 999,
     teamId: 5976,
+    league: "premier-league",
     name: "Sheppey United",
     image: {
       id: 5054,
@@ -8987,6 +9985,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1000,
     teamId: 5977,
+    league: "premier-league",
     name: "Scarborough Athletic",
     image: {
       id: 6555,
@@ -8996,6 +9995,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1001,
     teamId: 6755,
+    league: "premier-league",
     name: "Staveley",
     image: {
       id: 6416,
@@ -9005,6 +10005,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1002,
     teamId: 7617,
+    league: "premier-league",
     name: "Independiente Rivadavia",
     image: {
       id: 2052,
@@ -9014,6 +10015,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1003,
     teamId: 13323,
+    league: "premier-league",
     name: "Newell's Old Boys",
     image: {
       id: 2067,
@@ -9023,6 +10025,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1004,
     teamId: 30646,
+    league: "premier-league",
     name: "Formartine United",
     image: {
       id: 6873,
@@ -9032,6 +10035,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1005,
     teamId: 30651,
+    league: "premier-league",
     name: "Turriff United",
     image: {
       id: 6874,
@@ -9041,6 +10045,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1006,
     teamId: 30654,
+    league: "premier-league",
     name: "Edinburgh University",
     image: {
       id: 6870,
@@ -9050,6 +10055,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1007,
     teamId: 30655,
+    league: "premier-league",
     name: "Dalbeattie Star",
     image: {
       id: 6881,
@@ -9059,6 +10065,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1008,
     teamId: 30659,
+    league: "premier-league",
     name: "Hutchison Vale",
     image: {
       id: 5391,
@@ -9068,6 +10075,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1009,
     teamId: 30661,
+    league: "premier-league",
     name: "Civil Service Strollers",
     image: {
       id: 6878,
@@ -9077,6 +10085,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1010,
     teamId: 30662,
+    league: "premier-league",
     name: "Cumbernauld Colts",
     image: {
       id: 6868,
@@ -9086,6 +10095,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1011,
     teamId: 30665,
+    league: "premier-league",
     name: "Forres Mechanics",
     image: {
       id: 6892,
@@ -9095,6 +10105,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1012,
     teamId: 30670,
+    league: "premier-league",
     name: "Inverurie Loco Works",
     image: {
       id: 6888,
@@ -9104,6 +10115,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1013,
     teamId: 30673,
+    league: "premier-league",
     name: "Linlithgow Rose",
     image: {
       id: 6864,
@@ -9113,6 +10125,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1014,
     teamId: 30687,
+    league: "premier-league",
     name: "Golspie Sutherland",
     image: {
       id: 5400,
@@ -9122,6 +10135,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1015,
     teamId: 30691,
+    league: "premier-league",
     name: "Gala Fairydean Rovers",
     image: {
       id: 6872,
@@ -9131,6 +10145,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1016,
     teamId: 30693,
+    league: "premier-league",
     name: "Whitehill Welfare",
     image: {
       id: 6882,
@@ -9140,6 +10155,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1017,
     teamId: 30695,
+    league: "premier-league",
     name: "Auchinleck Talbot",
     image: {
       id: 7551,
@@ -9149,6 +10165,7 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1018,
     teamId: 30696,
+    league: "premier-league",
     name: "Strathspey Thistle",
     image: {
       id: 6875,
@@ -9158,10 +10175,511 @@ export const footballTeamsDataSet: FootballTeam[] = [
   {
     id: 1019,
     teamId: 30723,
+    league: "premier-league",
     name: "Ankaragücü",
     image: {
       id: 5245,
       url: "https://crests.football-data.org/5245.png",
+    },
+  },
+  {
+    id: 200002,
+    teamId: 200002,
+    league: "uefa",
+    name: "Albania",
+    image: {
+      id: 200002,
+      url: "https://img.uefa.com/imgml/flags/240x240/ALB.png",
+    },
+  },
+  {
+    id: 200008,
+    teamId: 200008,
+    league: "uefa",
+    name: "Austria",
+    image: {
+      id: 200008,
+      url: "https://img.uefa.com/imgml/flags/240x240/AUT.png",
+    },
+  },
+  {
+    id: 200013,
+    teamId: 200013,
+    league: "uefa",
+    name: "Belgium",
+    image: {
+      id: 200013,
+      url: "https://img.uefa.com/imgml/flags/240x240/BEL.png",
+    },
+  },
+  {
+    id: 200035,
+    teamId: 200035,
+    league: "uefa",
+    name: "Denmark",
+    image: {
+      id: 200035,
+      url: "https://img.uefa.com/imgml/flags/240x240/DEN.png",
+    },
+  },
+  {
+    id: 200039,
+    teamId: 200039,
+    league: "uefa",
+    name: "England",
+    image: {
+      id: 200039,
+      url: "https://img.uefa.com/imgml/flags/240x240/ENG.png",
+    },
+  },
+  {
+    id: 200043,
+    teamId: 200043,
+    league: "uefa",
+    name: "France",
+    image: {
+      id: 200043,
+      url: "https://img.uefa.com/imgml/flags/240x240/FRA.png",
+    },
+  },
+  {
+    id: 200047,
+    teamId: 200047,
+    league: "uefa",
+    name: "Germany",
+    image: {
+      id: 200047,
+      url: "https://img.uefa.com/imgml/flags/240x240/GER.png",
+    },
+  },
+  {
+    id: 256370,
+    teamId: 256370,
+    league: "uefa",
+    name: "Croatia",
+    image: {
+      id: 256370,
+      url: "https://img.uefa.com/imgml/flags/240x240/CRO.png",
+    },
+  },
+  {
+    id: 200057,
+    teamId: 200057,
+    league: "uefa",
+    name: "Hungary",
+    image: {
+      id: 200057,
+      url: "https://img.uefa.com/imgml/flags/240x240/HUN.png",
+    },
+  },
+  {
+    id: 200066,
+    teamId: 200066,
+    league: "uefa",
+    name: "Italy",
+    image: {
+      id: 200066,
+      url: "https://img.uefa.com/imgml/flags/240x240/ITA.png",
+    },
+  },
+  {
+    id: 257157,
+    teamId: 257157,
+    league: "uefa",
+    name: "Georgia",
+    image: {
+      id: 257157,
+      url: "https://img.uefa.com/imgml/flags/240x240/GEO.png",
+    },
+  },
+  {
+    id: 257163,
+    teamId: 257163,
+    league: "uefa",
+    name: "Slovenia",
+    image: {
+      id: 257163,
+      url: "https://img.uefa.com/imgml/flags/240x240/SVN.png",
+    },
+  },
+  {
+    id: 257166,
+    teamId: 257166,
+    league: "uefa",
+    name: "Ukraine",
+    image: {
+      id: 257166,
+      url: "https://img.uefa.com/imgml/flags/240x240/UKR.png",
+    },
+  },
+  {
+    id: 200095,
+    teamId: 200095,
+    league: "uefa",
+    name: "Netherlands",
+    image: {
+      id: 200095,
+      url: "https://img.uefa.com/imgml/flags/240x240/NED.png",
+    },
+  },
+  {
+    id: 200109,
+    teamId: 200109,
+    league: "uefa",
+    name: "Poland",
+    image: {
+      id: 200109,
+      url: "https://img.uefa.com/imgml/flags/240x240/POL.png",
+    },
+  },
+  {
+    id: 200110,
+    teamId: 200110,
+    league: "uefa",
+    name: "Portugal",
+    image: {
+      id: 200110,
+      url: "https://img.uefa.com/imgml/flags/240x240/POR.png",
+    },
+  },
+  {
+    id: 200113,
+    teamId: 200113,
+    league: "uefa",
+    name: "Romania",
+    image: {
+      id: 200113,
+      url: "https://img.uefa.com/imgml/flags/240x240/ROU.png",
+    },
+  },
+  {
+    id: 200117,
+    teamId: 200117,
+    league: "uefa",
+    name: "Scotland",
+    image: {
+      id: 200117,
+      url: "https://img.uefa.com/imgml/flags/240x240/SCO.png",
+    },
+  },
+  {
+    id: 200122,
+    teamId: 200122,
+    league: "uefa",
+    name: "Spain",
+    image: {
+      id: 200122,
+      url: "https://img.uefa.com/imgml/flags/240x240/ESP.png",
+    },
+  },
+  {
+    id: 200128,
+    teamId: 200128,
+    league: "uefa",
+    name: "Switzerland",
+    image: {
+      id: 200128,
+      url: "https://img.uefa.com/imgml/flags/240x240/SUI.png",
+    },
+  },
+  {
+    id: 200135,
+    teamId: 200135,
+    league: "uefa",
+    name: "Türkiye",
+    image: {
+      id: 200135,
+      url: "https://img.uefa.com/imgml/flags/240x240/TUR.png",
+    },
+  },
+  {
+    id: 200147,
+    teamId: 200147,
+    league: "uefa",
+    name: "Serbia",
+    image: {
+      id: 200147,
+      url: "https://img.uefa.com/imgml/flags/240x240/SRB.png",
+    },
+  },
+  {
+    id: 258836,
+    teamId: 258836,
+    league: "uefa",
+    name: "Slovakia",
+    image: {
+      id: 258836,
+      url: "https://img.uefa.com/imgml/flags/240x240/SVK.png",
+    },
+  },
+  {
+    id: 258837,
+    teamId: 258837,
+    league: "uefa",
+    name: "Czechia",
+    image: {
+      id: 258837,
+      url: "https://img.uefa.com/imgml/flags/240x240/CZE.png",
+    },
+  },
+  {
+    id: 200049,
+    teamId: 200049,
+    league: "uefa",
+    name: "Greece",
+    image: {
+      id: 200049,
+      url: "https://img.uefa.com/imgml/flags/240x240/GRE.png",
+    },
+  },
+  {
+    id: 200058,
+    teamId: 200058,
+    league: "uefa",
+    name: "Iceland",
+    image: {
+      id: 200058,
+      url: "https://img.uefa.com/imgml/flags/240x240/ISL.png",
+    },
+  },
+  {
+    id: 200144,
+    teamId: 200144,
+    league: "uefa",
+    name: "Wales",
+    image: {
+      id: 200144,
+      url: "https://img.uefa.com/imgml/flags/240x240/WAL.png",
+    },
+  },
+  {
+    id: 256556,
+    teamId: 256556,
+    league: "uefa",
+    name: "Estonia",
+    image: {
+      id: 256556,
+      url: "https://img.uefa.com/imgml/flags/240x240/EST.png",
+    },
+  },
+  {
+    id: 200042,
+    teamId: 200042,
+    league: "uefa",
+    name: "Finland",
+    image: {
+      id: 200042,
+      url: "https://img.uefa.com/imgml/flags/240x240/FIN.png",
+    },
+  },
+  {
+    id: 200065,
+    teamId: 200065,
+    league: "uefa",
+    name: "Israel",
+    image: {
+      id: 200065,
+      url: "https://img.uefa.com/imgml/flags/240x240/ISR.png",
+    },
+  },
+  {
+    id: 200082,
+    teamId: 200082,
+    league: "uefa",
+    name: "Luxembourg",
+    image: {
+      id: 200082,
+      url: "https://img.uefa.com/imgml/flags/240x240/LUX.png",
+    },
+  },
+  {
+    id: 265146,
+    teamId: 265146,
+    league: "uefa",
+    name: "Kazakhstan",
+    image: {
+      id: 265146,
+      url: "https://img.uefa.com/imgml/flags/240x240/KAZ.png",
+    },
+  },
+  {
+    id: 260094,
+    teamId: 260094,
+    league: "uefa",
+    name: "Bosnia and Herzegovina",
+    image: {
+      id: 260094,
+      url: "https://img.uefa.com/imgml/flags/240x240/BIH.png",
+    },
+  },
+  {
+    id: 256557,
+    teamId: 256557,
+    league: "uefa",
+    name: "Lithuania",
+    image: {
+      id: 256557,
+      url: "https://img.uefa.com/imgml/flags/240x240/LTU.png",
+    },
+  },
+  {
+    id: 256558,
+    teamId: 256558,
+    league: "uefa",
+    name: "Latvia",
+    image: {
+      id: 256558,
+      url: "https://img.uefa.com/imgml/flags/240x240/LVA.png",
+    },
+  },
+  {
+    id: 250168,
+    teamId: 250168,
+    league: "uefa",
+    name: "San Marino",
+    image: {
+      id: 250168,
+      url: "https://img.uefa.com/imgml/flags/240x240/SMR.png",
+    },
+  },
+  {
+    id: 250005899,
+    teamId: 250005899,
+    league: "uefa",
+    name: "Kosovo",
+    image: {
+      id: 250005899,
+      url: "https://img.uefa.com/imgml/flags/240x240/KOS.png",
+    },
+  },
+  {
+    id: 251218,
+    teamId: 251218,
+    league: "uefa",
+    name: "Faroe Islands",
+    image: {
+      id: 251218,
+      url: "https://img.uefa.com/imgml/flags/240x240/FRO.png",
+    },
+  },
+  {
+    id: 200020,
+    teamId: 200020,
+    league: "uefa",
+    name: "Bulgaria",
+    image: {
+      id: 200020,
+      url: "https://img.uefa.com/imgml/flags/240x240/BUL.png",
+    },
+  },
+  {
+    id: 200033,
+    teamId: 200033,
+    league: "uefa",
+    name: "Cyprus",
+    image: {
+      id: 200033,
+      url: "https://img.uefa.com/imgml/flags/240x240/CYP.png",
+    },
+  },
+  {
+    id: 200063,
+    teamId: 200063,
+    league: "uefa",
+    name: "Northern Ireland",
+    image: {
+      id: 200063,
+      url: "https://img.uefa.com/imgml/flags/240x240/NIR.png",
+    },
+  },
+  {
+    id: 200064,
+    teamId: 200064,
+    league: "uefa",
+    name: "Republic of Ireland",
+    image: {
+      id: 200064,
+      url: "https://img.uefa.com/imgml/flags/240x240/IRL.png",
+    },
+  },
+  {
+    id: 257154,
+    teamId: 257154,
+    league: "uefa",
+    name: "Azerbaijan",
+    image: {
+      id: 257154,
+      url: "https://img.uefa.com/imgml/flags/240x240/AZE.png",
+    },
+  },
+  {
+    id: 257155,
+    teamId: 257155,
+    league: "uefa",
+    name: "Belarus",
+    image: {
+      id: 257155,
+      url: "https://img.uefa.com/imgml/flags/240x240/BLR.png",
+    },
+  },
+  {
+    id: 259205,
+    teamId: 259205,
+    league: "uefa",
+    name: "North Macedonia",
+    image: {
+      id: 259205,
+      url: "https://img.uefa.com/imgml/flags/240x240/MKD.png",
+    },
+  },
+  {
+    id: 257160,
+    teamId: 257160,
+    league: "uefa",
+    name: "Moldova",
+    image: {
+      id: 257160,
+      url: "https://img.uefa.com/imgml/flags/240x240/MDA.png",
+    },
+  },
+  {
+    id: 257419,
+    teamId: 257419,
+    league: "uefa",
+    name: "Armenia",
+    image: {
+      id: 257419,
+      url: "https://img.uefa.com/imgml/flags/240x240/ARM.png",
+    },
+  },
+  {
+    id: 200081,
+    teamId: 200081,
+    league: "uefa",
+    name: "Liechtenstein",
+    image: {
+      id: 200081,
+      url: "https://img.uefa.com/imgml/flags/240x240/LIE.png",
+    },
+  },
+  {
+    id: 200088,
+    teamId: 200088,
+    league: "uefa",
+    name: "Malta",
+    image: {
+      id: 200088,
+      url: "https://img.uefa.com/imgml/flags/240x240/MLT.png",
+    },
+  },
+  {
+    id: 200101,
+    teamId: 200101,
+    league: "uefa",
+    name: "Norway",
+    image: {
+      id: 200101,
+      url: "https://img.uefa.com/imgml/flags/240x240/NOR.png",
     },
   },
 ];

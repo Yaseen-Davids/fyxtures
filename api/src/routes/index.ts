@@ -1,11 +1,15 @@
 import { Request, Response, Router, NextFunction } from "express";
 import { port } from "../Server";
 
-import { getFootballFixtures } from "../calls/football";
+import {
+  getFootballFixtures,
+  getUefaFootballFixtures,
+} from "../calls/football";
 import { getFormulaOneRaces } from "../calls/formula-one";
 import { formatFixture } from "../utils/formatFixture";
 import { Football } from "../types/football";
 import { FormulaOneRace } from "../types/formulaone";
+import { FootballUefaType } from "src/types/fooball-uefa";
 
 const router = Router();
 
@@ -17,22 +21,40 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
   }
 });
 
-router.get("/fixtures", async (req, res, next) => {
+router.post("/fixtures", async (req, res, next) => {
   try {
-    const { teams, startDate, includeFOne } = req.query;
+    const { teams, startDate, includeFOne } = req.body;
 
-    const requests: any[] = [getFootballFixtures({ teams, startDate })];
+    const teamsObj = (teams as { id: number; league: string }[]).reduce(
+      (obj: any, team: any) => {
+        obj[team.league] = [...(obj[team.league] || []), team.id];
+        return obj;
+      },
+      {}
+    );
+
+    const requests: any[] = [
+      getFootballFixtures({
+        teams: teamsObj["premier-league"],
+        startDate,
+      }),
+      getUefaFootballFixtures({
+        teams: teamsObj["uefa"],
+        startDate,
+      }),
+    ];
 
     if (JSON.parse(includeFOne)) {
       requests.push(getFormulaOneRaces({ next: true }));
     }
 
-    const [fooball, formulaOne] = await Promise.all(requests);
+    const [fooball, uefa, formulaone] = await Promise.all(requests);
 
     const data = formatFixture([
       ...fooball,
-      ...(formulaOne || []),
-    ] as (Football & FormulaOneRace)[]);
+      ...uefa,
+      ...(formulaone || []),
+    ] as (Football & FormulaOneRace & FootballUefaType)[]);
     return res.json(data);
   } catch (error) {
     return next(error);

@@ -3,7 +3,7 @@ export type FixtureTeam = {
   name: string;
   shortName: string;
   abbr: string;
-  score?: number;
+  score?: number | null;
 };
 
 export type FixtureLeague = {
@@ -32,7 +32,7 @@ export type FixtureClock = {
 
 export type Fixture = {
   id?: number;
-  sport: "football" | "formula-one";
+  sport: "football" | "formula-one" | "football-uefa";
   date: Date;
   league?: FixtureLeague;
   teams?: FixtureTeam[];
@@ -41,6 +41,6 @@ export type Fixture = {
   image?: string;
   circuit?: FixtureCircuit;
   ground?: FixtureGround;
-  clock?: FixtureClock;
+  clock?: FixtureClock | null;
   raceName?: string;
 };

@@ -33,9 +33,17 @@ router.get(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       const { teamId } = req.params;
-      const url = footballTeamsDataSet.find(
-        (tds) => tds.teamId == parseInt(teamId)
-      )!.image.url;
+      const { sport } = req.query;
+
+      const url = (
+        footballTeamsDataSet.find(
+          (tds) => tds.teamId == parseInt(teamId) && tds.league === sport
+        ) || {
+          image: {
+            url: "https://img.icons8.com/?size=100&id=8672&format=png&color=000000",
+          },
+        }
+      ).image.url;
       return res.json({ url });
     } catch (err) {
       return next(err);

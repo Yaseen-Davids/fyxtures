@@ -44,19 +44,23 @@ export const ComboBox: FC<Props> = ({
   );
 
   const optionsSelected = useMemo(
-    () => selected.map((s) => data.find((d) => d.teamId == s)).filter((s) => s),
+    () =>
+      selected.map((s) => data.find((d) => d.teamId == s.id)).filter((s) => s),
     [selected, data]
   );
 
   const unSelect = (teamId: number) => {
-    setSelected(selected.filter((s) => s !== teamId));
+    setSelected(selected.filter((s) => s.id !== teamId));
   };
 
   return (
     <div>
       <div className="flex gap-1 flex-row flex-wrap">
         {optionsSelected.map((s) => (
-          <span className="inline-flex items-center rounded-md bg-gray-700 px-2 py-1 text-xs font-medium text-gray-300 ring-1 ring-inset ring-gray-500/10 flex flex-row gap-2">
+          <span
+            key={s.name}
+            className="inline-flex items-center rounded-md bg-gray-700 px-2 py-1 text-xs font-medium text-gray-300 ring-1 ring-inset ring-gray-500/10 flex flex-row gap-2"
+          >
             <span>{s.name}</span>
             <span
               className="hover:bg-gray-600 cursor-pointer pl-1 pr-1 rounded"
@@ -88,8 +92,14 @@ export const ComboBox: FC<Props> = ({
               aria-hidden="true"
             />
           </ComboboxButton>
-          <ComboboxOptions className="absolute z-10 mt-1 w-full rounded-md bg-gray-800 py-1 text-xs shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none h-full h-56">
-            <AutoSizer>
+          <ComboboxOptions className="absolute z-10 mt-1 w-full rounded-md bg-gray-800 py-1 text-xs shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <AutoSizer
+              style={{
+                height: `${
+                  (filteredData.length - 1 >= 5 ? 5 : filteredData.length) * 40
+                }px`,
+              }}
+            >
               {({ height, width }) => (
                 <List
                   itemCount={filteredData.length}
@@ -117,7 +127,7 @@ const Row = (props: any) => {
   return (
     <ComboboxOption
       style={style}
-      value={selectedValue.teamId}
+      value={selectedValue}
       key={`${selectedValue.id}-${selectedValue.name}`}
       className={({ focus }: any) =>
         classNames(

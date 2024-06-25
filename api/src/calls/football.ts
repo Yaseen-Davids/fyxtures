@@ -2,21 +2,25 @@ import axios from "axios";
 import { Football } from "../types/football";
 import { FootballEvent } from "../types/football-event";
 import { HeadToHeadReponse } from "../types/football-headtohead";
+import { FootballUefaType } from "../types/fooball-uefa";
 
 interface FootballFixtureProps {
   pageSize?: number;
   startDate?: string;
-  teams?: string;
+  teams?: number[];
 }
 
 export const getFootballFixtures = async (
   props: FootballFixtureProps
 ): Promise<Football[]> => {
-  const keys = Object.keys(props).reduce((str, k, i) => {
+  const keys = Object.keys(props).reduce((str, k: any, i) => {
     if (i === 0) {
       str += "?";
     } else {
       str += "&";
+    }
+    if (typeof k === "object") {
+      k = k.join(",");
     }
     str += `${k}=${(props as any)[k]}`;
     return str;
@@ -59,4 +63,34 @@ export const getFootballHeadToHead = async (
     }
   );
   return data;
+};
+
+export const getUefaFootballFixtures = async ({
+  teams,
+  startDate,
+}: FootballFixtureProps): Promise<FootballUefaType> => {
+  const limit = 60,
+    offset = 0;
+
+  const { data } = await axios.get(
+    `https://match.uefa.com/v5/matches?fromDate=${startDate}&limit=${limit}&offset=${offset}&order=ASC`,
+    {
+      headers: {
+        Origin: "https://match.uefa.com",
+      },
+    }
+  );
+
+  if ((teams || []).length === 0) return data;
+
+  // The api doesn't filter by 'teamId' (even though teamId is a valid paramater)
+  // so we'll have to manually filter the results
+
+  return data.filter((match: FootballUefaType) =>
+    (teams || []).find(
+      (team) =>
+        team == parseInt(match.awayTeam.associationId) ||
+        team == parseInt(match.homeTeam.associationId)
+    )
+  );
 };

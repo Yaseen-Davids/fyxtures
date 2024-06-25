@@ -53,7 +53,7 @@ const HeaderTeam: FC<{ team: Teams; right?: boolean }> = ({ team, right }) => (
     }`}
   >
     <div className="w-10 h-10 md:w-20 md:h-20 content-center">
-      <FootballImage teamId={team.team.id} />
+      <FootballImage teamId={team.team.id} sport="premier-league" />
     </div>
     <p className="text-sm sm:text-2xl md:text-3xl">{team.team.shortName}</p>
   </div>

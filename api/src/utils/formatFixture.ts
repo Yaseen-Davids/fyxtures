@@ -1,3 +1,4 @@
+import { FootballUefaType } from "src/types/fooball-uefa";
 import { Fixture } from "../types/fixture";
 import { Football } from "../types/football";
 import { FormulaOneRace } from "../types/formulaone";
@@ -13,7 +14,7 @@ const formatRaceType: { [index: string]: string } = {
 };
 
 export const formatFixture = (
-  data: (Football & FormulaOneRace)[]
+  data: (Football & FormulaOneRace & FootballUefaType)[]
 ): Fixture[] => {
   return data.reduce((arr, row) => {
     if (row.raceName) {
@@ -64,7 +65,49 @@ export const formatFixture = (
           });
         }
       }
+    } else if (row.awayTeam) {
+      // UEFA Football Match Data
+      arr.push({
+        id: row.id,
+        sport: "football-uefa",
+        date: new Date(
+          row.kickOffTime.dateTime
+            ? row.kickOffTime.dateTime
+            : row.kickOffTime.date
+        ),
+        league: {
+          name: row.competition.metaData.name,
+        },
+        teams: [
+          {
+            id: parseInt(row.awayTeam.associationId),
+            name: row.awayTeam.internationalName,
+            abbr: row.awayTeam.countryCode,
+            shortName:
+              row.awayTeam.countryCode || row.awayTeam.internationalName,
+            score: row.score ? row.score.total.away : null,
+          },
+          {
+            id: parseInt(row.homeTeam.associationId),
+            name: row.homeTeam.internationalName,
+            abbr: row.homeTeam.countryCode,
+            shortName:
+              row.homeTeam.countryCode || row.homeTeam.internationalName,
+            score: row.score ? row.score.total.home : null,
+          },
+        ],
+        ground: {
+          id: parseInt(row.stadium ? row.stadium.id : "0"),
+          city: row.stadium ? row.stadium.city.translations.name.EN : "",
+          name: row.stadium ? row.stadium.translations.mediaName.EN : "",
+          source: row.stadium ? row.stadium.translations.mediaName.EN : "",
+        },
+        clock: row.minute
+          ? { label: `${row.minute.normal}"`, secs: row.minute.normal }
+          : null,
+      });
     } else {
+      // PREMIER LEAGUE Football Match Data
       arr.push({
         id: row.id,
         sport: "football",

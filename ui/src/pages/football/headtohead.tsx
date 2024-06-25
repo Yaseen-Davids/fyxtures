@@ -59,10 +59,10 @@ export const HeadToHead: FC<HeadToHeadProps> = ({ teamsId }) => {
         <div>
           <div className="h-10 md:h-20 flex flex-row justify-between pl-8 pr-8 md:pl-20 md:pr-20">
             <div className="w-10 h-10 md:w-20 md:h-20">
-              <FootballImage teamId={teamsId[0]} />
+              <FootballImage teamId={teamsId[0]} sport="premier-league" />
             </div>
             <div className="w-10 h-10 md:w-20 md:h-20">
-              <FootballImage teamId={teamsId[1]} />
+              <FootballImage teamId={teamsId[1]} sport="premier-league" />
             </div>
           </div>
         </div>
@@ -124,7 +124,6 @@ export const HeadToHead: FC<HeadToHeadProps> = ({ teamsId }) => {
         </h3>
         {data?.data.headToHeads.map((event, index) => (
           <FootballCard
-            completed
             key={`${event.id}-${index}`}
             event={{
               id: event.id,

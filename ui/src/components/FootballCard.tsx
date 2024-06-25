@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useMemo } from "react";
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
 
@@ -10,15 +10,21 @@ import {
 } from "@heroicons/react/24/solid";
 
 type FootballCardProps = {
-  completed?: boolean;
   event: Fixture;
 };
 
-export const FootballCard: FC<FootballCardProps> = ({ event, completed }) => {
-  const { id, date, teams, league, ground, clock } = event;
+export const FootballCard: FC<FootballCardProps> = ({ event }) => {
+  const { id, date, teams, league, ground, clock, sport } = event;
+
+  const completed = useMemo(() => new Date() >= new Date(date), [date]);
+
+  const leagueType = useMemo(
+    () => (sport === "football" ? "premier-league" : "uefa"),
+    [sport]
+  );
 
   return (
-    <Link to={`/football/${id}`}>
+    <Link to={sport === "football-uefa" ? "#" : `/football/${id}`}>
       <div className="flex flex-col items-center bg-gray-800 rounded p-2 sm:p-4 h-full gap-2 sm:gap-2 relative hover:bg-gray-700 cursor-pointer text-xs sm:text-sm">
         <div className="flex flex-row gap-4 text-gray-400 text-xxs sm:text-sm">
           {completed && (
@@ -33,7 +39,7 @@ export const FootballCard: FC<FootballCardProps> = ({ event, completed }) => {
           </div>
         </div>
         <div className="grid grid-cols-[1fr_50px_1fr] items-center gap-2 sm:gap-5">
-          <FootballCardDetail home teams={teams![0]} />
+          <FootballCardDetail home teams={teams![0]} sport={leagueType} />
           {completed || clock ? (
             <p className="border rounded p-1 sm:p-2 border-slate-500 justify-self-center text-nowrap">
               {teams![0].score} - {teams![1].score}
@@ -43,7 +49,7 @@ export const FootballCard: FC<FootballCardProps> = ({ event, completed }) => {
               {format(date, "HH:mm")}
             </p>
           )}
-          <FootballCardDetail teams={teams![1]} />
+          <FootballCardDetail teams={teams![1]} sport={leagueType} />
         </div>
         <div className="w-full text-center text-xxs sm:text-sm">
           <p className="text-gray-400 leading-0">
@@ -64,20 +70,25 @@ export const FootballCard: FC<FootballCardProps> = ({ event, completed }) => {
 type FootballCardDetailProps = {
   home?: boolean;
   teams: FixtureTeam;
+  sport: string;
 };
 
-const FootballCardDetail: FC<FootballCardDetailProps> = ({ home, teams }) => {
+const FootballCardDetail: FC<FootballCardDetailProps> = ({
+  home,
+  teams,
+  sport,
+}) => {
   return home ? (
     <div className="grid grid-cols-[1fr_25px] sm:grid-cols-[1fr_30px] gap-3 items-center font-bold">
       <p className="text-right">{teams.shortName}</p>
       <div>
-        <FootballImage teamId={teams.id} />
+        <FootballImage teamId={teams.id} sport={sport} />
       </div>
     </div>
   ) : (
     <div className="grid grid-cols-[25px_1fr] sm:grid-cols-[30px_1fr] gap-3 items-center font-bold">
       <div>
-        <FootballImage teamId={teams.id} />
+        <FootballImage teamId={teams.id} sport={sport} />
       </div>
       <p className="text-left">{teams.shortName}</p>
     </div>
