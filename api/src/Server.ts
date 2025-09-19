@@ -1,8 +1,10 @@
+import dotenv from "dotenv";
+dotenv.config({ path: "../.env" });
+
 import cookieParser from "cookie-parser";
 import express from "express";
 import logger from "morgan";
 import path from "path";
-import dotenv from "dotenv";
 import cors from "cors";
 
 // import BaseRouter from "./routes";
@@ -12,7 +14,6 @@ import formulaOneRouter from "./routes/formula-one";
 
 // Init express
 const app = express();
-dotenv.config();
 
 app.use(cors());
 

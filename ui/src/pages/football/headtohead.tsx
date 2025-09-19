@@ -5,9 +5,9 @@ import { useQuery } from "@tanstack/react-query";
 
 import { HeadToHeadReponse } from "../../types/football-headtohead";
 import { LoadingSpinner } from "../../components/LoadingSpinner";
-import { FootballCard } from "../../components/FootballCard";
+// import { FootballCard } from "../../components/EventCard";
 import { StatsBar } from "../../components/StatsBar";
-import { FootballImage } from "../../components/FootballImage";
+// import { FootballImage } from "../../components/CardImage";
 
 type HeadToHeadProps = {
   teamsId: number[];
@@ -59,10 +59,10 @@ export const HeadToHead: FC<HeadToHeadProps> = ({ teamsId }) => {
         <div>
           <div className="h-10 md:h-20 flex flex-row justify-between pl-8 pr-8 md:pl-20 md:pr-20">
             <div className="w-10 h-10 md:w-20 md:h-20">
-              <FootballImage teamId={teamsId[0]} sport="premier-league" />
+              {/* <FootballImage teamId={teamsId[0]} sport="premier-league" /> */}
             </div>
             <div className="w-10 h-10 md:w-20 md:h-20">
-              <FootballImage teamId={teamsId[1]} sport="premier-league" />
+              {/* <FootballImage teamId={teamsId[1]} sport="premier-league" /> */}
             </div>
           </div>
         </div>
@@ -122,7 +122,7 @@ export const HeadToHead: FC<HeadToHeadProps> = ({ teamsId }) => {
         <h3 className="font-bold text-sm md:text-2xl">
           Recent Premier League Meetings
         </h3>
-        {data?.data.headToHeads.map((event, index) => (
+        {/* {data?.data.headToHeads.map((event, index) => (
           <FootballCard
             key={`${event.id}-${index}`}
             event={{
@@ -142,7 +142,7 @@ export const HeadToHead: FC<HeadToHeadProps> = ({ teamsId }) => {
               ground: event.ground,
             }}
           />
-        ))}
+        ))} */}
       </div>
     </div>
   );

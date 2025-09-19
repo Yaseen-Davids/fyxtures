@@ -6,12 +6,9 @@ import { useQuery } from "@tanstack/react-query";
 import { formatRelative, format } from "date-fns";
 
 import { Fixture } from "./types/Fixture";
-import { FootballCard } from "./components/FootballCard";
-import { FormulaOneCard } from "./components/FormulaOneCard";
+import { Card } from "./components/EventCard";
 import { LoadingSpinner } from "./components/LoadingSpinner";
 import { NextEvent } from "./components/NextEvent";
-import { ComboBox } from "./components/ComboBox";
-import { Toggle } from "./components/Toggle";
 
 const formatRelativeLocale = {
   other: "EEEE, dd MMM yyyy",
@@ -33,31 +30,12 @@ const formatDate = (date: string) =>
 function App() {
   const [dateFrom] = useState(format(new Date(), "yyyy-MM-dd"));
   const [timezone] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone);
-  const [teams, setSelected] = useState<{ id: number; league: string }[]>([
-    { id: 10, league: "premier-league" },
-    { id: 12, league: "premier-league" },
-    { id: 200110, league: "uefa" },
-  ]);
-
-  // TODO: change this to an object for the different sports
-  const [includeFOne, toggleIncludeFOne] = useState(true);
 
   const { data, isLoading } = useQuery(
-    ["getFixtures", teams, dateFrom, timezone, includeFOne],
-    () =>
-      axios.post(`/api/fixtures`, {
-        startDate: dateFrom,
-        teams: teams.map((team) => ({ id: team.id, league: team.league })),
-        includeFOne: includeFOne,
-      })
+    ["getFixtures", dateFrom, timezone],
+    () => axios.post(`/api/fixtures`, { dateFrom })
   );
 
-  const { data: teamsData, isLoading: isLoadingTeams } = useQuery(
-    ["getTeams"],
-    () => axios.get(`/api/football/teams`)
-  );
-
-  // group data by date
   const grouped: { [date: string]: Fixture[] } = useMemo(
     () =>
       isLoading
@@ -73,7 +51,6 @@ function App() {
     [data, isLoading]
   );
 
-  // TODO: Cleanup
   return (
     <div className="grid grid-rows-[1fr] lg:grid-cols-[1fr_2fr_1fr] lg:grid-rows-[1fr]">
       <div className="flex flex-col">
@@ -83,26 +60,9 @@ function App() {
             One place for all your sporting fixtures
           </p>
         </div>
-        <div className="flex flex-col gap-2 p-4">
-          <div className="bg-gray-900 p-2 rounded w-full h-full">
-            <ComboBox
-              loading={isLoadingTeams}
-              data={teamsData?.data.teams || []}
-              selected={teams}
-              setSelected={setSelected}
-            />
-          </div>
-          <div className="bg-gray-900 p-2 rounded w-full h-10">
-            <Toggle
-              enabled={includeFOne}
-              setEnabled={toggleIncludeFOne}
-              label="Show Formula One"
-            />
-          </div>
-        </div>
       </div>
       <div className="flex flex-col gap-4 md:gap-10 p-4 pt-0">
-        <NextEvent data={data?.data || []} includeFOne={includeFOne} />
+        <NextEvent data={data?.data || []} />
         <div>
           <p className="font-bold text-gray-200 capitalize text-lg sm:text-lg">
             Calendar
@@ -126,20 +86,9 @@ function App() {
                           new Date(a.date).valueOf() -
                           new Date(b.date).valueOf()
                       )
-                      .map((event: Fixture, index: number) =>
-                        event.sport === "football" ||
-                        event.sport === "football-uefa" ? (
-                          <FootballCard
-                            key={`${event.id}-${index}`}
-                            event={event}
-                          />
-                        ) : (
-                          <FormulaOneCard
-                            key={`${event.id}-${index}`}
-                            event={event}
-                          />
-                        )
-                      )}
+                      .map((event: Fixture, index: number) => (
+                        <Card key={`${event.id}-${index}`} event={event} />
+                      ))}
                   </div>
                 ))
             )}

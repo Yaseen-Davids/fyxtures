@@ -4,14 +4,9 @@ import { format } from "date-fns";
 
 type NextEventProps = {
   data: Fixture[];
-  includeFOne: boolean;
 };
 
-// TODO:
-// - Refactor data sorting
-// - Refactor into components
-
-export const NextEvent: FC<NextEventProps> = ({ data, includeFOne }) => {
+export const NextEvent: FC<NextEventProps> = ({ data }) => {
   const sortedData = useMemo(
     () =>
       data.sort(
@@ -21,20 +16,17 @@ export const NextEvent: FC<NextEventProps> = ({ data, includeFOne }) => {
   );
 
   const nextFootballEvent = useMemo(
-    () => sortedData.find((row) => row.sport !== "formula-one"),
+    () => sortedData.find((row) => row.type !== "formulaone"),
     [sortedData]
   );
 
   const nextFormulaOneEvent = useMemo(
-    () =>
-      includeFOne
-        ? sortedData.find((row) => row.sport === "formula-one")
-        : undefined,
-    [sortedData, includeFOne]
+    () => sortedData.find((row) => row.type === "formulaone"),
+    [sortedData]
   );
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1 sm:mt-8">
       <p className="font-bold text-gray-200 capitalize text-lg sm:text-lg">
         Upcoming Events
       </p>
@@ -53,8 +45,8 @@ export const NextEvent: FC<NextEventProps> = ({ data, includeFOne }) => {
                 {format(nextFootballEvent?.date, "dd MMM yyyy HH:mm")}
               </p>
               <p className="font-bold">
-                {(nextFootballEvent?.teams || [])[0].shortName} vs{" "}
-                {(nextFootballEvent?.teams || [])[1].shortName}
+                {nextFootballEvent.left.display} vs{" "}
+                {nextFootballEvent.right.display}
               </p>
             </div>
           ) : (
@@ -63,29 +55,30 @@ export const NextEvent: FC<NextEventProps> = ({ data, includeFOne }) => {
             </div>
           )}
         </div>
-        {includeFOne && (
-          <div className="flex flex-row gap-4 rounded bg-gray-800 p-2">
-            <div className="flex self-center">
-              <img
-                className="max-w-6 max-h-6 sm:max-w-8"
-                alt="F1 Logo"
-                src="/F1-Logo.png"
-              />
-            </div>
-            {nextFormulaOneEvent ? (
-              <div className="flex flex-col gap-1 text-xs sm:text-base">
-                <p className="text-xs">
-                  {format(nextFormulaOneEvent?.date, "dd MMM yyyy HH:mm")}
-                </p>
-                <p className="font-bold">{nextFormulaOneEvent.type}</p>
-              </div>
-            ) : (
-              <div className="flex items-center">
-                <p className="text-xs">No upcoming F1 events</p>
-              </div>
-            )}
+        <div className="flex flex-row gap-4 rounded bg-gray-800 p-2">
+          <div className="flex self-center">
+            <img
+              className="max-w-6 max-h-6 sm:max-w-8"
+              alt="F1 Logo"
+              src="/formulaone.png"
+            />
           </div>
-        )}
+          {nextFormulaOneEvent ? (
+            <div className="flex flex-col gap-1 text-xs sm:text-base">
+              <p className="text-xs">
+                {format(nextFormulaOneEvent?.date, "dd MMM yyyy HH:mm")}
+              </p>
+              <p className="font-bold">
+                {nextFormulaOneEvent.left.display} -{" "}
+                {nextFormulaOneEvent.right.display}
+              </p>
+            </div>
+          ) : (
+            <div className="flex items-center">
+              <p className="text-xs">No upcoming F1 events</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
