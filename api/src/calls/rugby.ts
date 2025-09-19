@@ -25,13 +25,10 @@ export const getRugbyFixtures = async ({
     headers: {
       Accept: "application/json, text/plain, */*",
       "Content-Type": "application/json",
-      Referer: "https://www.supersport.com/football/",
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
       "Accept-Encoding": "gzip, deflate",
     },
   });
-
-  console.log("🚀 ~ getRugbyFixtures ~ data:", data);
 
   return (data || { Summary: [] }).Summary;
 };
