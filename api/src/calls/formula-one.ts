@@ -28,8 +28,12 @@ export const getFormulaOneFixtures = async ({
   );
 
   return data.meetings.reduce((acc: FormulaOneSession[], meeting) => {
-    if (meeting.meetingStartDate >= startDate) {
-      const sessions = meeting.meetingSessions.map((s) => ({
+    const selectedDate = new Date(startDate);
+    selectedDate.setHours(0, 0, 0, 0);
+
+    const sessions = meeting.meetingSessions
+      .filter((s) => new Date(s.startTime) >= selectedDate)
+      .map((s) => ({
         ...s,
         id: meeting.meetingKey,
         name: meeting.meetingOfficialName,
@@ -38,8 +42,7 @@ export const getFormulaOneFixtures = async ({
         flag: meeting.countryFlag,
         track: meeting.meetingLocation,
       }));
-      acc.push(...sessions);
-    }
+    acc.push(...sessions);
     return acc;
   }, []);
 };
