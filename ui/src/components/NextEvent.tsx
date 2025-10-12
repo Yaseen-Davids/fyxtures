@@ -16,7 +16,7 @@ export const NextEvent: FC<NextEventProps> = ({ data }) => {
   );
 
   const nextFootballEvent = useMemo(
-    () => sortedData.find((row) => row.type !== "formulaone"),
+    () => sortedData.find((row) => row.type === "football"),
     [sortedData]
   );
 
