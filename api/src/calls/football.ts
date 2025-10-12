@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Football } from "../types/football";
 import { getUnixTime } from "date-fns";
+import https from "https";
 
 interface FootballFixtureProps {
   startDate: Date; // time
@@ -21,7 +22,10 @@ export const getFootballFixtures = async ({
     startDate
   )}&orderAscending=true&region=za&platform=indaleko-web`;
 
+  const agent = new https.Agent({ rejectUnauthorized: false });
+
   const { data } = await axios.get(url, {
+    httpsAgent: agent,
     headers: {
       Accept: "application/json, text/plain, */*",
       "Content-Type": "application/json",

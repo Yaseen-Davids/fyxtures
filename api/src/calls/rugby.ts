@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Rugby } from "../types/rugby";
 import { getUnixTime } from "date-fns";
+import https from "https";
 
 interface RugbyFixtureProps {
   startDate: Date; // datetime
@@ -21,7 +22,10 @@ export const getRugbyFixtures = async ({
     startDate
   )}&orderAscending=true&region=za&platform=indaleko-web`;
 
+  const agent = new https.Agent({ rejectUnauthorized: false });
+
   const { data } = await axios.get(url, {
+    httpsAgent: agent,
     headers: {
       Accept: "application/json, text/plain, */*",
       "Content-Type": "application/json",

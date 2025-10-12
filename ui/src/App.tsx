@@ -31,10 +31,11 @@ function App() {
   const [dateFrom] = useState(format(new Date(), "yyyy-MM-dd"));
   const [timezone] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone);
 
-  const { data, isLoading } = useQuery(
-    ["getFixtures", dateFrom, timezone],
-    () => axios.post(`/api/fixtures`, { dateFrom })
-  );
+  const { data, isLoading } = useQuery({
+    queryKey: ["getFixtures", dateFrom, timezone],
+    queryFn: () => axios.post(`/api/fixtures`, { dateFrom }),
+    staleTime: 1000 * 60 * 30, // 30 minutes
+  });
 
   const grouped: { [date: string]: Fixture[] } = useMemo(
     () =>
