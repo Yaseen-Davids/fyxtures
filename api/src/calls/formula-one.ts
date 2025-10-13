@@ -1,5 +1,6 @@
 import axios from "axios";
 import { FormulaOneEvent, FormulaOneSession } from "../types/formulaone";
+import { parseISO, formatISO, getYear } from "date-fns";
 
 interface FormulaOneRacesProps {
   startDate: string; // yyyymmdd
@@ -8,7 +9,7 @@ interface FormulaOneRacesProps {
 export const getFormulaOneFixtures = async ({
   startDate,
 }: FormulaOneRacesProps): Promise<FormulaOneSession[]> => {
-  const season = 2025;
+  const season = getYear(new Date());
   const baseUrl = process.env.FORMULA_ONE_URL;
 
   if (!baseUrl) {
@@ -33,15 +34,21 @@ export const getFormulaOneFixtures = async ({
 
     const sessions = meeting.meetingSessions
       .filter((s) => new Date(s.startTime) >= selectedDate)
-      .map((s) => ({
-        ...s,
-        id: meeting.meetingKey,
-        name: meeting.meetingOfficialName,
-        date: meeting.meetingStartDate,
-        venue: meeting.meetingCountryName,
-        flag: meeting.countryFlag,
-        track: meeting.meetingLocation,
-      }));
+      .map((s) => {
+        const start = parseISO(`${s.startTime}${s.gmtOffset}`);
+        const end = parseISO(`${s.endTime}${s.gmtOffset}`);
+        return {
+          ...s,
+          id: meeting.meetingKey,
+          name: meeting.meetingOfficialName,
+          date: meeting.meetingStartDate,
+          venue: meeting.meetingCountryName,
+          flag: meeting.countryFlag,
+          track: meeting.meetingLocation,
+          startTime: formatISO(start),
+          endTime: formatISO(end),
+        };
+      });
     acc.push(...sessions);
     return acc;
   }, []);
