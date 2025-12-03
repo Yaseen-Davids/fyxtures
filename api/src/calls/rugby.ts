@@ -34,5 +34,7 @@ export const getRugbyFixtures = async ({
     },
   });
 
+  if (!data.Summary) return [];
+
   return (data || { Summary: [] }).Summary;
 };

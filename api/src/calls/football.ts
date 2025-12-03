@@ -34,5 +34,7 @@ export const getFootballFixtures = async ({
     },
   });
 
+  if (!data.Summary) return [];
+
   return (data || { Summary: [] }).Summary;
 };

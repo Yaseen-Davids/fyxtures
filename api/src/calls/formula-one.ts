@@ -28,6 +28,8 @@ export const getFormulaOneFixtures = async ({
     }
   );
 
+  if (!data.meetings) return [];
+
   return data.meetings.reduce((acc: FormulaOneSession[], meeting) => {
     const selectedDate = new Date(startDate);
     selectedDate.setHours(0, 0, 0, 0);
