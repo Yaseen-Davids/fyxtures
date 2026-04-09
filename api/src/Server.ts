@@ -11,6 +11,7 @@ import cors from "cors";
 import indexRouter from "./routes/index";
 import footballRouter from "./routes/football";
 import formulaOneRouter from "./routes/formula-one";
+import teamRouter from "./routes/team";
 
 // Init express
 const app = express();
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/api", indexRouter);
 app.use("/api/football", footballRouter);
 app.use("/api/formula-one", formulaOneRouter);
+app.use("/api/team", teamRouter);
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");

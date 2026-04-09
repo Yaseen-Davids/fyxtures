@@ -1,13 +1,10 @@
 import { FC, useMemo } from "react";
 import { format } from "date-fns";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Fixture } from "../types/Fixture";
 import { CardImage } from "./CardImage";
-import {
-  CalendarDaysIcon,
-  GlobeAsiaAustraliaIcon,
-} from "@heroicons/react/24/solid";
+import { CalendarDaysIcon, GlobeAsiaAustraliaIcon } from "@heroicons/react/24/solid";
 
 type CardProps = {
   event: Fixture;
@@ -40,11 +37,11 @@ export const Card: FC<CardProps> = ({ event }) => {
           </div>
         </div>
         <div className="grid grid-cols-[1fr_50px_1fr] items-center gap-2 sm:gap-5">
-          <CardDetail home team={left} />
+          <CardDetail home team={left} type={type} />
           <p className="border rounded p-1 sm:p-2 border-slate-500 justify-self-center">
             {format(date, "HH:mm")}
           </p>
-          <CardDetail team={right} />
+          <CardDetail team={right} type={type} />
         </div>
         <div className="w-full text-center text-xxs sm:text-sm">
           <p className="text-gray-400 leading-0">
@@ -54,9 +51,6 @@ export const Card: FC<CardProps> = ({ event }) => {
         <div className="absolute right-2 bottom-2 max-w-4">
           <img alt="Image of sports" src={image[type]} />
         </div>
-        {/* <div className="absolute right-3 top-2 text-teal-300 animate-pulse">
-          <p>{clock?.label}</p>
-        </div> */}
       </div>
     </Link>
   );
@@ -64,19 +58,28 @@ export const Card: FC<CardProps> = ({ event }) => {
 
 type CardDetailProps = {
   home?: boolean;
-  team: { display: string; icon: string };
+  team: { id: string; display: string; icon: string };
+  type: "football" | "rugby" | "formulaone";
 };
 
-const CardDetail: FC<CardDetailProps> = ({ home, team }) => {
+const CardDetail: FC<CardDetailProps> = ({ home, team, type }) => {
+  const navigate = useNavigate();
+
   return home ? (
-    <div className="grid grid-cols-[1fr_25px] sm:grid-cols-[1fr_30px] gap-3 items-center font-bold">
+    <div
+      className="grid grid-cols-[1fr_25px] sm:grid-cols-[1fr_30px] gap-3 items-center font-bold"
+      onClick={() => (type === "football" ? navigate(`/team/${team.id}`) : {})}
+    >
       <p className="text-right">{team.display}</p>
       <div>
         <CardImage url={team.icon} />
       </div>
     </div>
   ) : (
-    <div className="grid grid-cols-[25px_1fr] sm:grid-cols-[30px_1fr] gap-3 items-center font-bold">
+    <div
+      className="grid grid-cols-[25px_1fr] sm:grid-cols-[30px_1fr] gap-3 items-center font-bold"
+      onClick={() => (type === "football" ? navigate(`/team/${team.id}`) : {})}
+    >
       <div>
         <CardImage url={team.icon} />
       </div>

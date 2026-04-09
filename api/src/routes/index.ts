@@ -21,26 +21,15 @@ router.post("/fixtures", async (req, res, next) => {
   try {
     const { dateFrom } = req.body;
 
-    const [footballFixtures, rugbyFixtures, formulaOneFixtures] =
-      await Promise.all([
-        getFootballFixtures({
-          startDate: new Date(dateFrom),
-          sportIds: process.env.FOOTBALL_PREMIER_LEAGUE_ID || "",
-        }),
-        getRugbyFixtures({
-          startDate: new Date(dateFrom),
-          sportIds: process.env.RUGBY_CHAMPIONSHIP_ID || "",
-        }),
-        getFormulaOneFixtures({
-          startDate: format(new Date(dateFrom), "yyyy-MM-dd"),
-        }),
-      ]);
+    const [footballFixtures, rugbyFixtures, formulaOneFixtures] = await Promise.all([
+      getFootballFixtures({ startDate: new Date(dateFrom) }),
+      getRugbyFixtures({ startDate: new Date(dateFrom) }),
+      getFormulaOneFixtures({ startDate: format(new Date(dateFrom), "yyyy-MM-dd") }),
+    ]);
 
     const formattedFootballMatchs = footballFixtures.map(formatFootballMatch);
     const formattedRugbyMatchs = rugbyFixtures.map(formatRugbyMatch);
-    const formattedFormulaOneEvents = formulaOneFixtures.map(
-      formatFormulaOneEvent
-    );
+    const formattedFormulaOneEvents = formulaOneFixtures.map(formatFormulaOneEvent);
 
     return res.json([
       ...formattedFootballMatchs,
