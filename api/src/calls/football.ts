@@ -20,6 +20,7 @@ export const getFootballFixtures = async ({
     process.env.FOOTBALL_PREMIER_LEAGUE_ID,
     process.env.FOOTBALL_FA_CUP_ID,
     process.env.FOOTBALL_CHAMPIONS_LEAGUE_CUP_ID,
+    process.env.FOOTBALL_WORLD_CUP_ID,
   ].join(",");
 
   const url = `${baseUrl}?skip=0&top=50&eventStatusIds=1,2&entityTagIds=${sportIds}&startDate=${getUnixTime(
